@@ -1,1 +1,1 @@
-# muvlab-sejong.github.io
+# muv-sejong.github.io
