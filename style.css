@@ -1,3 +1,4 @@
+```css
 * {
   box-sizing: border-box;
 }
@@ -13,6 +14,10 @@ body {
   color: #fff;
 }
 
+/* =========================
+   Header
+========================= */
+
 .header {
   position: fixed;
   top: 0;
@@ -23,14 +28,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0));
+  z-index: 50;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0));
 }
 
 .logo {
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.08em;
+  color: #fff;
 }
 
 nav {
@@ -39,33 +45,82 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
+
+nav a:hover {
+  opacity: 0.75;
+}
+
+/* =========================
+   Hero Section
+========================= */
 
 .hero {
   position: relative;
+  width: 100%;
   height: 100vh;
   min-height: 620px;
-  background:
-    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  background: #000;
 }
 
+/* Background video */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark cinematic overlay */
+.hero-dark-overlay,
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));
+  z-index: 1;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.78), rgba(0,0,0,0.32)),
+    linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.08));
+}
+
+/* 
+   Technical grid / checker filter.
+   If you want a stronger checker pattern, increase opacity to 0.16~0.22.
+*/
+.hero-checker-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Slight vignette for SpaceX-like depth */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.48) 100%);
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   height: 100%;
   max-width: 980px;
   padding: 0 8vw 12vh;
@@ -77,22 +132,30 @@ nav a {
 .small-title {
   margin: 0 0 14px;
   font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 h1 {
   margin: 0;
+  max-width: 820px;
   font-size: clamp(42px, 6vw, 88px);
   line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .subtitle {
   max-width: 760px;
   margin: 26px 0 36px;
-  font-size: clamp(18px, 2vw, 26px);
+  font-size: clamp(18px, 2vw, 25px);
   line-height: 1.45;
+  font-weight: 500;
+  color: #fff;
 }
 
 .button {
@@ -101,15 +164,23 @@ h1 {
   padding: 15px 30px;
   border: 2px solid #fff;
   color: #fff;
+  background: transparent;
   text-decoration: none;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: 0.25s ease;
 }
 
 .button:hover {
   background: #fff;
   color: #000;
 }
+
+/* =========================
+   Main Sections
+========================= */
 
 .section {
   padding: 120px 8vw;
@@ -118,11 +189,14 @@ h1 {
 .section h2 {
   margin: 0 0 24px;
   font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
 .section p {
-  max-width: 900px;
+  max-width: 920px;
   font-size: 20px;
   line-height: 1.7;
 }
@@ -137,6 +211,10 @@ h1 {
   color: #fff;
 }
 
+/* =========================
+   Footer
+========================= */
+
 footer {
   padding: 36px 8vw;
   background: #000;
@@ -144,8 +222,13 @@ footer {
   font-size: 14px;
 }
 
+/* =========================
+   Tablet
+========================= */
+
 @media (max-width: 900px) {
   .header {
+    height: 68px;
     padding: 0 24px;
   }
 
@@ -153,23 +236,51 @@ footer {
     display: none;
   }
 
+  .hero {
+    min-height: 560px;
+  }
+
   .hero-content {
     padding: 0 6vw 10vh;
   }
+
+  .section {
+    padding: 96px 6vw;
+  }
 }
+
+/* =========================
+   Mobile
+========================= */
 
 @media (max-width: 600px) {
   .hero {
-    height: 90vh;
+    height: 92vh;
     min-height: 520px;
+  }
+
+  .hero-content {
+    padding: 0 6vw 9vh;
   }
 
   .small-title {
     font-size: 12px;
+    letter-spacing: 0.18em;
+  }
+
+  h1 {
+    font-size: clamp(38px, 13vw, 58px);
+    line-height: 0.95;
   }
 
   .subtitle {
+    margin: 22px 0 30px;
     font-size: 17px;
+  }
+
+  .button {
+    padding: 13px 24px;
+    font-size: 12px;
   }
 
   .section {
@@ -179,4 +290,10 @@ footer {
   .section p {
     font-size: 17px;
   }
+
+  .hero-checker-overlay {
+    opacity: 0.08;
+    background-size: 22px 22px;
+  }
 }
+```
