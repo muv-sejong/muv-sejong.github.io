@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 50;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.38), rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.36), rgba(0,0,0,0));
 }
 
 .logo {
@@ -97,7 +97,7 @@ nav a:hover {
   z-index: 1;
   background:
     linear-gradient(to right, rgba(0,0,0,0.30), rgba(0,0,0,0.04)),
-    linear-gradient(to top, rgba(0,0,0,0.16), rgba(0,0,0,0.00));
+    linear-gradient(to top, rgba(0,0,0,0.14), rgba(0,0,0,0.00));
 }
 
 /* =========================
@@ -155,16 +155,16 @@ nav a:hover {
   justify-content: flex-end;
 }
 
-/* SEJONG UNIVERSITY */
+/* SEJONG UNIVERSITY: 작고 얇은 소속 표기 */
 .small-title {
-  margin: 0 0 22px;
-  font-size: clamp(18px, 1.45vw, 24px);
-  font-weight: 900;
-  letter-spacing: 0.28em;
-  line-height: 1.15;
+  margin: 0 0 10px;
+  font-size: clamp(11px, 0.85vw, 14px);
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  line-height: 1.1;
   text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.38);
+  color: rgba(255,255,255,0.86);
+  text-shadow: none;
 }
 
 /* Main title */
@@ -177,13 +177,13 @@ h1 {
   letter-spacing: -0.045em;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.36);
+  text-shadow: 0 2px 5px rgba(0,0,0,0.28);
 }
 
 /* Subtitle: 항상 3줄 고정 */
 .subtitle {
   max-width: 900px;
-  margin: 28px 0 38px;
+  margin: 26px 0 38px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -192,7 +192,7 @@ h1 {
   line-height: 1.28;
   font-weight: 600;
   color: #fff;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.38);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.28);
 }
 
 .subtitle span {
@@ -293,9 +293,9 @@ footer {
   }
 
   .small-title {
-    font-size: 17px;
-    letter-spacing: 0.24em;
-    margin-bottom: 18px;
+    font-size: 11px;
+    letter-spacing: 0.21em;
+    margin-bottom: 9px;
   }
 
   h1 {
@@ -346,12 +346,13 @@ footer {
   }
 
   .small-title {
-    font-size: 11px;
-    letter-spacing: 0.17em;
-    line-height: 1.2;
-    margin-bottom: 9px;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    line-height: 1.1;
+    margin-bottom: 7px;
     max-width: 260px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.34);
+    color: rgba(255,255,255,0.82);
+    text-shadow: none;
   }
 
   h1 {
@@ -359,7 +360,7 @@ footer {
     line-height: 0.96;
     max-width: 330px;
     letter-spacing: -0.04em;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.34);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
   }
 
   .subtitle {
@@ -371,7 +372,7 @@ footer {
     gap: 3px;
     font-size: 13.5px;
     line-height: 1.24;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.34);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
   }
 
   .subtitle span {
@@ -404,7 +405,7 @@ footer {
   .hero-overlay {
     background:
       linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0.03)),
-      linear-gradient(to top, rgba(0,0,0,0.14), rgba(0,0,0,0.00));
+      linear-gradient(to top, rgba(0,0,0,0.13), rgba(0,0,0,0.00));
   }
 
   .hero::after {
@@ -419,7 +420,7 @@ footer {
 
 @media (max-width: 420px) {
   .small-title {
-    font-size: 10.5px;
+    font-size: 9px;
     letter-spacing: 0.16em;
   }
 
