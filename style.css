@@ -274,3 +274,59 @@
     line-height:1.04 !important;
   }
 }
+
+/* v33: joinus image/link safety + unified detail-page hero */
+.page-hero{
+  min-height:74vh !important;
+  height:74vh !important;
+  display:flex !important;
+  align-items:flex-end !important;
+  background-size:cover !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+}
+.page-hero-content{
+  width:100% !important;
+  max-width:1180px !important;
+  padding:0 8vw 8.5vh !important;
+}
+.page-hero h1{
+  max-width:980px !important;
+  font-size:clamp(34px,3.85vw,64px) !important;
+  line-height:1.04 !important;
+  letter-spacing:-.042em !important;
+}
+.page-hero p{
+  max-width:780px !important;
+  font-size:clamp(16px,1.15vw,20px) !important;
+  line-height:1.55 !important;
+}
+@media(min-aspect-ratio:19/9){
+  .hero-video-pc{
+    object-fit:cover !important;
+    object-position:center center !important;
+    background:transparent !important;
+  }
+}
+@media(max-width:760px){
+  .landing-panel,
+  .page-hero{
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+  }
+  .hero-video-mobile{
+    object-fit:cover !important;
+    object-position:center center !important;
+  }
+  .page-hero{
+    min-height:72vh !important;
+    height:72vh !important;
+  }
+  .page-hero-content{
+    padding:0 6vw 7vh !important;
+  }
+  .page-hero h1{
+    font-size:clamp(30px,8.8vw,44px) !important;
+  }
+}
