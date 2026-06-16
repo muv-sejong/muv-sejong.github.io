@@ -155,18 +155,6 @@ nav a:hover {
   justify-content: flex-end;
 }
 
-/* SEJONG UNIVERSITY: 작고 얇은 소속 표기 */
-.small-title {
-  margin: 0 0 10px;
-  font-size: clamp(11px, 0.85vw, 14px);
-  font-weight: 800;
-  letter-spacing: 0.24em;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.86);
-  text-shadow: none;
-}
-
 /* Main title */
 h1 {
   margin: 0;
@@ -292,12 +280,6 @@ footer {
     padding: 0 6vw 10vh;
   }
 
-  .small-title {
-    font-size: 11px;
-    letter-spacing: 0.21em;
-    margin-bottom: 9px;
-  }
-
   h1 {
     max-width: 760px;
     font-size: clamp(44px, 10vw, 76px);
@@ -343,16 +325,6 @@ footer {
   .hero-content {
     padding: 0 6vw 5.5vh;
     max-width: 100%;
-  }
-
-  .small-title {
-    font-size: 9.5px;
-    letter-spacing: 0.18em;
-    line-height: 1.1;
-    margin-bottom: 7px;
-    max-width: 260px;
-    color: rgba(255,255,255,0.82);
-    text-shadow: none;
   }
 
   h1 {
@@ -419,11 +391,6 @@ footer {
 ========================= */
 
 @media (max-width: 420px) {
-  .small-title {
-    font-size: 9px;
-    letter-spacing: 0.16em;
-  }
-
   h1 {
     font-size: clamp(24px, 8vw, 34px);
     max-width: 310px;
