@@ -36,7 +36,7 @@ body {
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.70);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
 }
 
 nav {
@@ -81,10 +81,9 @@ nav a:hover {
   z-index: 0;
 }
 
-/* PC용 영상 */
+/* PC용 영상: 원본 밝기 그대로 */
 .hero-video-pc {
   display: block;
-  filter: brightness(1.48) contrast(1.03) saturate(1.12);
 }
 
 /* 모바일용 영상은 기본적으로 숨김 */
@@ -92,28 +91,55 @@ nav a:hover {
   display: none;
 }
 
-/* PC 화면용: 오버레이를 약하게 */
+/* 아주 약한 cinematic overlay */
 .hero-dark-overlay,
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to right, rgba(0,0,0,0.20), rgba(0,0,0,0.00)),
-    linear-gradient(to top, rgba(0,0,0,0.10), rgba(0,0,0,0.00));
+    linear-gradient(to right, rgba(0,0,0,0.16), rgba(0,0,0,0.00)),
+    linear-gradient(to top, rgba(0,0,0,0.08), rgba(0,0,0,0.00));
 }
 
-/* 아주 약한 기술 격자 필터 */
-.hero-checker-overlay {
+/* =========================
+   Grid Overlay
+   기술적 느낌의 얇은 격자 필터
+========================= */
+
+.hero-grid-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.022;
+
+  /*
+    opacity가 그리드 강도입니다.
+    약하게: 0.04
+    보통: 0.06
+    강하게: 0.10
+  */
+  opacity: 0.065;
+
   background-image:
-    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 26px 26px;
+    linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px);
+
+  background-size:
+    32px 32px,
+    32px 32px,
+    160px 160px,
+    160px 160px;
+
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+
+  mix-blend-mode: screen;
 }
 
 /* 매우 약한 가장자리 비네팅 */
@@ -305,6 +331,7 @@ footer {
 /* =========================
    Mobile
    - hero-mobile.mp4 사용
+   - 영상 밝기 원본 유지
    - 글씨 축소
    - 영상 가림 최소화
 ========================= */
@@ -320,12 +347,11 @@ footer {
     display: none;
   }
 
-  /* 모바일에서는 모바일 전용 영상 표시 */
+  /* 모바일에서는 모바일 전용 영상 표시: 원본 밝기 그대로 */
   .hero-video-mobile {
     display: block;
     object-fit: cover;
     object-position: center center;
-    filter: brightness(1.10) contrast(1.03) saturate(1.05);
   }
 
   .hero-content {
@@ -376,21 +402,25 @@ footer {
     font-size: 17px;
   }
 
-  .hero-checker-overlay {
-    opacity: 0.010;
-    background-size: 22px 22px;
+  .hero-grid-overlay {
+    opacity: 0.045;
+    background-size:
+      26px 26px,
+      26px 26px,
+      130px 130px,
+      130px 130px;
   }
 
   .hero-dark-overlay,
   .hero-overlay {
     background:
-      linear-gradient(to right, rgba(0,0,0,0.22), rgba(0,0,0,0.02)),
-      linear-gradient(to top, rgba(0,0,0,0.16), rgba(0,0,0,0.00));
+      linear-gradient(to right, rgba(0,0,0,0.18), rgba(0,0,0,0.00)),
+      linear-gradient(to top, rgba(0,0,0,0.10), rgba(0,0,0,0.00));
   }
 
   .hero::after {
     background:
-      radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.05) 100%);
+      radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.04) 100%);
   }
 }
 
