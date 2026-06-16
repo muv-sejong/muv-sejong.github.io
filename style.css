@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 50;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.42), rgba(0,0,0,0));
 }
 
 .logo {
@@ -36,7 +36,7 @@ body {
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.70);
 }
 
 nav {
@@ -51,7 +51,7 @@ nav a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.70);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
 }
 
 nav a:hover {
@@ -80,19 +80,19 @@ nav a:hover {
   object-fit: cover;
   z-index: 0;
 
-  /* 영상 자체를 약간 밝고 선명하게 */
-  filter: brightness(1.18) contrast(1.05) saturate(1.08);
+  /* PC 화면: 영상이 어둡게 보이는 문제 보정 */
+  filter: brightness(1.48) contrast(1.03) saturate(1.12);
 }
 
-/* 밝게 조정한 cinematic overlay */
+/* PC 화면용: 오버레이를 매우 약하게 */
 .hero-dark-overlay,
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0.02)),
-    linear-gradient(to top, rgba(0,0,0,0.18), rgba(0,0,0,0.00));
+    linear-gradient(to right, rgba(0,0,0,0.20), rgba(0,0,0,0.00)),
+    linear-gradient(to top, rgba(0,0,0,0.10), rgba(0,0,0,0.00));
 }
 
 /* 아주 약한 기술 격자 필터 */
@@ -101,7 +101,7 @@ nav a:hover {
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.025;
+  opacity: 0.022;
   background-image:
     linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
@@ -116,37 +116,40 @@ nav a:hover {
   z-index: 3;
   pointer-events: none;
   background:
-    radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.08) 100%);
+    radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.06) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 4;
   height: 100%;
-  max-width: 980px;
+  max-width: 1050px;
   padding: 0 8vw 12vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+/* SEJONG UNIVERSITY */
 .small-title {
-  margin: 0 0 14px;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.22em;
+  margin: 0 0 22px;
+  font-size: clamp(18px, 1.45vw, 24px);
+  font-weight: 900;
+  letter-spacing: 0.28em;
+  line-height: 1.15;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 3px 14px rgba(0,0,0,0.85);
+  text-shadow: 0 3px 14px rgba(0,0,0,0.90);
 }
 
+/* Main title */
 h1 {
   margin: 0;
-  max-width: 820px;
-  font-size: clamp(42px, 6vw, 88px);
+  max-width: 980px;
+  font-size: clamp(46px, 6.4vw, 98px);
   line-height: 0.95;
   font-weight: 900;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
   color: #fff;
   text-shadow:
@@ -154,14 +157,33 @@ h1 {
     0 1px 4px rgba(0,0,0,0.90);
 }
 
+/* Subtitle: stable responsive chunks */
 .subtitle {
-  max-width: 760px;
-  margin: 26px 0 36px;
-  font-size: clamp(18px, 2vw, 25px);
-  line-height: 1.45;
-  font-weight: 500;
+  max-width: 900px;
+  margin: 28px 0 38px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 14px;
+  row-gap: 8px;
+  font-size: clamp(19px, 1.65vw, 26px);
+  line-height: 1.35;
+  font-weight: 600;
   color: #fff;
   text-shadow: 0 3px 14px rgba(0,0,0,0.90);
+}
+
+.subtitle span {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* 가운데 점 자동 삽입 */
+.subtitle span:not(:last-child)::after {
+  content: "·";
+  margin-left: 14px;
+  opacity: 0.9;
 }
 
 .button {
@@ -253,6 +275,23 @@ footer {
     padding: 0 6vw 10vh;
   }
 
+  .small-title {
+    font-size: 17px;
+    letter-spacing: 0.24em;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    max-width: 760px;
+    font-size: clamp(44px, 10vw, 76px);
+  }
+
+  .subtitle {
+    max-width: 720px;
+    font-size: 20px;
+    row-gap: 7px;
+  }
+
   .section {
     padding: 96px 6vw;
   }
@@ -260,6 +299,8 @@ footer {
 
 /* =========================
    Mobile
+   - 글씨가 영상을 가리지 않도록 축소
+   - 모바일은 이미 밝게 보이므로 밝기 과보정 방지
 ========================= */
 
 @media (max-width: 600px) {
@@ -273,27 +314,49 @@ footer {
   }
 
   .hero-content {
-    padding: 0 6vw 9vh;
+    padding: 0 6vw 6vh;
+    max-width: 100%;
   }
 
   .small-title {
     font-size: 12px;
     letter-spacing: 0.18em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    max-width: 260px;
   }
 
   h1 {
-    font-size: clamp(38px, 13vw, 58px);
+    font-size: clamp(28px, 9.5vw, 42px);
     line-height: 0.95;
+    max-width: 360px;
+    letter-spacing: -0.04em;
   }
 
   .subtitle {
-    margin: 22px 0 30px;
-    font-size: 17px;
+    margin: 16px 0 22px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .subtitle span {
+    white-space: nowrap;
+  }
+
+  /* 모바일에서는 점 제거: 줄바꿈 안정화 */
+  .subtitle span:not(:last-child)::after {
+    content: "";
+    margin-left: 0;
   }
 
   .button {
-    padding: 13px 24px;
-    font-size: 12px;
+    padding: 11px 20px;
+    font-size: 11px;
   }
 
   .section {
@@ -305,14 +368,40 @@ footer {
   }
 
   .hero-checker-overlay {
-    opacity: 0.018;
+    opacity: 0.012;
     background-size: 22px 22px;
   }
 
   .hero-dark-overlay,
   .hero-overlay {
     background:
-      linear-gradient(to right, rgba(0,0,0,0.34), rgba(0,0,0,0.05)),
-      linear-gradient(to top, rgba(0,0,0,0.24), rgba(0,0,0,0.00));
+      linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0.02)),
+      linear-gradient(to top, rgba(0,0,0,0.18), rgba(0,0,0,0.00));
+  }
+}
+
+/* =========================
+   Very small phones
+========================= */
+
+@media (max-width: 420px) {
+  .small-title {
+    font-size: 11px;
+    letter-spacing: 0.17em;
+  }
+
+  h1 {
+    font-size: clamp(26px, 9vw, 38px);
+    max-width: 320px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    max-width: 280px;
+  }
+
+  .button {
+    padding: 10px 18px;
+    font-size: 10px;
   }
 }
