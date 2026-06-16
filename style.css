@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 50;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0));
 }
 
 .logo {
@@ -79,34 +79,31 @@ nav a:hover {
   z-index: 0;
 }
 
-/* Dark cinematic overlay */
+/* Brighter cinematic overlay */
 .hero-dark-overlay,
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to right, rgba(0,0,0,0.78), rgba(0,0,0,0.32)),
-    linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.08));
+    linear-gradient(to right, rgba(0,0,0,0.48), rgba(0,0,0,0.12)),
+    linear-gradient(to top, rgba(0,0,0,0.34), rgba(0,0,0,0.02));
 }
 
-/* 
-   Technical grid / checker filter.
-   If you want a stronger checker pattern, increase opacity to 0.16~0.22.
-*/
+/* Subtle technical grid filter */
 .hero-checker-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.12;
+  opacity: 0.055;
   background-image:
     linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
   background-size: 26px 26px;
 }
 
-/* Slight vignette for SpaceX-like depth */
+/* Very light vignette */
 .hero::after {
   content: "";
   position: absolute;
@@ -114,7 +111,7 @@ nav a:hover {
   z-index: 3;
   pointer-events: none;
   background:
-    radial-gradient(circle at center, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.48) 100%);
+    radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.20) 100%);
 }
 
 .hero-content {
@@ -135,6 +132,7 @@ nav a:hover {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.75);
 }
 
 h1 {
@@ -146,6 +144,7 @@ h1 {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #fff;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.80);
 }
 
 .subtitle {
@@ -155,6 +154,7 @@ h1 {
   line-height: 1.45;
   font-weight: 500;
   color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.75);
 }
 
 .button {
@@ -163,18 +163,20 @@ h1 {
   padding: 15px 30px;
   border: 2px solid #fff;
   color: #fff;
-  background: transparent;
+  background: rgba(0,0,0,0.10);
   text-decoration: none;
   font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   transition: 0.25s ease;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.65);
 }
 
 .button:hover {
   background: #fff;
   color: #000;
+  text-shadow: none;
 }
 
 /* =========================
@@ -291,7 +293,14 @@ footer {
   }
 
   .hero-checker-overlay {
-    opacity: 0.08;
+    opacity: 0.04;
     background-size: 22px 22px;
+  }
+
+  .hero-dark-overlay,
+  .hero-overlay {
+    background:
+      linear-gradient(to right, rgba(0,0,0,0.52), rgba(0,0,0,0.18)),
+      linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0.04));
   }
 }
