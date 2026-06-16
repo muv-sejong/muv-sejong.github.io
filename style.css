@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 50;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.42), rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.38), rgba(0,0,0,0));
 }
 
 .logo {
@@ -36,7 +36,6 @@ body {
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
 }
 
 nav {
@@ -51,7 +50,6 @@ nav a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
 }
 
 nav a:hover {
@@ -91,15 +89,15 @@ nav a:hover {
   display: none;
 }
 
-/* 아주 약한 cinematic overlay */
+/* 영상 위에 아주 약한 어두운 그라디언트 */
 .hero-dark-overlay,
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to right, rgba(0,0,0,0.16), rgba(0,0,0,0.00)),
-    linear-gradient(to top, rgba(0,0,0,0.08), rgba(0,0,0,0.00));
+    linear-gradient(to right, rgba(0,0,0,0.30), rgba(0,0,0,0.04)),
+    linear-gradient(to top, rgba(0,0,0,0.16), rgba(0,0,0,0.00));
 }
 
 /* =========================
@@ -112,13 +110,6 @@ nav a:hover {
   inset: 0;
   z-index: 2;
   pointer-events: none;
-
-  /*
-    opacity가 그리드 강도입니다.
-    약하게: 0.04
-    보통: 0.06
-    강하게: 0.10
-  */
   opacity: 0.065;
 
   background-image:
@@ -142,7 +133,7 @@ nav a:hover {
   mix-blend-mode: screen;
 }
 
-/* 매우 약한 가장자리 비네팅 */
+/* 가장자리 아주 약한 비네팅 */
 .hero::after {
   content: "";
   position: absolute;
@@ -173,7 +164,7 @@ nav a:hover {
   line-height: 1.15;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 3px 14px rgba(0,0,0,0.90);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.38);
 }
 
 /* Main title */
@@ -186,9 +177,7 @@ h1 {
   letter-spacing: -0.045em;
   text-transform: uppercase;
   color: #fff;
-  text-shadow:
-    0 3px 20px rgba(0,0,0,0.95),
-    0 1px 4px rgba(0,0,0,0.90);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.36);
 }
 
 /* Subtitle: 항상 3줄 고정 */
@@ -203,7 +192,7 @@ h1 {
   line-height: 1.28;
   font-weight: 600;
   color: #fff;
-  text-shadow: 0 3px 14px rgba(0,0,0,0.90);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.38);
 }
 
 .subtitle span {
@@ -223,21 +212,18 @@ h1 {
   padding: 15px 30px;
   border: 2px solid #fff;
   color: #fff;
-  background: rgba(0,0,0,0.08);
+  background: rgba(0,0,0,0.04);
   text-decoration: none;
   font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   transition: 0.25s ease;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .button:hover {
   background: #fff;
   color: #000;
-  text-shadow: none;
 }
 
 /* =========================
@@ -365,6 +351,7 @@ footer {
     line-height: 1.2;
     margin-bottom: 9px;
     max-width: 260px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.34);
   }
 
   h1 {
@@ -372,6 +359,7 @@ footer {
     line-height: 0.96;
     max-width: 330px;
     letter-spacing: -0.04em;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.34);
   }
 
   .subtitle {
@@ -383,6 +371,7 @@ footer {
     gap: 3px;
     font-size: 13.5px;
     line-height: 1.24;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.34);
   }
 
   .subtitle span {
@@ -414,8 +403,8 @@ footer {
   .hero-dark-overlay,
   .hero-overlay {
     background:
-      linear-gradient(to right, rgba(0,0,0,0.18), rgba(0,0,0,0.00)),
-      linear-gradient(to top, rgba(0,0,0,0.10), rgba(0,0,0,0.00));
+      linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0.03)),
+      linear-gradient(to top, rgba(0,0,0,0.14), rgba(0,0,0,0.00));
   }
 
   .hero::after {
