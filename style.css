@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 620px;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 980px;
+  padding: 0 8vw 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.small-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 88px);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin: 26px 0 36px;
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.45;
+}
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.section {
+  padding: 120px 8vw;
+}
+
+.section h2 {
+  margin: 0 0 24px;
+  font-size: clamp(34px, 4vw, 58px);
+  text-transform: uppercase;
+}
+
+.section p {
+  max-width: 900px;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.white {
+  background: #fff;
+  color: #111;
+}
+
+.black {
+  background: #111;
+  color: #fff;
+}
+
+footer {
+  padding: 36px 8vw;
+  background: #000;
+  color: #999;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 24px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 0 6vw 10vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 90vh;
+    min-height: 520px;
+  }
+
+  .small-title {
+    font-size: 12px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .section {
+    padding: 84px 6vw;
+  }
+
+  .section p {
+    font-size: 17px;
+  }
+}
