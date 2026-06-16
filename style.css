@@ -71,7 +71,7 @@ nav a:hover {
   background: #000;
 }
 
-/* Background video */
+/* 공통 영상 설정 */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -79,12 +79,20 @@ nav a:hover {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+}
 
-  /* PC 화면: 영상이 어둡게 보이는 문제 보정 */
+/* PC용 영상 */
+.hero-video-pc {
+  display: block;
   filter: brightness(1.48) contrast(1.03) saturate(1.12);
 }
 
-/* PC 화면용: 오버레이를 매우 약하게 */
+/* 모바일용 영상은 기본적으로 숨김 */
+.hero-video-mobile {
+  display: none;
+}
+
+/* PC 화면용: 오버레이를 약하게 */
 .hero-dark-overlay,
 .hero-overlay {
   position: absolute;
@@ -157,33 +165,30 @@ h1 {
     0 1px 4px rgba(0,0,0,0.90);
 }
 
-/* Subtitle: stable responsive chunks */
+/* Subtitle: 항상 3줄 고정 */
 .subtitle {
   max-width: 900px;
   margin: 28px 0 38px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 14px;
-  row-gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
   font-size: clamp(19px, 1.65vw, 26px);
-  line-height: 1.35;
+  line-height: 1.28;
   font-weight: 600;
   color: #fff;
   text-shadow: 0 3px 14px rgba(0,0,0,0.90);
 }
 
 .subtitle span {
-  display: inline-flex;
-  align-items: center;
+  display: block;
   white-space: nowrap;
 }
 
-/* 가운데 점 자동 삽입 */
+/* 점 제거 */
 .subtitle span:not(:last-child)::after {
-  content: "·";
-  margin-left: 14px;
-  opacity: 0.9;
+  content: "";
+  margin-left: 0;
 }
 
 .button {
@@ -289,7 +294,7 @@ footer {
   .subtitle {
     max-width: 720px;
     font-size: 20px;
-    row-gap: 7px;
+    row-gap: 6px;
   }
 
   .section {
@@ -299,8 +304,9 @@ footer {
 
 /* =========================
    Mobile
-   - 글씨가 영상을 가리지 않도록 축소
-   - 모바일은 이미 밝게 보이므로 밝기 과보정 방지
+   - hero-mobile.mp4 사용
+   - 글씨 축소
+   - 영상 가림 최소화
 ========================= */
 
 @media (max-width: 600px) {
@@ -309,54 +315,57 @@ footer {
     min-height: 520px;
   }
 
-  .hero-video {
-    filter: brightness(1.12) contrast(1.04) saturate(1.05);
+  /* 모바일에서는 PC용 영상 숨김 */
+  .hero-video-pc {
+    display: none;
+  }
+
+  /* 모바일에서는 모바일 전용 영상 표시 */
+  .hero-video-mobile {
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(1.10) contrast(1.03) saturate(1.05);
   }
 
   .hero-content {
-    padding: 0 6vw 6vh;
+    padding: 0 6vw 5.5vh;
     max-width: 100%;
   }
 
   .small-title {
-    font-size: 12px;
-    letter-spacing: 0.18em;
+    font-size: 11px;
+    letter-spacing: 0.17em;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     max-width: 260px;
   }
 
   h1 {
-    font-size: clamp(28px, 9.5vw, 42px);
-    line-height: 0.95;
-    max-width: 360px;
+    font-size: clamp(25px, 8.4vw, 36px);
+    line-height: 0.96;
+    max-width: 330px;
     letter-spacing: -0.04em;
   }
 
   .subtitle {
-    margin: 16px 0 22px;
-    max-width: 300px;
+    margin: 14px 0 18px;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
-    font-size: 15px;
-    line-height: 1.25;
+    gap: 3px;
+    font-size: 13.5px;
+    line-height: 1.24;
   }
 
   .subtitle span {
     white-space: nowrap;
   }
 
-  /* 모바일에서는 점 제거: 줄바꿈 안정화 */
-  .subtitle span:not(:last-child)::after {
-    content: "";
-    margin-left: 0;
-  }
-
   .button {
-    padding: 11px 20px;
-    font-size: 11px;
+    padding: 10px 18px;
+    font-size: 10px;
   }
 
   .section {
@@ -368,15 +377,20 @@ footer {
   }
 
   .hero-checker-overlay {
-    opacity: 0.012;
+    opacity: 0.010;
     background-size: 22px 22px;
   }
 
   .hero-dark-overlay,
   .hero-overlay {
     background:
-      linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0.02)),
-      linear-gradient(to top, rgba(0,0,0,0.18), rgba(0,0,0,0.00));
+      linear-gradient(to right, rgba(0,0,0,0.22), rgba(0,0,0,0.02)),
+      linear-gradient(to top, rgba(0,0,0,0.16), rgba(0,0,0,0.00));
+  }
+
+  .hero::after {
+    background:
+      radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.05) 100%);
   }
 }
 
@@ -386,22 +400,22 @@ footer {
 
 @media (max-width: 420px) {
   .small-title {
-    font-size: 11px;
-    letter-spacing: 0.17em;
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
   }
 
   h1 {
-    font-size: clamp(26px, 9vw, 38px);
-    max-width: 320px;
+    font-size: clamp(24px, 8vw, 34px);
+    max-width: 310px;
   }
 
   .subtitle {
-    font-size: 14px;
-    max-width: 280px;
+    font-size: 13px;
+    max-width: 270px;
   }
 
   .button {
-    padding: 10px 18px;
-    font-size: 10px;
+    padding: 9px 16px;
+    font-size: 9.5px;
   }
 }
