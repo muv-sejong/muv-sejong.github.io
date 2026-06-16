@@ -7,21 +7,26 @@
   <title>MUV Lab | Sejong University</title>
   <meta name="description" content="Marine Unmanned Vehicle Laboratory, Sejong University" />
 
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=15" />
 </head>
 
 <body>
   <header class="header">
-    <div class="logo">MUV LAB</div>
+    <a href="#" class="logo">MUV LAB</a>
+
     <nav>
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
       <a href="#members">Members</a>
+      <a href="#join">Join Us</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
   <section class="hero">
     <!-- PC / tablet video -->
     <video class="hero-video hero-video-pc" autoplay muted loop playsinline poster="assets/poster.png">
@@ -49,47 +54,503 @@
     </div>
   </section>
 
-  <section id="research" class="section white">
-    <h2>Research</h2>
-    <p>
-      MUV Lab focuses on nonlinear control, autonomous underwater vehicles,
-      surface vehicles, formation control, guidance, navigation, and defense AI systems.
-    </p>
+  <!-- =========================================================
+       RESEARCH
+  ========================================================== -->
+  <section id="research" class="section section-dark">
+    <div class="section-inner">
+      <p class="eyebrow">Research</p>
+
+      <h2 class="section-title">
+        Guidance-and-control-centered autonomy for marine unmanned systems.
+      </h2>
+
+      <p class="section-lead">
+        MUV Lab studies the theoretical and algorithmic foundations of autonomous
+        marine systems, with emphasis on guidance, nonlinear control, cooperative
+        operation, and simulation-based verification under uncertainty, actuator
+        constraints, and communication-limited environments.
+      </p>
+
+      <div class="card-grid four">
+        <article class="card">
+          <span class="card-number">01</span>
+          <h3>Nonlinear Control for Autonomy</h3>
+          <p>
+            Lyapunov-based control, sliding-mode control, sampled-data control,
+            actuator saturation, robustness, and stability analysis for autonomous
+            unmanned systems.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">02</span>
+          <h3>Guidance and Path Following</h3>
+          <p>
+            Guidance laws, path-following control, trajectory tracking, waypoint
+            missions, and 3D maneuvering for underwater and surface vehicles.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">03</span>
+          <h3>Cooperative Marine Autonomy</h3>
+          <p>
+            Formation control, cooperative path following, distributed coordination,
+            and autonomous operation under delayed, intermittent, and low-rate
+            underwater communication.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">04</span>
+          <h3>Mission-Level Simulation</h3>
+          <p>
+            6-DOF vehicle dynamics, digital twin simulation, mission scenario
+            generation, performance evaluation, and verification of autonomy
+            algorithms.
+          </p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="projects" class="section black">
-    <h2>Projects</h2>
-    <p>
-      We develop autonomy, guidance, and control technologies for AUVs, USVs,
-      hybrid marine vehicles, and defense unmanned systems.
-    </p>
+  <!-- =========================================================
+       PROJECTS
+  ========================================================== -->
+  <section id="projects" class="section section-black">
+    <div class="section-inner">
+      <p class="eyebrow">Projects</p>
+
+      <h2 class="section-title">
+        Project-driven research for real marine autonomy problems.
+      </h2>
+
+      <p class="section-lead">
+        MUV Lab conducts research projects that connect nonlinear control theory,
+        vehicle guidance, cooperative autonomy, simulation-based verification,
+        and defense-oriented unmanned system applications.
+      </p>
+
+      <div class="subsection-heading">
+        <span>Ongoing Projects</span>
+      </div>
+
+      <div class="project-feature-list">
+        <article class="project-feature">
+          <div class="project-status">Ongoing Project</div>
+          <h3>Cooperative Autonomy under Communication Constraints</h3>
+          <p>
+            Guidance, control, and cooperative autonomy for multiple marine unmanned
+            vehicles operating under delayed, intermittent, and low-rate underwater
+            communication.
+          </p>
+
+          <div class="tag-row">
+            <span>AUV</span>
+            <span>Formation Control</span>
+            <span>Underwater Communication</span>
+            <span>Simulation</span>
+          </div>
+        </article>
+
+        <article class="project-feature">
+          <div class="project-status">Ongoing Project</div>
+          <h3>Guidance and Control Algorithms for Autonomous Marine Systems</h3>
+          <p>
+            Development of guidance and nonlinear control algorithms for autonomous
+            underwater and surface vehicles operating under model uncertainty,
+            actuator limits, and environmental disturbances.
+          </p>
+
+          <div class="tag-row">
+            <span>Guidance</span>
+            <span>Nonlinear Control</span>
+            <span>AUV / USV</span>
+            <span>Robustness</span>
+          </div>
+        </article>
+
+        <article class="project-feature">
+          <div class="project-status">Ongoing Project</div>
+          <h3>Digital Twin Simulation for Marine Unmanned Vehicle Missions</h3>
+          <p>
+            Development of mission-level simulation environments for evaluating
+            path following, formation operation, sensor and communication constraints,
+            actuator limits, and autonomy performance.
+          </p>
+
+          <div class="tag-row">
+            <span>Digital Twin</span>
+            <span>MATLAB</span>
+            <span>Python</span>
+            <span>Verification</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="subsection-heading">
+        <span>Project Archive</span>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item ongoing">
+          <div class="timeline-year">2026–Present</div>
+          <div class="timeline-body">
+            <h3>Cooperative Autonomy for Marine Unmanned Vehicles</h3>
+            <p>
+              Formation control, cooperative path following, and mission autonomy
+              under delayed and intermittent underwater communication.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item ongoing">
+          <div class="timeline-year">2026–Present</div>
+          <div class="timeline-body">
+            <h3>Guidance-and-Control-Centered Autonomy for Marine Systems</h3>
+            <p>
+              Guidance, nonlinear control, and simulation-based verification for
+              autonomous underwater and surface vehicle missions.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item ongoing">
+          <div class="timeline-year">2025–Present</div>
+          <div class="timeline-body">
+            <h3>Digital Twin Simulation for Autonomous Marine Missions</h3>
+            <p>
+              Mission-level simulation, vehicle dynamics, communication constraints,
+              and autonomy-performance evaluation.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-year">2023–2025</div>
+          <div class="timeline-body">
+            <h3>Defense-Oriented Marine Unmanned System Control</h3>
+            <p>
+              Control algorithm design, performance analysis, and simulation-based
+              validation for marine unmanned system applications.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-year">Earlier</div>
+          <div class="timeline-body">
+            <h3>Nonlinear and Sampled-Data Control for Autonomous Systems</h3>
+            <p>
+              Theoretical and applied research on nonlinear systems, sampled-data
+              control, robust control, and autonomous vehicle applications.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="subsection-heading">
+        <span>Sponsored Research</span>
+      </div>
+
+      <div class="card-grid three">
+        <article class="card">
+          <span class="card-number">A</span>
+          <h3>Algorithm Design</h3>
+          <p>
+            Guidance, tracking, path-following, formation, and nonlinear control
+            algorithms for marine unmanned vehicles.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">B</span>
+          <h3>Simulation-Based Validation</h3>
+          <p>
+            MATLAB, Simulink, and Python-based verification under uncertainty,
+            actuator constraints, communication delay, and packet loss.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">C</span>
+          <h3>Technical Collaboration</h3>
+          <p>
+            Feasibility analysis, algorithm review, performance improvement,
+            prototype simulation, and technical consulting.
+          </p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="publications" class="section white">
-    <h2>Publications</h2>
-    <p>
-      Selected journal papers, conference papers, and technical reports will be listed here.
-    </p>
+  <!-- =========================================================
+       PUBLICATIONS
+  ========================================================== -->
+  <section id="publications" class="section section-dark">
+    <div class="section-inner">
+      <p class="eyebrow">Publications</p>
+
+      <h2 class="section-title">
+        Full research record in nonlinear control and autonomous marine systems.
+      </h2>
+
+      <p class="section-lead">
+        The laboratory’s publications cover nonlinear control, sampled-data systems,
+        fuzzy and LPV systems, robust control, and autonomous marine vehicle control.
+        A full publication list is organized below by year.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <strong>150+</strong>
+          <span>Publications</span>
+        </div>
+        <div class="stat-box">
+          <strong>40+</strong>
+          <span>SCIE Papers</span>
+        </div>
+        <div class="stat-box">
+          <strong>Marine</strong>
+          <span>Autonomy Applications</span>
+        </div>
+        <div class="stat-box">
+          <strong>Control</strong>
+          <span>Theory to Implementation</span>
+        </div>
+      </div>
+
+      <div class="publication-actions">
+        <a class="button secondary" href="#" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="button secondary" href="#" target="_blank" rel="noopener">ORCID</a>
+      </div>
+
+      <div class="subsection-heading">
+        <span>Selected Highlights</span>
+      </div>
+
+      <ol class="publication-list">
+        <li>
+          <span class="pub-year">2026</span>
+          <span class="pub-text">
+            Add selected representative journal paper here.
+          </span>
+        </li>
+        <li>
+          <span class="pub-year">2025</span>
+          <span class="pub-text">
+            Add selected representative journal paper here.
+          </span>
+        </li>
+        <li>
+          <span class="pub-year">2015</span>
+          <span class="pub-text">
+            Add representative autonomous underwater vehicle control paper here.
+          </span>
+        </li>
+      </ol>
+
+      <div class="subsection-heading">
+        <span>Full Publication List</span>
+      </div>
+
+      <div class="publication-years">
+        <details open>
+          <summary>2026</summary>
+          <ol>
+            <li>Add full citation here.</li>
+            <li>Add full citation here.</li>
+            <li>Add full citation here.</li>
+          </ol>
+        </details>
+
+        <details>
+          <summary>2025</summary>
+          <ol>
+            <li>Add full citation here.</li>
+            <li>Add full citation here.</li>
+          </ol>
+        </details>
+
+        <details>
+          <summary>2024 and Earlier</summary>
+          <ol>
+            <li>Add full citation here.</li>
+            <li>Add full citation here.</li>
+            <li>Add full citation here.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
   </section>
 
-  <section id="members" class="section black">
-    <h2>Members</h2>
-    <p>
-      Principal investigator, graduate students, researchers, and collaborators.
-    </p>
+  <!-- =========================================================
+       MEMBERS
+  ========================================================== -->
+  <section id="members" class="section section-black">
+    <div class="section-inner">
+      <p class="eyebrow">Members</p>
+
+      <h2 class="section-title">
+        Building a team for control, robotics, marine autonomy, and defense AI.
+      </h2>
+
+      <p class="section-lead">
+        MUV Lab welcomes students and researchers interested in theoretical control,
+        autonomous marine systems, simulation, and real project-driven research.
+      </p>
+
+      <div class="pi-card">
+        <div>
+          <p class="eyebrow small">Principal Investigator</p>
+          <h3>Dowan Kim</h3>
+          <p>
+            Professor, Sejong University<br />
+            Principal Investigator, Marine Unmanned Vehicle Laboratory
+          </p>
+        </div>
+
+        <div>
+          <p>
+            Research interests include nonlinear control, sampled-data control,
+            autonomous marine vehicles, guidance and control, and defense unmanned
+            systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="subsection-heading">
+        <span>Student Research Tracks</span>
+      </div>
+
+      <div class="card-grid four">
+        <article class="card">
+          <span class="card-number">01</span>
+          <h3>Control Theory Track</h3>
+          <p>
+            Lyapunov theory, nonlinear control, robust control, sliding-mode control,
+            sampled-data systems, and stability analysis.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">02</span>
+          <h3>Marine Autonomy Track</h3>
+          <p>
+            AUV and USV guidance, path following, formation control, cooperative
+            mission operation, and marine vehicle dynamics.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">03</span>
+          <h3>Simulation and Software Track</h3>
+          <p>
+            MATLAB, Simulink, Python, C/C++, ROS2, digital twin simulation, and
+            autonomy verification.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">04</span>
+          <h3>Defense AI Track</h3>
+          <p>
+            Mission planning, world models, decision support, distributed autonomy,
+            and AI-assisted autonomous operation.
+          </p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="section white">
-    <h2>Contact</h2>
-    <p>
-      Sejong University<br />
-      Department of Defense Systems Engineering<br />
-      Seoul, Republic of Korea
-    </p>
+  <!-- =========================================================
+       JOIN US
+  ========================================================== -->
+  <section id="join" class="section section-join">
+    <div class="section-inner join-inner">
+      <p class="eyebrow">Join Us</p>
+
+      <h2 class="section-title">
+        Work on real autonomy problems for marine unmanned systems.
+      </h2>
+
+      <p class="section-lead">
+        We are looking for motivated M.S. and Ph.D. students who want to work on
+        guidance, nonlinear control, simulation, cooperative autonomy, and
+        defense-oriented unmanned system projects.
+      </p>
+
+      <div class="join-grid">
+        <div>
+          <h3>Students will work on</h3>
+          <ul class="clean-list">
+            <li>Autonomous underwater and surface vehicle guidance</li>
+            <li>Nonlinear control and stability analysis</li>
+            <li>Multi-vehicle formation control</li>
+            <li>Simulation and digital twin development</li>
+            <li>Underwater communication-limited autonomy</li>
+            <li>Defense-oriented unmanned system projects</li>
+            <li>Sponsored research with companies and research institutes</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Recommended background</h3>
+          <ul class="clean-list">
+            <li>Control engineering</li>
+            <li>Electrical or mechanical engineering</li>
+            <li>Robotics and autonomous systems</li>
+            <li>Applied mathematics</li>
+            <li>AI and software</li>
+            <li>MATLAB, Python, Simulink, C/C++, or ROS2</li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="#contact" class="button">Contact PI</a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACT
+  ========================================================== -->
+  <section id="contact" class="section section-contact">
+    <div class="section-inner contact-inner">
+      <p class="eyebrow">Contact</p>
+
+      <h2 class="section-title">
+        Graduate admission and sponsored research inquiries.
+      </h2>
+
+      <div class="contact-grid">
+        <div>
+          <h3>Marine Unmanned Vehicle Laboratory</h3>
+          <p>
+            Department of Defense Systems Engineering<br />
+            Sejong University<br />
+            Seoul, Republic of Korea
+          </p>
+        </div>
+
+        <div>
+          <h3>Graduate Admission / Student Inquiry</h3>
+          <p>
+            Email: <a href="mailto:dwk@sejong.ac.kr">dwk@sejong.ac.kr</a>
+          </p>
+
+          <h3>Sponsored Research / Technical Collaboration</h3>
+          <p>
+            Email: <a href="mailto:dwk@sejong.ac.kr">dwk@sejong.ac.kr</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    © 2026 MUV Lab. All rights reserved.
+    <span>MUV LAB · SEJONG UNIVERSITY</span>
+    <span>© 2026 Marine Unmanned Vehicle Laboratory. All rights reserved.</span>
   </footer>
 </body>
 </html>
