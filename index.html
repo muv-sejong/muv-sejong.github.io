@@ -7,7 +7,7 @@
   <title>MUV Lab | Sejong University</title>
   <meta name="description" content="Marine Unmanned Vehicle Laboratory, Sejong University" />
 
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 
 <body>
@@ -23,8 +23,14 @@
   </header>
 
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="assets/poster.png">
+    <!-- PC / tablet video -->
+    <video class="hero-video hero-video-pc" autoplay muted loop playsinline poster="assets/poster.png">
       <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Mobile video -->
+    <video class="hero-video hero-video-mobile" autoplay muted loop playsinline poster="assets/poster.png">
+      <source src="assets/hero-mobile.mp4" type="video/mp4" />
     </video>
 
     <div class="hero-dark-overlay"></div>
