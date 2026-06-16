@@ -138,3 +138,139 @@
     margin-top:22px;
   }
 }
+
+/* v31: detail-page vertical balance and wide-monitor readability */
+@media(min-aspect-ratio:19/9){
+  .hero-video-pc{
+    object-fit:cover !important;
+    object-position:center center !important;
+    background:transparent !important;
+  }
+}
+
+/* Detail pages: move title block down, reduce title burden, unify heights */
+.page-hero{
+  min-height:78vh !important;
+  display:flex !important;
+  align-items:flex-end !important;
+}
+
+.page-hero-content{
+  width:100%;
+  max-width:1180px !important;
+  padding:0 8vw 10vh !important;
+}
+
+.page-hero .eyebrow{
+  margin-bottom:16px !important;
+}
+
+.page-hero h1{
+  max-width:980px !important;
+  font-size:clamp(34px,4.05vw,64px) !important;
+  line-height:1.04 !important;
+  letter-spacing:-.042em !important;
+}
+
+.page-hero p{
+  max-width:780px !important;
+  font-size:clamp(16px,1.15vw,20px) !important;
+  line-height:1.55 !important;
+}
+
+.page-metrics{
+  margin-top:24px !important;
+}
+
+.page-metrics.metric-grid.compact,
+.page-hero .metric-grid.compact{
+  gap:12px !important;
+  max-width:940px !important;
+}
+
+.page-hero .metric-grid div{
+  padding:14px 16px !important;
+}
+
+.page-hero .metric-grid strong{
+  font-size:clamp(26px,2.8vw,42px) !important;
+}
+
+.page-hero .metric-grid span{
+  font-size:10.5px !important;
+  line-height:1.25 !important;
+}
+
+/* More horizontal room on wide monitors, but keep title smaller */
+@media(min-width:1500px){
+  .page-hero-content{
+    max-width:1320px !important;
+  }
+  .page-hero h1{
+    max-width:1120px !important;
+    font-size:clamp(42px,3.55vw,66px) !important;
+  }
+  .page-hero p{
+    max-width:850px !important;
+  }
+}
+
+/* Very wide and short browser windows: prevent top crowding */
+@media(min-width:1500px) and (max-height:760px){
+  .page-hero{
+    min-height:88vh !important;
+  }
+  .page-hero-content{
+    padding-bottom:8vh !important;
+  }
+  .page-hero h1{
+    font-size:clamp(36px,3.05vw,58px) !important;
+    max-width:1080px !important;
+  }
+  .page-hero p{
+    font-size:16px !important;
+    max-width:760px !important;
+  }
+  .page-hero .metric-grid div{
+    padding:12px 14px !important;
+  }
+  .page-hero .metric-grid strong{
+    font-size:34px !important;
+  }
+}
+
+/* Landing-page panels remain cinematic, but avoid one-word line breaks on wide screens */
+@media(min-width:1500px){
+  .panel-content{
+    max-width:1280px !important;
+  }
+  .panel-content h2{
+    max-width:1160px !important;
+    font-size:clamp(46px,3.9vw,78px) !important;
+    line-height:.98 !important;
+  }
+}
+
+/* Mobile: keep cinematic crop, not full-image shrink */
+@media(max-width:760px){
+  .landing-panel,
+  .page-hero{
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+  }
+  .hero-video-mobile{
+    object-fit:cover !important;
+    object-position:center center !important;
+  }
+  .page-hero{
+    min-height:72vh !important;
+  }
+  .page-hero-content{
+    padding:0 6vw 7vh !important;
+  }
+  .page-hero h1{
+    font-size:clamp(30px,8.8vw,44px) !important;
+    line-height:1.04 !important;
+  }
+}
