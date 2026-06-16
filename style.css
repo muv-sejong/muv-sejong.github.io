@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 50;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0));
 }
 
 .logo {
@@ -36,6 +36,7 @@ body {
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.65);
 }
 
 nav {
@@ -50,6 +51,7 @@ nav a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.70);
 }
 
 nav a:hover {
@@ -77,33 +79,36 @@ nav a:hover {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+
+  /* 영상 자체를 약간 밝고 선명하게 */
+  filter: brightness(1.18) contrast(1.05) saturate(1.08);
 }
 
-/* Brighter cinematic overlay */
+/* 밝게 조정한 cinematic overlay */
 .hero-dark-overlay,
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(to right, rgba(0,0,0,0.48), rgba(0,0,0,0.12)),
-    linear-gradient(to top, rgba(0,0,0,0.34), rgba(0,0,0,0.02));
+    linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0.02)),
+    linear-gradient(to top, rgba(0,0,0,0.18), rgba(0,0,0,0.00));
 }
 
-/* Subtle technical grid filter */
+/* 아주 약한 기술 격자 필터 */
 .hero-checker-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.055;
+  opacity: 0.025;
   background-image:
-    linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
   background-size: 26px 26px;
 }
 
-/* Very light vignette */
+/* 매우 약한 가장자리 비네팅 */
 .hero::after {
   content: "";
   position: absolute;
@@ -111,7 +116,7 @@ nav a:hover {
   z-index: 3;
   pointer-events: none;
   background:
-    radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.20) 100%);
+    radial-gradient(circle at center, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.08) 100%);
 }
 
 .hero-content {
@@ -132,7 +137,7 @@ nav a:hover {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.75);
+  text-shadow: 0 3px 14px rgba(0,0,0,0.85);
 }
 
 h1 {
@@ -144,7 +149,9 @@ h1 {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 3px 18px rgba(0,0,0,0.80);
+  text-shadow:
+    0 3px 20px rgba(0,0,0,0.95),
+    0 1px 4px rgba(0,0,0,0.90);
 }
 
 .subtitle {
@@ -154,7 +161,7 @@ h1 {
   line-height: 1.45;
   font-weight: 500;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.75);
+  text-shadow: 0 3px 14px rgba(0,0,0,0.90);
 }
 
 .button {
@@ -163,14 +170,15 @@ h1 {
   padding: 15px 30px;
   border: 2px solid #fff;
   color: #fff;
-  background: rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.08);
   text-decoration: none;
   font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   transition: 0.25s ease;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .button:hover {
@@ -260,6 +268,10 @@ footer {
     min-height: 520px;
   }
 
+  .hero-video {
+    filter: brightness(1.12) contrast(1.04) saturate(1.05);
+  }
+
   .hero-content {
     padding: 0 6vw 9vh;
   }
@@ -293,14 +305,14 @@ footer {
   }
 
   .hero-checker-overlay {
-    opacity: 0.04;
+    opacity: 0.018;
     background-size: 22px 22px;
   }
 
   .hero-dark-overlay,
   .hero-overlay {
     background:
-      linear-gradient(to right, rgba(0,0,0,0.52), rgba(0,0,0,0.18)),
-      linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0.04));
+      linear-gradient(to right, rgba(0,0,0,0.34), rgba(0,0,0,0.05)),
+      linear-gradient(to top, rgba(0,0,0,0.24), rgba(0,0,0,0.00));
   }
 }
