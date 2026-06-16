@@ -1,755 +1,142 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>MUV Lab | Sejong University</title>
   <meta name="description" content="Marine Unmanned Vehicle Laboratory, Sejong University" />
-
-  <link rel="stylesheet" href="style.css?v=16" />
+  <link rel="stylesheet" href="style.css?v=20" />
 </head>
-
 <body>
-  <header class="header">
-    <a href="#" class="logo">MUV LAB</a>
 
-    <nav>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#members">Members</a>
-      <a href="#join">Join Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header class="site-header">
+  <a class="brand" href="index.html">MUV LAB</a>
+  <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+  <nav class="site-nav">
+    <a href="research.html">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+    <a href="members.html">Members</a>
+    <a href="join.html">Join Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <!-- =========================================================
-       HERO
-  ========================================================== -->
-  <section class="hero">
-    <video class="hero-video hero-video-pc" autoplay muted loop playsinline poster="assets/poster.png">
+
+<main>
+  <section class="hero hero-video-section">
+    <video class="hero-video hero-video-pc" autoplay muted loop playsinline poster="assets/research.png">
       <source src="assets/hero.mp4" type="video/mp4" />
     </video>
-
-    <video class="hero-video hero-video-mobile" autoplay muted loop playsinline poster="assets/poster.png">
+    <video class="hero-video hero-video-mobile" autoplay muted loop playsinline poster="assets/research.png">
       <source src="assets/hero-mobile.mp4" type="video/mp4" />
     </video>
-
-    <div class="hero-dark-overlay"></div>
-    <div class="hero-grid-overlay"></div>
-
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
     <div class="hero-content">
+      <p class="eyebrow">Sejong University</p>
       <h1>Marine Unmanned Vehicle Laboratory</h1>
-
-      <p class="subtitle">
-        <span>Nonlinear Control</span>
-        <span>Autonomous Marine Systems</span>
-        <span>Defense AI</span>
-      </p>
-
-      <a href="#research" class="button">Explore Research</a>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       RESEARCH
-  ========================================================== -->
-  <section id="research" class="section section-dark">
-    <div class="section-inner">
-      <p class="eyebrow">Research</p>
-
-      <h2 class="section-title">
+      <p class="hero-subtitle">
         Guidance-and-control-centered autonomy for marine unmanned systems.
-      </h2>
-
-      <p class="section-lead">
-        MUV Lab studies autonomy technologies for marine unmanned systems through
-        guidance, nonlinear control, cooperative operation, and simulation-based
-        verification. The lab focuses on AUVs, UUVs, USVs, and defense-oriented
-        unmanned systems operating under uncertainty, actuator constraints, limited
-        sensing, and intermittent underwater communication.
       </p>
-
-      <div class="card-grid four">
-        <article class="card">
-          <span class="card-number">01</span>
-          <h3>Nonlinear Control for Autonomy</h3>
-          <p>
-            Lyapunov-based control, sliding-mode control, sampled-data control,
-            input saturation, robustness, and stability analysis for autonomous
-            unmanned systems.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">02</span>
-          <h3>Guidance and Path Following</h3>
-          <p>
-            Guidance laws, path-following control, trajectory tracking, waypoint
-            missions, and 3D maneuvering for underwater and surface vehicles.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">03</span>
-          <h3>Cooperative Marine Autonomy</h3>
-          <p>
-            Formation control, cooperative path following, distributed coordination,
-            and autonomous operation under delayed, intermittent, and low-rate
-            underwater communication.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">04</span>
-          <h3>Mission-Level Simulation</h3>
-          <p>
-            6-DOF vehicle dynamics, digital twin simulation, mission scenario
-            generation, performance evaluation, and verification of autonomy
-            algorithms.
-          </p>
-        </article>
+      <div class="hero-actions">
+        <a href="research.html" class="button">Explore Research</a>
+        <a href="join.html" class="button ghost">Join MUV Lab</a>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================
-       PROJECTS
-  ========================================================== -->
-  <section id="projects" class="section section-black">
-    <div class="section-inner">
+  <section class="landing-panel" style="--bg:url('assets/research.png')">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <p class="eyebrow">Research</p>
+      <h2>Autonomy built on guidance and control.</h2>
+      <p>
+        Nonlinear control, path following, cooperative marine autonomy, and mission-level simulation for AUVs, UUVs, and USVs.
+      </p>
+      <div class="keyword-row">
+        <span>Nonlinear Control</span><span>Guidance</span><span>Formation</span><span>Simulation</span>
+      </div>
+      <a href="research.html" class="button">Explore Research</a>
+    </div>
+  </section>
+
+  <section class="landing-panel" style="--bg:url('assets/projects.png')">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
       <p class="eyebrow">Projects</p>
-
-      <h2 class="section-title">
-        Project-driven research for real marine autonomy problems.
-      </h2>
-
-      <p class="section-lead">
-        MUV Lab conducts sponsored and national research projects on guidance,
-        control, cooperative autonomy, and simulation-based verification for marine
-        unmanned systems. Ongoing projects provide graduate students with direct
-        experience in industry- and defense-oriented research.
+      <h2>Ongoing defense and national R&amp;D projects.</h2>
+      <p>
+        Sponsored and public research projects connecting control theory, autonomy algorithms, simulation, and marine unmanned system applications.
       </p>
-
-      <div class="subsection-heading">
-        <span>Ongoing Projects</span>
+      <div class="metric-grid compact">
+        <div><strong class="count" data-target="8">0</strong><span>Defense / Industry Projects</span></div>
+        <div><strong class="count" data-target="13">0</strong><span>National / Public R&amp;D Projects</span></div>
+        <div><strong class="count" data-target="2">0</strong><span>Ongoing Major Projects</span></div>
       </div>
-
-      <div class="project-feature-list">
-        <article class="project-feature">
-          <div class="project-status">Ongoing · LIG Nex1 · 2025–2027</div>
-          <h3>Cooperative Operation Technology for Mine-Detection AUVs</h3>
-          <p>
-            Development of guidance, control, and cooperative autonomy technologies
-            for multi-AUV mine-detection missions under underwater communication
-            constraints.
-          </p>
-
-          <div class="tag-row">
-            <span>AUV</span>
-            <span>Formation Control</span>
-            <span>Mine Detection</span>
-            <span>Underwater Communication</span>
-          </div>
-        </article>
-
-        <article class="project-feature">
-          <div class="project-status">Ongoing · NRF · 2025–2028</div>
-          <h3>Hybrid Path-Following Approach for AUVs</h3>
-          <p>
-            A hybrid approach to autonomous underwater vehicle path following using
-            nonlinear model-based control and data-driven control, with theoretical
-            development and experimental validation.
-          </p>
-
-          <div class="tag-row">
-            <span>Nonlinear Control</span>
-            <span>Data-Driven Control</span>
-            <span>Path Following</span>
-            <span>AUV</span>
-          </div>
-        </article>
-
-        <article class="project-feature">
-          <div class="project-status">Ongoing Platform</div>
-          <h3>Digital Twin Simulation for Marine Unmanned Vehicle Missions</h3>
-          <p>
-            Development of mission-level simulation environments for evaluating path
-            following, formation operation, actuator limits, delay, packet loss, and
-            autonomy performance.
-          </p>
-
-          <div class="tag-row">
-            <span>Digital Twin</span>
-            <span>MATLAB</span>
-            <span>Python</span>
-            <span>Verification</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="subsection-heading">
-        <span>Defense and Industry-Sponsored Projects</span>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item ongoing">
-          <div class="timeline-year">2025–2027</div>
-          <div class="timeline-body">
-            <h3>Cooperative Operation Technology for Mine-Detection AUVs</h3>
-            <p>LIG Nex1. Guidance, control, and cooperative operation for mine-detection AUV missions.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2023–2025</div>
-          <div class="timeline-body">
-            <h3>AUV with Variable Speed for Target Submarine Applications</h3>
-            <p>LIG Nex1. Guidance and control technologies for variable-speed unmanned underwater vehicle operation.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2023–2025</div>
-          <div class="timeline-body">
-            <h3>Guidance Method for Lightweight Torpedo Performance Improvement</h3>
-            <p>LIG Nex1. Defense-oriented guidance algorithm research and performance analysis.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2023–2025</div>
-          <div class="timeline-body">
-            <h3>Controller Design for Lightweight Torpedo Performance Improvement</h3>
-            <p>LIG Nex1. Control algorithm design and validation for performance improvement.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2021</div>
-          <div class="timeline-body">
-            <h3>Robust Control System for Autonomous Mine-Search AUVs</h3>
-            <p>LIG Nex1. Robust control system development for autonomous mine-search unmanned underwater vehicles.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2021</div>
-          <div class="timeline-body">
-            <h3>Attitude Control System for Autonomous Mine-Search AUVs</h3>
-            <p>LIG Nex1. Attitude control system development for autonomous underwater vehicle applications.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2016–2017</div>
-          <div class="timeline-body">
-            <h3>Autonomous Navigation Technology for Large-Diameter Search AUVs</h3>
-            <p>LIG Nex1. Autonomous navigation and control technologies for large-diameter unmanned underwater vehicles.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2010–2011</div>
-          <div class="timeline-body">
-            <h3>Intelligent Control System for AUV Path Tracking</h3>
-            <p>LIG Nex1. Intelligent control system design for unmanned underwater vehicle path tracking.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="subsection-heading">
-        <span>National Research and Public Projects</span>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item ongoing">
-          <div class="timeline-year">2025–2028</div>
-          <div class="timeline-body">
-            <h3>Hybrid Path-Following Approach for AUVs Using Nonlinear Model-Based and Data-Driven Control</h3>
-            <p>National Research Foundation of Korea. Theory and experimental validation for AUV path following.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2024</div>
-          <div class="timeline-body">
-            <h3>Autonomous Marine Systems Laboratory</h3>
-            <p>Commercializations Promotion Agency for R&D Outcomes. Laboratory platform for autonomous marine system research.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2021–2024</div>
-          <div class="timeline-body">
-            <h3>Convex Relaxation for Multi-Dimensional Parameterized LMIs and Fuzzy-Model-Based Control of UUVs</h3>
-            <p>National Research Foundation of Korea. Theoretical LMI relaxation and application to unmanned underwater vehicles.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2019–2022</div>
-          <div class="timeline-body">
-            <h3>Fuzzy Event-Triggered Control for Nonlinear Networked Control Systems</h3>
-            <p>National Research Foundation of Korea. Application to autonomous wave gliders and networked nonlinear systems.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2017–2020</div>
-          <div class="timeline-body">
-            <h3>Analysis and Design of Nonlinear Sampled-Data Control Systems with Input Saturation</h3>
-            <p>National Research Foundation of Korea. Direct-discretization and input-delay approaches for constrained nonlinear systems.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2014–2017</div>
-          <div class="timeline-body">
-            <h3>Optimal Digital Fuzzy Control for Nonlinear Systems with Input Saturation and Delay</h3>
-            <p>National Research Foundation of Korea. Application to optimal operation of autonomous underwater gliders.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2011–2014</div>
-          <div class="timeline-body">
-            <h3>Robust Observer-Based Digital Fuzzy Tracking Control</h3>
-            <p>National Research Foundation of Korea. Application to formation operation of AUVs in ocean currents.</p>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-year">2010–2013</div>
-          <div class="timeline-body">
-            <h3>3D Path Planning and Real-Time Underwater Obstacle Avoidance Control</h3>
-            <p>Defense Unmanned Technology Research Center. 3D path planning and control for underwater unmanned systems.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="subsection-heading">
-        <span>Sponsored Research Capabilities</span>
-      </div>
-
-      <div class="card-grid three">
-        <article class="card">
-          <span class="card-number">A</span>
-          <h3>Algorithm Design</h3>
-          <p>
-            Guidance, tracking, path-following, formation, and nonlinear control
-            algorithms for marine unmanned vehicles.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">B</span>
-          <h3>Simulation-Based Validation</h3>
-          <p>
-            MATLAB, Simulink, and Python-based verification under uncertainty,
-            actuator constraints, communication delay, and packet loss.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">C</span>
-          <h3>Technical Collaboration</h3>
-          <p>
-            Feasibility analysis, algorithm review, performance improvement,
-            prototype simulation, and technical consulting.
-          </p>
-        </article>
-      </div>
+      <a href="projects.html" class="button">View Projects</a>
     </div>
   </section>
 
-  <!-- =========================================================
-       PUBLICATIONS
-  ========================================================== -->
-  <section id="publications" class="section section-dark">
-    <div class="section-inner">
+  <section class="landing-panel" style="--bg:url('assets/publications.png')">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
       <p class="eyebrow">Publications</p>
-
-      <h2 class="section-title">
-        Full research record in nonlinear control and autonomous marine systems.
-      </h2>
-
-      <p class="section-lead">
-        Publications cover nonlinear control, sampled-data systems, fuzzy and LPV
-        systems, data-driven control, robust control, and autonomous marine vehicle
-        control. The list below is organized so that visitors can view recent
-        highlights first and expand the full publication record.
+      <h2>Full research record in control and marine autonomy.</h2>
+      <p>
+        Publications in nonlinear control, sampled-data systems, fuzzy/LPV systems, data-driven control, and autonomous marine vehicle control.
       </p>
-
-      <div class="stats-grid">
-        <div class="stat-box">
-          <strong>150+</strong>
-          <span>Publications</span>
-        </div>
-        <div class="stat-box">
-          <strong>40+</strong>
-          <span>SCIE Papers</span>
-        </div>
-        <div class="stat-box">
-          <strong>Marine</strong>
-          <span>Autonomy Applications</span>
-        </div>
-        <div class="stat-box">
-          <strong>Control</strong>
-          <span>Theory to Implementation</span>
-        </div>
+      <div class="metric-grid compact">
+        <div><strong class="count" data-target="150">0</strong><span>Total Published Papers</span></div>
+        <div><strong class="count" data-target="40">0</strong><span>SCIE Papers</span></div>
+        <div><strong class="count" data-target="12">0</strong><span>Papers in Progress</span></div>
       </div>
-
-      <div class="publication-actions">
-        <a class="button secondary" href="#" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="button secondary" href="#" target="_blank" rel="noopener">ORCID</a>
-      </div>
-
-      <div class="subsection-heading">
-        <span>Selected Highlights</span>
-      </div>
-
-      <ol class="publication-list">
-        <li>
-          <span class="pub-year">2026</span>
-          <span class="pub-text">
-            D. Kim, “Finite-time residual compensation for control-affine nonlinear systems under input saturation and unmatched disturbances,” <em>Mathematics and Computers in Simulation</em>, 2026.
-          </span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <span class="pub-text">
-            J. W. Ryu, S. Han, and D. Kim, “Data-driven path-following control for unmanned surface vehicles,” <em>Scientific Reports</em>, 2026.
-          </span>
-        </li>
-        <li>
-          <span class="pub-year">2025</span>
-          <span class="pub-text">
-            M. H. Kim, D. H. Lee, and D. W. Kim, “Three-dimensional path-following control of nonlinear autonomous underwater vehicles with actuator saturation,” <em>Ocean Engineering</em>, 2025.
-          </span>
-        </li>
-        <li>
-          <span class="pub-year">2025</span>
-          <span class="pub-text">
-            D. W. Kim and D. H. Lee, “Relaxed conditions for parameterized linear matrix inequality in the form of nested fuzzy summations,” <em>Applied Mathematics and Computation</em>, 2025.
-          </span>
-        </li>
-        <li>
-          <span class="pub-year">2015</span>
-          <span class="pub-text">
-            D. W. Kim, “Tracking of REMUS autonomous underwater vehicles with actuator saturations,” <em>Automatica</em>, 2015.
-          </span>
-        </li>
-      </ol>
-
-      <div class="subsection-heading">
-        <span>Recent Journal Publications</span>
-      </div>
-
-      <div class="publication-years">
-        <details open>
-          <summary>2026</summary>
-          <ol>
-            <li>H. H. Lee and D. Kim, “Barrier-function-based adaptive sliding mode control for path following of USV with unknown disturbance,” <em>The Transactions of the Korean Institute of Electrical Engineers</em>, vol. 75, no. 3, pp. 615–623, 2026.</li>
-            <li>J. W. Ryu, S. Han, and D. Kim, “Data-driven path-following control for unmanned surface vehicles,” <em>Scientific Reports</em>, vol. 16, no. 1718, 2026.</li>
-            <li>D. Kim, “Finite-time residual compensation for control-affine nonlinear systems under input saturation and unmatched disturbances,” <em>Mathematics and Computers in Simulation</em>, 2026.</li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>2025</summary>
-          <ol>
-            <li>M. H. Kim, D. H. Lee, and D. W. Kim, “Three-dimensional path following control of nonlinear autonomous underwater vehicles with actuator saturation,” <em>Ocean Engineering</em>, vol. 317, 119966, 2025.</li>
-            <li>D. W. Kim and D. H. Lee, “Relaxed conditions for parameterized linear matrix inequality in the form of nested fuzzy summations,” <em>Applied Mathematics and Computation</em>, vol. 487, 129079, 2025.</li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>2024</summary>
-          <ol>
-            <li>D. H. Lee and D. W. Kim, “On the local quadratic stability of T-S fuzzy systems in the vicinity of the origin,” <em>Fuzzy Sets and Systems</em>, vol. 497, 109113, 2024.</li>
-            <li>D. H. Lee and D. W. Kim, “Harnessing membership function dynamics for stability analysis of T-S fuzzy systems,” <em>Information Sciences</em>, vol. 681, 121236, 2024.</li>
-            <li>D. W. Kim and D. Lee, “Relaxed conditions for parameterized linear matrix inequality in the form of double fuzzy summation,” <em>IEEE Transactions on Fuzzy Systems</em>, vol. 32, no. 3, pp. 1608–1612, 2024.</li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>2023</summary>
-          <ol>
-            <li>D. Lee and D. W. Kim, “Data-driven control design with LMIs and dynamic programming,” <em>IEEE Access</em>, vol. 11, pp. 14309–14321, 2023.</li>
-            <li>D. W. Kim and D. H. Lee, “Relaxed conditions for parameterized linear matrix inequality in the form of double fuzzy summation,” <em>IEEE Transactions on Fuzzy Systems</em>, 2023.</li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>2022 and Earlier</summary>
-          <ol>
-            <li>D. Lee, D. W. Kim, and J. Hu, “Distributed off-policy temporal difference learning using primal-dual method,” <em>IEEE Access</em>, vol. 10, pp. 107077–107094, 2022.</li>
-            <li>D. W. Kim, “Separation principle for linear sampled-data control systems under observer-based output feedback with aperiodic sampling,” <em>IEEE Access</em>, vol. 8, pp. 53777–53783, 2020.</li>
-            <li>D. W. Kim, “Fuzzy model-based control of a quadrotor,” <em>Fuzzy Sets and Systems</em>, vol. 371, pp. 136–147, 2019.</li>
-            <li>D. W. Kim, “Further refinement on controller design for linear systems with input saturation,” <em>Automatica</em>, vol. 77, pp. 14–17, 2017.</li>
-            <li>D. W. Kim, “Tracking of REMUS autonomous underwater vehicles with actuator saturations,” <em>Automatica</em>, vol. 58, pp. 15–21, 2015.</li>
-            <li>D. H. Lee and D. W. Kim, “Relaxed LMI conditions for local stability and local stabilization of continuous-time Takagi-Sugeno fuzzy systems,” <em>IEEE Transactions on Cybernetics</em>, vol. 44, no. 3, pp. 394–405, 2014.</li>
-            <li>D. W. Kim, H. J. Lee, and M. Tomizuka, “Fuzzy stabilization of nonlinear systems under sampled-data feedback: an exact discrete-time model approach,” <em>IEEE Transactions on Fuzzy Systems</em>, vol. 18, no. 2, pp. 251–260, 2010.</li>
-            <li>D. W. Kim and H. J. Lee, “Stability connection between sampled-data fuzzy control systems with quantization and their approximate discrete-time model,” <em>Automatica</em>, vol. 45, no. 6, pp. 1518–1523, 2009.</li>
-            <li>D. W. Kim, J. B. Park, and Y. H. Joo, “Theoretical justification of approximate norm minimization method for intelligent digital redesign,” <em>Automatica</em>, vol. 44, no. 3, pp. 851–856, 2008.</li>
-            <li>D. W. Kim, J. B. Park, and Y. H. Joo, “Effective digital implementation of fuzzy control systems based on approximate discrete-time models,” <em>Automatica</em>, vol. 43, no. 10, pp. 1671–1683, 2007.</li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>Recent Conference Papers</summary>
-          <ol>
-            <li>J. W. Ryu and D. Kim, “Design of a data-driven controller for path-following of unmanned surface vehicle,” <em>Information and Control Symposium</em>, 2025.</li>
-            <li>H. H. Lee and D. Kim, “Barrier-function-based adaptive sliding mode control for path following of USV in the presence of noise and disturbances,” <em>Information and Control Symposium</em>, 2025.</li>
-            <li>D. W. Kim, “Depth control of autonomous underwater vehicles with multi-thruster configuration,” 한국정밀공학회 추계학술대회, 2024.</li>
-            <li>D. H. Kim and D. W. Kim, “Heading control of autonomous underwater vehicles with multi-thruster configuration,” 한국정밀공학회 추계학술대회, 2024.</li>
-            <li>D. Lee, H. D. Lim, and D. W. Kim, “Continuous-time distributed dynamic programming for networked multi-agent Markov decision processes,” <em>IEEE ICCA</em>, 2024.</li>
-            <li>D. W. Kim, M. H. Lee, and D. H. Lee, “Path following control of unmanned surface vessel: linear control approach,” 대한전기학회 CICS, 2023.</li>
-            <li>D. Lee and D. W. Kim, “Formulations for data-driven control design and reinforcement learning,” <em>IEEE ICCA</em>, pp. 207–212, 2022.</li>
-          </ol>
-        </details>
-      </div>
+      <a href="publications.html" class="button">View Publications</a>
     </div>
   </section>
 
-  <!-- =========================================================
-       MEMBERS
-  ========================================================== -->
-  <section id="members" class="section section-black">
-    <div class="section-inner">
+  <section class="landing-panel" style="--bg:url('assets/joinus.png')">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
       <p class="eyebrow">Members</p>
-
-      <h2 class="section-title">
-        Building a team for control, robotics, marine autonomy, and defense AI.
-      </h2>
-
-      <p class="section-lead">
-        MUV Lab welcomes students and researchers interested in theoretical control,
-        autonomous marine systems, simulation, and project-driven research with
-        real defense and industry applications.
+      <h2>A project-driven team for marine unmanned systems.</h2>
+      <p>
+        Principal investigator, graduate researchers, and incoming students working across control, robotics, simulation, and defense AI.
       </p>
-
-      <div class="pi-card">
-        <div>
-          <p class="eyebrow small">Principal Investigator</p>
-          <h3>Professor Do Wan Kim</h3>
-          <p>
-            Department of Defense Systems Engineering<br />
-            Sejong University
-          </p>
-        </div>
-
-        <div>
-          <p>
-            Professor Kim received the B.S., M.S., and Ph.D. degrees in Electrical
-            and Electronic Engineering from Yonsei University in 2002, 2004, and
-            2007, respectively. He was a postdoctoral researcher at the University
-            of California, Berkeley in 2008 and a research professor at Yonsei
-            University in 2009. He joined Sejong University in 2025 after serving
-            as a professor at Hanbat National University from 2010 to 2025.
-          </p>
-        </div>
+      <div class="metric-grid compact">
+        <div><strong class="count" data-target="1">0</strong><span>Principal Investigator</span></div>
+        <div><strong class="count" data-target="3">0</strong><span>Researchers</span></div>
+        <div><strong class="count" data-target="4">0</strong><span>Research Tracks</span></div>
       </div>
-
-      <div class="subsection-heading">
-        <span>Researchers</span>
-      </div>
-
-      <div class="card-grid three">
-        <article class="card">
-          <span class="card-number">01</span>
-          <h3>Je Wook Ryu</h3>
-          <p>
-            Integrated Master's–PhD Student<br />
-            Fall 2025<br /><br />
-            Research interests: data-driven control, unmanned surface vehicles,
-            path following, and marine autonomy.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">02</span>
-          <h3>Dong Geon Lee</h3>
-          <p>
-            Incoming Integrated Master's–PhD Student<br />
-            Spring 2026<br /><br />
-            Research interests: guidance, control, simulation, and autonomous
-            marine systems.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">03</span>
-          <h3>Hoon Hee Lee</h3>
-          <p>
-            Incoming Integrated Master's–PhD Student<br />
-            Spring 2026<br /><br />
-            Research interests: sliding-mode control, barrier-function-based
-            control, USV path following, and disturbance rejection.
-          </p>
-        </article>
-      </div>
-
-      <div class="subsection-heading">
-        <span>PI Profile</span>
-      </div>
-
-      <div class="join-grid">
-        <div>
-          <h3>Education</h3>
-          <ul class="clean-list">
-            <li>Ph.D. in Electrical and Electronic Engineering, Yonsei University, Korea, 2007</li>
-            <li>M.S. in Electrical and Electronic Engineering, Yonsei University, Korea, 2004</li>
-            <li>B.S. in Electrical and Electronic Engineering, Yonsei University, Korea, 2002</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Professional Experience</h3>
-          <ul class="clean-list">
-            <li>Professor, Sejong University, Korea, 2025.03–Present</li>
-            <li>Professor, Hanbat National University, Korea, 2019.04–2025.02</li>
-            <li>Associate Professor, Hanbat National University, Korea, 2014.04–2019.03</li>
-            <li>Assistant Professor, Hanbat National University, Korea, 2010.03–2014.03</li>
-            <li>Research Professor, Yonsei University, Korea, 2009.03–2010.02</li>
-            <li>Postdoctoral Researcher, University of California, Berkeley, USA, 2008.01–2008.12</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="subsection-heading">
-        <span>Student Research Tracks</span>
-      </div>
-
-      <div class="card-grid four">
-        <article class="card">
-          <span class="card-number">01</span>
-          <h3>Control Theory Track</h3>
-          <p>
-            Lyapunov theory, nonlinear control, robust control, sliding-mode control,
-            sampled-data systems, and stability analysis.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">02</span>
-          <h3>Marine Autonomy Track</h3>
-          <p>
-            AUV and USV guidance, path following, formation control, cooperative
-            mission operation, and marine vehicle dynamics.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">03</span>
-          <h3>Simulation and Software Track</h3>
-          <p>
-            MATLAB, Simulink, Python, C/C++, ROS2, digital twin simulation, and
-            autonomy verification.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-number">04</span>
-          <h3>Defense AI Track</h3>
-          <p>
-            Mission planning, world models, decision support, distributed autonomy,
-            and AI-assisted autonomous operation.
-          </p>
-        </article>
-      </div>
+      <a href="members.html" class="button">View Members</a>
     </div>
   </section>
 
-  <!-- =========================================================
-       JOIN US
-  ========================================================== -->
-  <section id="join" class="section section-join">
-    <div class="section-inner join-inner">
-      <p class="eyebrow">Join Us</p>
-
-      <h2 class="section-title">
-        Work on real autonomy problems for marine unmanned systems.
-      </h2>
-
-      <p class="section-lead">
-        We are looking for motivated M.S. and Ph.D. students who want to work on
-        guidance, nonlinear control, simulation, cooperative autonomy, and
-        defense-oriented unmanned system projects.
+  <section class="landing-panel" style="--bg:url('assets/contact.png')">
+    <div class="panel-overlay"></div>
+    <div class="panel-content">
+      <p class="eyebrow">Join / Contact</p>
+      <h2>Graduate admission and sponsored research inquiries.</h2>
+      <p>
+        MUV Lab welcomes motivated graduate students and technical collaboration with companies, defense organizations, and research institutes.
       </p>
-
-      <div class="join-grid">
-        <div>
-          <h3>Students will work on</h3>
-          <ul class="clean-list">
-            <li>Autonomous underwater and surface vehicle guidance</li>
-            <li>Nonlinear control and stability analysis</li>
-            <li>Multi-vehicle formation control</li>
-            <li>Simulation and digital twin development</li>
-            <li>Underwater communication-limited autonomy</li>
-            <li>Defense-oriented unmanned system projects</li>
-            <li>Sponsored research with companies and research institutes</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Recommended background</h3>
-          <ul class="clean-list">
-            <li>Control engineering</li>
-            <li>Electrical or mechanical engineering</li>
-            <li>Robotics and autonomous systems</li>
-            <li>Applied mathematics</li>
-            <li>AI and software</li>
-            <li>MATLAB, Python, Simulink, C/C++, or ROS2</li>
-          </ul>
-        </div>
+      <div class="keyword-row">
+        <span>MS / PhD</span><span>Internship</span><span>Sponsored Research</span><span>Technical Collaboration</span>
       </div>
-
-      <a href="#contact" class="button">Contact PI</a>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       CONTACT
-  ========================================================== -->
-  <section id="contact" class="section section-contact">
-    <div class="section-inner contact-inner">
-      <p class="eyebrow">Contact</p>
-
-      <h2 class="section-title">
-        Graduate admission and sponsored research inquiries.
-      </h2>
-
-      <div class="contact-grid">
-        <div>
-          <h3>Marine Unmanned Vehicle Laboratory</h3>
-          <p>
-            Department of Defense Systems Engineering<br />
-            Sejong University<br />
-            Seoul, Republic of Korea
-          </p>
-        </div>
-
-        <div>
-          <h3>Graduate Admission / Student Inquiry</h3>
-          <p>
-            Email: <a href="mailto:dwk@sejong.ac.kr">dwk@sejong.ac.kr</a>
-          </p>
-
-          <h3>Sponsored Research / Technical Collaboration</h3>
-          <p>
-            Email: <a href="mailto:dwk@sejong.ac.kr">dwk@sejong.ac.kr</a>
-          </p>
-        </div>
+      <div class="hero-actions">
+        <a href="join.html" class="button">Join Us</a>
+        <a href="contact.html" class="button ghost">Contact</a>
       </div>
     </div>
   </section>
+</main>
 
-  <footer>
-    <span>MUV LAB · SEJONG UNIVERSITY</span>
-    <span>© 2026 Marine Unmanned Vehicle Laboratory. All rights reserved.</span>
-  </footer>
+
+<footer class="site-footer">
+  <span>MUV LAB · SEJONG UNIVERSITY</span>
+  <span>© 2026 Marine Unmanned Vehicle Laboratory. All rights reserved.</span>
+</footer>
+<script src="script.js"></script>
+
 </body>
 </html>
