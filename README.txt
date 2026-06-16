@@ -28,3 +28,5 @@ Edit data-target values in index.html and publications.html/projects.html:
 - Defense / Industry Projects
 - National / Public R&D Projects
 - Ongoing Major Projects
+
+Update v24: Publication landing/page wording aligned with research areas; metrics updated to 162 total published papers, 45 SCIE papers, and 10 papers in progress.
