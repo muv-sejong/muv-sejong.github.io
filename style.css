@@ -1091,3 +1091,88 @@
     margin-bottom:64px;
   }
 }
+
+/* v38: minimal Members copy + keyword-driven cards */
+.simple-heading{
+  margin-bottom:28px !important;
+}
+
+.simple-heading .block-title{
+  margin:0 !important;
+}
+
+.member-keywords{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:auto;
+}
+
+.member-keywords span{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 8px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.035);
+  color:rgba(255,255,255,.68);
+  font-size:11px;
+  line-height:1.25;
+  font-weight:700;
+}
+
+.track-keywords{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:9px;
+}
+
+.track-keywords li{
+  position:relative;
+  padding-left:16px;
+  color:rgba(255,255,255,.72);
+  font-size:14px;
+  line-height:1.45;
+}
+
+.track-keywords li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.72em;
+  width:5px;
+  height:5px;
+  border-radius:999px;
+  background:rgba(255,255,255,.55);
+}
+
+.researcher-card p{
+  margin-bottom:18px !important;
+}
+
+.track-grid article{
+  min-height:230px !important;
+}
+
+.track-grid h3{
+  margin-bottom:18px !important;
+}
+
+.track-grid p{
+  display:none;
+}
+
+@media(max-width:760px){
+  .simple-heading{
+    margin-bottom:20px !important;
+  }
+
+  .member-keywords{
+    margin-top:16px;
+  }
+
+  .track-grid article{
+    min-height:auto !important;
+  }
+}
