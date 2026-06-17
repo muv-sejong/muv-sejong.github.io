@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | MUV Lab</title>
   <meta name="description" content="Research areas of MUV Lab" />
-  <link rel="stylesheet" href="style.css?v=60" />
+  <link rel="stylesheet" href="style.css?v=62" />
 </head>
 <body>
 
@@ -83,22 +83,43 @@
           <p>Mission-level autonomy for unmanned maritime systems, including path planning, path following, waypoint management, mission sequencing, and autonomous operation in underwater and surface environments.</p>
           <div class="tags-v60"><span>UUV / USV</span><span>Mission autonomy</span><span>Path planning</span><span>Waypoint guidance</span></div>
         </div>
-        <div class="mini-system-v60">
-          <div class="mini-head-v60">Mission-to-Guidance Flow</div>
-          <div class="mini-flow-v60">
-            <article>Mission Area</article><i></i><article>Route Plan</article><i></i><article>Constraints</article><i></i><article>Reference</article>
+        <div class="mission-autonomy-board-v62">
+          <div class="mini-head-v60">Mission Autonomy Schematic</div>
+          <div class="mission-autonomy-grid-v62">
+            <svg viewBox="0 0 620 360" role="img" aria-label="Mission autonomy schematic">
+              <defs>
+                <marker id="missionV62Arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 Z" fill="#66d7ff"/>
+                </marker>
+              </defs>
+              <rect x="64" y="58" width="442" height="236" rx="8" class="mission-area-v62"/>
+              <path d="M104 250 C170 142, 242 222, 324 132 S432 122, 482 82" class="mission-path-v62" marker-end="url(#missionV62Arrow)"/>
+              <path d="M104 250 L218 158 L306 204 L410 120 L482 82" class="mission-route-v62"/>
+              <rect x="364" y="172" width="92" height="58" rx="5" class="mission-constraint-v62"/>
+              <text x="410" y="206" class="mission-svg-label-v62" text-anchor="middle">constraint</text>
+              <circle cx="104" cy="250" r="7" class="mission-wp-v62"/><circle cx="218" cy="158" r="7" class="mission-wp-v62"/><circle cx="306" cy="204" r="7" class="mission-wp-v62"/><circle cx="410" cy="120" r="7" class="mission-wp-v62"/><circle cx="482" cy="82" r="7" class="mission-wp-v62"/>
+              <g class="mission-uuv-v62" transform="translate(312 242) rotate(-12)">
+                <rect x="-40" y="-10" width="80" height="20" rx="10"/><polygon points="40,-10 62,0 40,10"/>
+              </g>
+              <path d="M312 242 L306 204" class="mission-link-v62"/>
+              <text x="284" y="326" class="mission-svg-caption-v62" text-anchor="middle">mission area · route · constraints · vehicle task</text>
+            </svg>
+            <div class="mission-modules-v62">
+              <article><span>Input</span><strong>Mission objectives</strong></article>
+              <article><span>Planning</span><strong>Route and waypoint logic</strong></article>
+              <article><span>Execution</span><strong>Reference for guidance/control</strong></article>
+            </div>
           </div>
-          <p>Mission objectives are converted into feasible references for vehicle-level guidance and control.</p>
         </div>
       </section>
 
       <section class="research-track-v60 reverse">
         <div class="track-copy-v60">
-          <p class="eyebrow small">02 / 3-D Guidance and Control</p>
-          <h3>Nonlinear 3-D Guidance and Control</h3>
+          <p class="eyebrow small">02 / 3D Guidance and Control</p>
+          <h3>Nonlinear 3D Guidance and Control</h3>
           <p>Nonlinear guidance and control algorithms for marine vehicles with spatial path-following objectives, underactuated dynamics, actuator limits, model uncertainty, and environmental disturbances.</p>
           <ul class="research-list-v60">
-            <li>3-D path-following guidance and nearest-point projection</li>
+            <li>3D path-following guidance and nearest-point projection</li>
             <li>Cross-track error regulation with heading and pitch command generation</li>
             <li>Vehicle-level feedback control under actuator and mission constraints</li>
             <li>Robust nonlinear and Lyapunov-based controller design</li>
@@ -108,7 +129,7 @@
           <a href="assets/guidance-3d-final-v60.jpg" target="_blank" rel="noopener" aria-label="Open full 3-D guidance and control figure">
             <img src="assets/guidance-3d-final-v60.jpg" alt="Three-dimensional UUV and USV guidance and control concept" />
           </a>
-          <figcaption>3-D reference path · vehicle state · cross-track error · heading/pitch commands · control input</figcaption>
+          <figcaption>3D reference path · vehicle state · cross-track error · heading/pitch commands · control input</figcaption>
         </figure>
       </section>
 
@@ -153,8 +174,21 @@
           <h3>Control Theory for Autonomous Systems</h3>
           <p>The theoretical foundation of MUV Lab includes nonlinear control, sampled-data control, fuzzy/LPV/LMI systems, input saturation, residual compensation, Lyapunov methods, robust control, and data-driven control.</p>
         </div>
-        <div class="theory-flow-v60">
-          <article>Theory</article><i></i><article>Algorithm</article><i></i><article>Simulation</article><i></i><article>Mission Scenario</article><i></i><article>Validation</article>
+        <div class="theory-board-v62">
+          <div class="mini-head-v60">Theory-to-System Pipeline</div>
+          <div class="theory-content-v62">
+            <div class="theory-methods-v62">
+              <article>Lyapunov<br>Methods</article>
+              <article>Sampled-Data<br>Control</article>
+              <article>Fuzzy / LPV<br>LMI Systems</article>
+              <article>Input<br>Saturation</article>
+              <article>Residual<br>Compensation</article>
+              <article>Data-Driven<br>Control</article>
+            </div>
+            <div class="theory-pipeline-v62">
+              <article>Theory</article><article>Algorithm</article><article>Simulation</article><article>Mission</article><article>Validation</article>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -164,7 +198,7 @@
       </section>
 
       <section class="research-stack-v60">
-        <article><h3>Guidance</h3><p>3-D path following · waypoint guidance · formation reference generation · mission-oriented guidance</p></article>
+        <article><h3>Guidance</h3><p>3D path following · waypoint guidance · formation reference generation · mission-oriented guidance</p></article>
         <article><h3>Control</h3><p>Nonlinear control · robust control · sliding-mode control · saturation handling · control allocation</p></article>
         <article><h3>Cooperation</h3><p>Formation control · low-rate communication · packet delay · packet dropout · distributed coordination</p></article>
         <article><h3>Simulation</h3><p>6-DOF vehicle dynamics · hydrodynamic models · digital twin · mission-level validation</p></article>
