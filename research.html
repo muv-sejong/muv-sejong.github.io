@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | MUV Lab</title>
   <meta name="description" content="Research areas of MUV Lab" />
-  <link rel="stylesheet" href="style.css?v=57" />
+  <link rel="stylesheet" href="style.css?v=58" />
 </head>
 <body>
 
@@ -25,7 +25,7 @@
 
 <main>
 
-  <section class="page-hero research-hero research-hero-v57" style="--bg:url('assets/research.png')">
+  <section class="page-hero research-hero research-hero-v58" style="--bg:url('assets/research.png')">
     <div class="panel-overlay"></div>
     <div class="page-hero-content">
       <p class="eyebrow">Research</p>
@@ -34,83 +34,166 @@
     </div>
   </section>
 
-  <section class="content-section research-v57">
+  <section class="content-section research-v58">
     <div class="section-inner">
 
-      <section class="research-lead-v57">
+      <section class="research-lead-v58">
         <div>
           <p class="eyebrow small">Research Architecture</p>
           <h2>From mission objectives to validated autonomy algorithms.</h2>
         </div>
         <p>
-          MUV Lab studies the complete autonomy pipeline: mission definition, world modeling, guidance generation,
-          nonlinear control, vehicle dynamics, cooperative operation, and simulation-based validation.
-          Technical figures are used as system-level schematics; detailed explanations are provided as readable web text.
+          MUV Lab studies the complete autonomy pipeline: mission definition, world modeling,
+          guidance generation, nonlinear control, vehicle dynamics, cooperative operation,
+          and simulation-based validation. All diagrams below are drawn directly in HTML/SVG/CSS
+          so that labels remain readable, editable, and technically controlled.
         </p>
       </section>
 
-      <section class="research-hero-plate-v57">
-        <a href="assets/research-architecture-plate-v57.jpg" target="_blank" rel="noopener" aria-label="Open full research architecture schematic">
-          <img src="assets/research-architecture-plate-v57.jpg" alt="Marine autonomy research architecture schematic" />
-        </a>
-        <div class="plate-caption-v57">
-          <p class="eyebrow small">System View</p>
-          <h3>Mission → World Model → Guidance → Control → Vehicle Dynamics → Validation</h3>
-          <p>The architecture connects mission-level objectives, environmental information, vehicle-level control, and validation into one closed-loop autonomy workflow.</p>
+      <section class="architecture-figure-v58 tech-figure-v58" aria-label="Marine autonomy research architecture">
+        <div class="figure-header-v58">
+          <p class="eyebrow small">Figure 1</p>
+          <h3>Marine Autonomy Research Architecture</h3>
+          <p>Mission → World Model → Guidance → Control → Vehicle Dynamics → Validation</p>
+        </div>
+
+        <div class="architecture-pipeline-v58">
+          <article>
+            <span>01</span>
+            <h4>Mission</h4>
+            <p>area · route · constraints</p>
+          </article>
+          <i></i>
+          <article>
+            <span>02</span>
+            <h4>World Model</h4>
+            <p>fusion · state · environment</p>
+          </article>
+          <i></i>
+          <article>
+            <span>03</span>
+            <h4>Guidance</h4>
+            <p>path · waypoint · formation</p>
+          </article>
+          <i></i>
+          <article>
+            <span>04</span>
+            <h4>Control</h4>
+            <p>tracking · allocation · saturation</p>
+          </article>
+          <i></i>
+          <article>
+            <span>05</span>
+            <h4>Dynamics</h4>
+            <p>UUV / USV · 6-DOF</p>
+          </article>
+          <i></i>
+          <article>
+            <span>06</span>
+            <h4>Validation</h4>
+            <p>simulation · metrics · replay</p>
+          </article>
+        </div>
+
+        <div class="architecture-bottom-v58">
+          <div class="architecture-map-v58">
+            <svg viewBox="0 0 680 360" role="img" aria-label="Mission area with surface relay, underwater vehicles, sensing, and data links">
+              <defs>
+                <marker id="archArrow58" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 Z" fill="#7ee4ff"/>
+                </marker>
+              </defs>
+              <rect x="72" y="54" width="530" height="250" rx="8" class="mission-boundary"/>
+              <path d="M114 250 C178 130, 250 216, 334 112 S478 132, 548 78" class="mission-path" marker-end="url(#archArrow58)"/>
+              <path d="M132 252 L232 162 L318 198 L448 118 L548 78" class="mission-route"/>
+              <rect x="406" y="176" width="112" height="62" rx="5" class="keepout"/>
+              <text x="462" y="213" class="diagram-note" text-anchor="middle">keep-out</text>
+
+              <g class="surface-vessel" transform="translate(340 48)">
+                <path d="M-72 20 L72 20 L50 38 L-55 38 Z"/>
+                <rect x="-36" y="-12" width="52" height="32" rx="4"/>
+                <path d="M6 -12 L22 -38 L30 -12"/>
+              </g>
+              <text x="340" y="36" class="diagram-label" text-anchor="middle">USV / relay</text>
+
+              <g class="uuv-shape" transform="translate(190 292) rotate(-8)">
+                <rect x="-48" y="-12" width="96" height="24" rx="12"/><polygon points="48,-12 72,0 48,12"/>
+              </g>
+              <g class="uuv-shape" transform="translate(340 312) rotate(2)">
+                <rect x="-48" y="-12" width="96" height="24" rx="12"/><polygon points="48,-12 72,0 48,12"/>
+              </g>
+              <g class="uuv-shape" transform="translate(500 286) rotate(9)">
+                <rect x="-48" y="-12" width="96" height="24" rx="12"/><polygon points="48,-12 72,0 48,12"/>
+              </g>
+              <path d="M340 80 L190 292 M340 80 L340 312 M340 80 L500 286" class="data-link"/>
+              <path d="M190 292 C260 250, 380 364, 500 286" class="formation-link"/>
+              <g class="sonar" transform="translate(190 292)"><path d="M-26 22 Q0 58 26 22"/><path d="M-42 26 Q0 86 42 26"/></g>
+              <g class="sonar" transform="translate(340 312)"><path d="M-26 22 Q0 58 26 22"/><path d="M-42 26 Q0 86 42 26"/></g>
+              <g class="sonar" transform="translate(500 286)"><path d="M-26 22 Q0 58 26 22"/><path d="M-42 26 Q0 86 42 26"/></g>
+
+              <circle cx="114" cy="250" r="7" class="wp"/><circle cx="232" cy="162" r="7" class="wp"/><circle cx="318" cy="198" r="7" class="wp"/><circle cx="448" cy="118" r="7" class="wp"/><circle cx="548" cy="78" r="7" class="wp"/>
+              <text x="337" y="338" class="diagram-caption" text-anchor="middle">mission route · relay link · cooperative UUV operation · sonar sensing</text>
+            </svg>
+          </div>
+
+          <div class="architecture-side-v58">
+            <article>
+              <h4>Command / Control</h4>
+              <p>Guidance and control commands flow from mission-level references to vehicle-level actuators.</p>
+            </article>
+            <article>
+              <h4>Data / Telemetry</h4>
+              <p>State estimates, mission status, and performance information close the autonomy loop.</p>
+            </article>
+            <article>
+              <h4>Validation</h4>
+              <p>Simulation and mission replay evaluate tracking, energy, constraints, and communication effects.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="architecture-rail-v57" aria-label="Marine autonomy architecture steps">
-        <article><span>01</span><h3>Mission</h3><p>Mission region, objectives, route constraints, and vehicle tasks.</p></article>
-        <article><span>02</span><h3>World Model</h3><p>Sensor fusion, bathymetry, state estimation, and uncertainty representation.</p></article>
-        <article><span>03</span><h3>Guidance</h3><p>Reference paths, waypoints, heading commands, and formation references.</p></article>
-        <article><span>04</span><h3>Control</h3><p>Nonlinear control, allocation, saturation handling, and robustness.</p></article>
-        <article><span>05</span><h3>Dynamics</h3><p>UUV / USV dynamics, actuators, hydrodynamics, and disturbances.</p></article>
-        <article><span>06</span><h3>Validation</h3><p>Mission simulation, performance metrics, and deployment-oriented checks.</p></article>
-      </section>
-
-      <section class="research-section-title-v57">
+      <section class="research-section-title-v58">
         <p class="eyebrow small">Core Research Tracks</p>
         <h2>Five research tracks connected by one system view.</h2>
       </section>
 
-      <section class="research-track-v57">
-        <div class="track-copy-v57">
+      <section class="track-v58">
+        <div class="track-copy-v58">
           <p class="eyebrow small">01 / Mission Autonomy</p>
           <h3>Marine Autonomy and Mission Guidance</h3>
-          <p>
-            Mission-level autonomy for unmanned maritime systems, including path planning, path following,
-            waypoint management, mission sequencing, and autonomous operation in underwater and surface environments.
-          </p>
-          <div class="research-tags-v57">
-            <span>UUV / USV</span><span>Mission autonomy</span><span>Path planning</span><span>Waypoint guidance</span>
-          </div>
+          <p>Mission-level autonomy for unmanned maritime systems, including path planning, path following, waypoint management, mission sequencing, and autonomous operation in underwater and surface environments.</p>
+          <div class="tags-v58"><span>UUV / USV</span><span>Mission autonomy</span><span>Path planning</span><span>Waypoint guidance</span></div>
         </div>
-        <div class="track-visual-v57 mission-mini-v57" aria-label="Mission guidance schematic">
-          <div class="mini-title-v57">Mission Guidance</div>
-          <svg viewBox="0 0 620 360">
+        <div class="mission-card-v58 tech-figure-v58">
+          <div class="mini-head-v58">Mission Guidance Schematic</div>
+          <svg viewBox="0 0 680 370" role="img" aria-label="Mission guidance schematic">
             <defs>
-              <marker id="arrowMission57" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                <path d="M0,0 L10,5 L0,10 Z" fill="#64d2ff"/>
+              <marker id="missionArrow58" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" fill="#7ee4ff"/>
               </marker>
             </defs>
-            <rect x="70" y="78" width="430" height="212" rx="8" class="zone"/>
-            <path d="M110 248 C170 142, 250 216, 320 125 S438 138, 500 88" class="route" marker-end="url(#arrowMission57)"/>
-            <rect x="370" y="178" width="92" height="54" rx="4" class="avoid"/>
-            <circle cx="110" cy="248" r="8" class="wp"/><circle cx="222" cy="160" r="8" class="wp"/><circle cx="318" cy="202" r="8" class="wp"/><circle cx="428" cy="118" r="8" class="wp"/><circle cx="500" cy="88" r="8" class="wp"/>
-            <text x="310" y="324" class="caption" text-anchor="middle">mission area · route · waypoints · constraints</text>
+            <rect x="82" y="74" width="510" height="230" rx="8" class="mission-boundary"/>
+            <path d="M128 260 C194 144, 280 218, 356 130 S490 140, 552 90" class="mission-path" marker-end="url(#missionArrow58)"/>
+            <path d="M128 260 L248 166 L340 204 L456 122 L552 90" class="mission-route"/>
+            <rect x="416" y="182" width="108" height="62" rx="5" class="keepout"/>
+            <text x="470" y="218" class="diagram-note" text-anchor="middle">keep-out</text>
+            <circle cx="128" cy="260" r="8" class="wp"/><circle cx="248" cy="166" r="8" class="wp"/><circle cx="340" cy="204" r="8" class="wp"/><circle cx="456" cy="122" r="8" class="wp"/><circle cx="552" cy="90" r="8" class="wp"/>
+            <text x="128" y="287" class="diagram-label" text-anchor="middle">Start</text>
+            <text x="248" y="150" class="diagram-label" text-anchor="middle">WP1</text>
+            <text x="340" y="232" class="diagram-label" text-anchor="middle">WP2</text>
+            <text x="456" y="106" class="diagram-label" text-anchor="middle">WP3</text>
+            <text x="552" y="74" class="diagram-label" text-anchor="middle">End</text>
+            <text x="338" y="334" class="diagram-caption" text-anchor="middle">mission area · waypoint route · operational constraints</text>
           </svg>
         </div>
       </section>
 
-      <section class="research-track-v57 reverse">
-        <div class="track-copy-v57">
+      <section class="track-v58 reverse">
+        <div class="track-copy-v58">
           <p class="eyebrow small">02 / Guidance and Control</p>
           <h3>Nonlinear Guidance and Control</h3>
-          <p>
-            Nonlinear guidance and control algorithms for marine vehicles with underactuated dynamics,
-            actuator limits, model uncertainty, and environmental disturbances.
-          </p>
+          <p>Nonlinear guidance and control algorithms for marine vehicles with underactuated dynamics, actuator limits, model uncertainty, and environmental disturbances.</p>
           <ul>
             <li>Path-following guidance and cross-track error regulation</li>
             <li>Heading command generation and vehicle-level feedback control</li>
@@ -118,22 +201,44 @@
             <li>Robust nonlinear and Lyapunov-based controller design</li>
           </ul>
         </div>
-        <figure class="research-image-panel-v57 crop-guidance-v57">
-          <a href="assets/guidance-control-plate-v57.jpg" target="_blank" rel="noopener">
-            <img src="assets/guidance-control-plate-v57.jpg" alt="UUV and USV guidance and control concept schematic" />
-          </a>
-          <figcaption>Reference path · tracking error · heading command · control input</figcaption>
-        </figure>
+        <div class="guidance-card-v58 tech-figure-v58">
+          <div class="mini-head-v58">Guidance and Control Concept</div>
+          <svg viewBox="0 0 760 430" role="img" aria-label="UUV and USV guidance and control concept">
+            <defs>
+              <marker id="ctrlArrow58" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" fill="#7ee4ff"/>
+              </marker>
+            </defs>
+            <path d="M82 132 C230 78, 346 118, 492 91 C594 72, 662 92, 708 130" class="reference-path"/>
+            <text x="150" y="92" class="diagram-label">Reference path r(s)</text>
+            <g class="uuv-shape" transform="translate(382 244) rotate(-18)">
+              <rect x="-55" y="-13" width="110" height="26" rx="13"/><polygon points="55,-13 84,0 55,13"/>
+            </g>
+            <path d="M382 244 L448 108" class="projection-line"/>
+            <path d="M382 244 L554 156" class="heading-command" marker-end="url(#ctrlArrow58)"/>
+            <path d="M382 244 L548 262" class="vehicle-heading"/>
+            <text x="454" y="166" class="diagram-label">cross-track error e<tspan baseline-shift="sub">y</tspan></text>
+            <text x="562" y="158" class="diagram-label">heading command ψ<tspan baseline-shift="sub">cmd</tspan></text>
+            <text x="548" y="291" class="diagram-label">vehicle heading ψ</text>
+            <text x="308" y="284" class="diagram-label">vehicle state</text>
+            <g class="flow-box-v58" transform="translate(62 342)">
+              <rect x="0" y="0" width="132" height="44" rx="5"/><text x="66" y="28">Path</text>
+              <path d="M144 22 H194" marker-end="url(#ctrlArrow58)"/>
+              <rect x="206" y="0" width="132" height="44" rx="5"/><text x="272" y="28">Guidance</text>
+              <path d="M350 22 H400" marker-end="url(#ctrlArrow58)"/>
+              <rect x="412" y="0" width="132" height="44" rx="5"/><text x="478" y="28">Control</text>
+              <path d="M556 22 H606" marker-end="url(#ctrlArrow58)"/>
+              <rect x="618" y="0" width="92" height="44" rx="5"/><text x="664" y="28">Input</text>
+            </g>
+          </svg>
+        </div>
       </section>
 
-      <section class="research-track-v57">
-        <div class="track-copy-v57">
+      <section class="track-v58">
+        <div class="track-copy-v58">
           <p class="eyebrow small">03 / Cooperative Operation</p>
           <h3>Cooperative and Swarm Operation</h3>
-          <p>
-            Cooperative operation of multiple unmanned maritime vehicles under realistic underwater communication constraints,
-            including low-rate acoustic links, packet delay, packet dropout, stale-packet rejection, and predictor-based coordination.
-          </p>
+          <p>Cooperative operation of multiple unmanned maritime vehicles under realistic underwater communication constraints, including low-rate acoustic links, packet delay, packet dropout, stale-packet rejection, and predictor-based coordination.</p>
           <ul>
             <li>Formation guidance and cooperative search geometry</li>
             <li>Low-rate underwater communication and sample-and-hold exchange</li>
@@ -141,55 +246,73 @@
             <li>Mission-level operation of multiple UUVs</li>
           </ul>
         </div>
-        <figure class="research-image-panel-v57 crop-swarm-v57">
-          <a href="assets/swarm-communication-plate-v57.jpg" target="_blank" rel="noopener">
-            <img src="assets/swarm-communication-plate-v57.jpg" alt="Cooperative UUV swarm operation under communication constraints" />
-          </a>
-          <figcaption>Multiple UUVs · acoustic communication · delay/dropout · formation operation</figcaption>
-        </figure>
+        <div class="swarm-card-v58 tech-figure-v58">
+          <div class="mini-head-v58">Communication-Constrained Swarm Operation</div>
+          <svg viewBox="0 0 760 430" role="img" aria-label="Cooperative UUV operation under communication constraints">
+            <rect x="62" y="82" width="480" height="258" rx="9" class="mission-boundary"/>
+            <text x="302" y="372" class="diagram-caption" text-anchor="middle">mission area · formation geometry · low-rate acoustic links</text>
+            <g class="uuv-shape" transform="translate(170 222) rotate(-8)"><rect x="-48" y="-12" width="96" height="24" rx="12"/><polygon points="48,-12 72,0 48,12"/></g>
+            <g class="uuv-shape" transform="translate(310 286) rotate(4)"><rect x="-48" y="-12" width="96" height="24" rx="12"/><polygon points="48,-12 72,0 48,12"/></g>
+            <g class="uuv-shape" transform="translate(470 246) rotate(12)"><rect x="-48" y="-12" width="96" height="24" rx="12"/><polygon points="48,-12 72,0 48,12"/></g>
+            <g class="uuv-shape" transform="translate(482 142) rotate(-10)"><rect x="-48" y="-12" width="96" height="24" rx="12"/><polygon points="48,-12 72,0 48,12"/></g>
+            <path d="M170 222 L310 286 L470 246 L482 142 L170 222 M170 222 L470 246 M310 286 L482 142" class="formation-link"/>
+            <circle cx="240" cy="254" r="12" class="delay-node"/><text x="240" y="259" class="diagram-note" text-anchor="middle">τ</text>
+            <path d="M390 258 l18 18 m0-18 l-18 18" class="dropout-mark"/>
+            <g transform="translate(584 112)">
+              <text x="0" y="0" class="diagram-label">Packet logic</text>
+              <line x1="0" y1="48" x2="132" y2="48" class="time-axis"/>
+              <rect x="8" y="38" width="18" height="18" class="packet fresh"/>
+              <rect x="46" y="38" width="18" height="18" class="packet delay"/>
+              <path d="M82 38 l18 18 m0-18 l-18 18" class="dropout-mark"/>
+              <rect x="114" y="38" width="18" height="18" class="packet fresh"/>
+              <text x="0" y="98" class="small-diagram-text">fresh · delayed · dropout</text>
+              <text x="0" y="126" class="small-diagram-text">timestamp and freshness check</text>
+            </g>
+          </svg>
+        </div>
       </section>
 
-      <section class="research-track-v57 reverse">
-        <div class="track-copy-v57">
+      <section class="track-v58 reverse">
+        <div class="track-copy-v58">
           <p class="eyebrow small">04 / Simulation and Validation</p>
           <h3>Simulation, Digital Twin, and Validation</h3>
-          <p>
-            Simulation and validation connect theory, software, and mission operation. We develop simulation environments that combine
-            6-DOF vehicle dynamics, actuator models, sensor-fusion scenarios, ocean-current effects, communication constraints,
-            autonomy algorithms, and mission-level performance evaluation.
-          </p>
-          <div class="research-tags-v57">
-            <span>6-DOF dynamics</span><span>Integrated simulator</span><span>Sensor fusion</span><span>Mission validation</span>
-          </div>
+          <p>Simulation and validation connect theory, software, and mission operation. We develop simulation environments that combine 6-DOF vehicle dynamics, actuator models, sensor-fusion scenarios, ocean-current effects, communication constraints, autonomy algorithms, and mission-level performance evaluation.</p>
+          <div class="tags-v58"><span>6-DOF dynamics</span><span>Integrated simulator</span><span>Sensor fusion</span><span>Mission validation</span></div>
         </div>
-        <figure class="research-image-panel-v57 crop-sim-v57">
-          <a href="assets/digital-twin-plate-v57.jpg" target="_blank" rel="noopener">
-            <img src="assets/digital-twin-plate-v57.jpg" alt="Integrated simulator and digital twin schematic for marine autonomy" />
-          </a>
-          <figcaption>6-DOF model · sensor fusion · mission scenario · autonomy algorithm · validation</figcaption>
-        </figure>
+        <div class="sim-card-v58 tech-figure-v58">
+          <div class="mini-head-v58">Integrated Simulator and Digital Twin</div>
+          <div class="sim-modules-v58">
+            <article><span>01</span><strong>6-DOF Model</strong><p>dynamics · actuators</p></article>
+            <i></i>
+            <article><span>02</span><strong>Sensor Fusion</strong><p>states · environment</p></article>
+            <i></i>
+            <article><span>03</span><strong>Mission Scenario</strong><p>map · route · constraints</p></article>
+            <i></i>
+            <article><span>04</span><strong>Autonomy Algorithm</strong><p>guidance · control</p></article>
+            <i></i>
+            <article><span>05</span><strong>Validation</strong><p>metrics · replay</p></article>
+          </div>
+          <div class="sim-loop-v58">closed-loop digital-twin evaluation: scenario → sensing → vehicle state → commands → performance</div>
+        </div>
       </section>
 
-      <section class="research-track-v57 theory-track-v57">
-        <div class="track-copy-v57">
+      <section class="track-v58 theory-track-v58">
+        <div class="track-copy-v58">
           <p class="eyebrow small">05 / Control Theory</p>
           <h3>Control Theory for Autonomous Systems</h3>
-          <p>
-            The theoretical foundation of MUV Lab includes nonlinear control, sampled-data control, fuzzy/LPV/LMI systems,
-            input saturation, residual compensation, Lyapunov methods, robust control, and data-driven control.
-          </p>
+          <p>The theoretical foundation of MUV Lab includes nonlinear control, sampled-data control, fuzzy/LPV/LMI systems, input saturation, residual compensation, Lyapunov methods, robust control, and data-driven control.</p>
         </div>
-        <div class="theory-flow-v57" aria-label="Theory to system pipeline">
+        <div class="theory-flow-v58 tech-figure-v58" aria-label="Theory to system pipeline">
           <article>Theory</article><i></i><article>Algorithm</article><i></i><article>Simulation</article><i></i><article>Mission Scenario</article><i></i><article>Validation</article>
         </div>
       </section>
 
-      <section class="research-section-title-v57">
+      <section class="research-section-title-v58">
         <p class="eyebrow small">Technical Stack</p>
         <h2>Methods and implementation layers.</h2>
       </section>
 
-      <section class="research-stack-v57">
+      <section class="research-stack-v58">
         <article><h3>Guidance</h3><p>Path following · waypoint guidance · formation reference generation · mission-oriented guidance</p></article>
         <article><h3>Control</h3><p>Nonlinear control · robust control · sliding-mode control · saturation handling · control allocation</p></article>
         <article><h3>Cooperation</h3><p>Formation control · low-rate communication · packet delay · packet dropout · distributed coordination</p></article>
