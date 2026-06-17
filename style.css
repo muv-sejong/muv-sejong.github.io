@@ -5762,3 +5762,218 @@ li{
     margin-top:28px !important;
   }
 }
+
+/* v71: final hierarchy and section-division polish
+   - makes internal section headings less competing with each other
+   - clarifies Research page section breaks
+   - keeps global typography consistent
+*/
+
+/* Site-wide readability baseline */
+:root{
+  --muv-text-main: rgba(255,255,255,.92);
+  --muv-text-body: rgba(255,255,255,.76);
+  --muv-text-muted: rgba(255,255,255,.58);
+  --muv-section-line: rgba(255,255,255,.115);
+}
+
+p,
+li{
+  color:var(--muv-text-body);
+}
+
+/* Keep page hero strong, but make inner-page section titles calmer */
+.hero-content h1,
+.page-hero-content h1{
+  font-size:clamp(48px,5.75vw,96px) !important;
+  line-height:.97 !important;
+  letter-spacing:-.055em !important;
+}
+
+/* Research lead becomes a lead statement, not another page hero */
+.research-lead-v60{
+  max-width:1120px !important;
+  margin-bottom:42px !important;
+  padding-bottom:30px !important;
+  border-bottom:1px solid var(--muv-section-line);
+}
+
+.research-lead-v60 h2{
+  max-width:1020px !important;
+  margin:0 !important;
+  text-transform:none !important;
+  font-size:clamp(40px,4.25vw,68px) !important;
+  line-height:1.04 !important;
+  letter-spacing:-.044em !important;
+  color:rgba(255,255,255,.90) !important;
+  text-wrap:balance;
+}
+
+.research-lead-v60 > p{
+  max-width:1040px !important;
+  margin-top:22px !important;
+  font-size:16.5px !important;
+  line-height:1.72 !important;
+  color:rgba(255,255,255,.76) !important;
+}
+
+/* Section dividers: make next blocks feel clearly separated */
+.research-section-title-v60{
+  margin:70px 0 30px !important;
+  padding-top:34px !important;
+  border-top:1px solid var(--muv-section-line);
+}
+
+.research-section-title-v60 h2{
+  max-width:900px !important;
+  margin:0 !important;
+  text-transform:none !important;
+  font-size:clamp(30px,3.2vw,52px) !important;
+  line-height:1.06 !important;
+  letter-spacing:-.038em !important;
+  color:rgba(255,255,255,.88) !important;
+  text-wrap:balance;
+}
+
+.research-section-title-v60 .eyebrow{
+  margin-bottom:12px !important;
+}
+
+/* System-level card should not visually compete with the lead statement */
+.figure-copy-v60 h3{
+  font-size:clamp(30px,2.55vw,46px) !important;
+  line-height:1.05 !important;
+  letter-spacing:-.04em !important;
+}
+
+.figure-copy-v60 p{
+  font-size:15px !important;
+  line-height:1.65 !important;
+  color:rgba(255,255,255,.74) !important;
+}
+
+/* Architecture cards: slightly calmer but more readable */
+.research-architecture-cards-v60 article,
+.research-stack-v60 article{
+  background:linear-gradient(180deg,rgba(255,255,255,.032),rgba(255,255,255,.010)) !important;
+}
+
+.research-architecture-cards-v60 h3,
+.research-stack-v60 h3{
+  font-size:15px !important;
+  letter-spacing:.02em !important;
+}
+
+.research-architecture-cards-v60 p,
+.research-stack-v60 p{
+  font-size:14.8px !important;
+  line-height:1.66 !important;
+  color:rgba(255,255,255,.74) !important;
+}
+
+/* Track headings remain important but below the lead statement */
+.track-copy-v60 h3{
+  font-size:clamp(34px,3.45vw,60px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.045em !important;
+}
+
+.track-copy-v60 p,
+.research-list-v60 li{
+  font-size:15.5px !important;
+  line-height:1.72 !important;
+  color:rgba(255,255,255,.76) !important;
+}
+
+/* Projects/publications/members/join/contact consistency */
+.project-band h3,
+.landmark-card h3,
+.publication-card h3,
+.join-final-cta h2,
+.contact-card h2{
+  letter-spacing:-.04em !important;
+}
+
+.project-title-ko,
+.project-band-main p,
+.project-band-side li,
+.archive-item p,
+.project-archive-list p,
+.landmark-card p,
+.publication-card p,
+.pub-theme-card p,
+.member-profile p,
+.researcher-card p,
+.join-card p,
+.contact-card p{
+  font-size:14.8px !important;
+  line-height:1.66 !important;
+  color:rgba(255,255,255,.74) !important;
+}
+
+/* Mobile: preserve restored horizontal figure swipe and keep calmer heading hierarchy */
+@media(max-width:760px){
+  .research-lead-v60{
+    margin-bottom:34px !important;
+    padding-bottom:24px !important;
+  }
+
+  .research-lead-v60 h2{
+    font-size:clamp(30px,9.2vw,42px) !important;
+    line-height:1.06 !important;
+  }
+
+  .research-section-title-v60{
+    margin:52px 0 24px !important;
+    padding-top:28px !important;
+  }
+
+  .research-section-title-v60 h2{
+    font-size:clamp(27px,8.4vw,38px) !important;
+    line-height:1.08 !important;
+  }
+
+  .figure-copy-v60 h3,
+  .track-copy-v60 h3{
+    font-size:clamp(25px,7.8vw,36px) !important;
+    line-height:1.08 !important;
+  }
+
+  .research-lead-v60 > p,
+  .track-copy-v60 p,
+  .research-list-v60 li{
+    font-size:15px !important;
+    line-height:1.74 !important;
+  }
+
+  /* Ensure horizontal swipe remains active */
+  .research-image-final-v64,
+  .research-image-v60,
+  .research-figure-board-v60 figure,
+  .hero-board-v60 figure{
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    touch-action:pan-x pan-y !important;
+  }
+
+  .research-image-final-v64 img,
+  .research-image-v60 img,
+  .research-figure-board-v60 figure img,
+  .hero-board-v60 figure img{
+    width:920px !important;
+    min-width:920px !important;
+    max-width:none !important;
+    height:auto !important;
+  }
+}
+
+@media(max-width:420px){
+  .research-image-final-v64 img,
+  .research-image-v60 img,
+  .research-figure-board-v60 figure img,
+  .hero-board-v60 figure img{
+    width:860px !important;
+    min-width:860px !important;
+  }
+}
