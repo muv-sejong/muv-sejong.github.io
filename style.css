@@ -2272,3 +2272,32 @@
     min-height:260px;
   }
 }
+
+/* v46: copy consistency polish */
+.panel-content h2{
+  text-wrap:balance;
+}
+
+.page-hero h1{
+  text-wrap:balance;
+}
+
+.panel-content p,
+.page-hero p{
+  text-wrap:pretty;
+}
+
+/* v47: Contact page simplification - remove defense experience strip */
+.credibility-strip{
+  display:none !important;
+}
+
+.minimal-location-section{
+  margin-top:58px !important;
+}
+
+@media(max-width:760px){
+  .minimal-location-section{
+    margin-top:46px !important;
+  }
+}
