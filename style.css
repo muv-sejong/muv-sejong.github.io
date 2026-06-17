@@ -1450,3 +1450,155 @@
     font-size:34px;
   }
 }
+
+/* v41: highest-polish Join page + hamburger mobile navigation */
+.nav-toggle{
+  width:42px !important;
+  height:38px !important;
+  padding:0 !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex-direction:column !important;
+  gap:5px !important;
+  font-size:0 !important;
+}
+
+.nav-toggle span{
+  display:block !important;
+  width:19px !important;
+  height:2px !important;
+  background:#fff !important;
+  border-radius:2px !important;
+  transition:.22s !important;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1){
+  transform:translateY(7px) rotate(45deg) !important;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2){
+  opacity:0 !important;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3){
+  transform:translateY(-7px) rotate(-45deg) !important;
+}
+
+/* Join page: make the hero clean, no application button clutter */
+.join-hero .hero-actions{
+  display:none !important;
+}
+
+.join-intro-section{
+  margin-top:0 !important;
+}
+
+.join-intro-grid{
+  margin-bottom:76px !important;
+}
+
+.join-intro-grid article{
+  min-height:210px !important;
+}
+
+.join-intro-grid h2{
+  font-size:clamp(20px,1.75vw,28px) !important;
+}
+
+/* Open Positions: desktop one-line, balanced 5-card layout */
+.position-grid{
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+
+.position-grid article:nth-child(n){
+  grid-column:auto !important;
+}
+
+.position-grid article{
+  min-height:245px !important;
+  padding:24px !important;
+}
+
+.position-grid h3{
+  font-size:clamp(18px,1.28vw,23px) !important;
+  line-height:1.06 !important;
+  min-height:52px !important;
+}
+
+.position-tags span{
+  font-size:11px !important;
+  padding:6px 8px !important;
+}
+
+/* Smaller, cleaner final CTA */
+.refined-join-cta{
+  margin-top:86px !important;
+  padding:38px 40px !important;
+  max-width:980px !important;
+}
+
+.refined-join-cta h2{
+  max-width:760px !important;
+  font-size:clamp(26px,2.8vw,44px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.04em !important;
+}
+
+.refined-join-cta p:not(.eyebrow){
+  max-width:620px !important;
+  margin:18px 0 0 !important;
+  color:rgba(255,255,255,.64) !important;
+  font-size:16px !important;
+  line-height:1.55 !important;
+}
+
+.refined-join-cta .hero-actions{
+  margin-top:28px !important;
+}
+
+/* Tablet fallback: 3 + 2, but not before typical desktop width */
+@media(max-width:1180px){
+  .position-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  }
+}
+
+/* Mobile */
+@media(max-width:760px){
+  .nav-toggle{
+    display:flex !important;
+  }
+
+  .join-intro-grid,
+  .join-track-grid,
+  .apply-timeline,
+  .position-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .join-intro-grid{
+    margin-bottom:58px !important;
+  }
+
+  .position-grid article{
+    min-height:auto !important;
+  }
+
+  .position-grid h3{
+    min-height:auto !important;
+  }
+
+  .refined-join-cta{
+    margin-top:64px !important;
+    padding:28px 22px !important;
+  }
+
+  .refined-join-cta h2{
+    font-size:30px !important;
+  }
+
+  .refined-join-cta p:not(.eyebrow){
+    font-size:14px !important;
+  }
+}
