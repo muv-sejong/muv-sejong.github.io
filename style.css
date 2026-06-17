@@ -6390,3 +6390,212 @@ h1, h2, h3, h4,
     line-height:1.04 !important;
   }
 }
+
+/* v75: mobile horizontal card-scroll system
+   On phones, dense card grids become horizontal swipe lanes with a subtle
+   right-side cue. This improves readability and keeps the page premium/minimal.
+*/
+@media(max-width:760px){
+
+  /* Generic horizontal card lane behavior */
+  .research-architecture-cards-v60,
+  .research-stack-v60,
+  .home-grid,
+  .quick-links-grid,
+  .pub-theme-grid,
+  .join-card-grid,
+  .join-process,
+  .contact-grid,
+  .researcher-grid,
+  .project-capability-grid{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:14px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    overscroll-behavior-x:contain !important;
+    scroll-snap-type:x mandatory !important;
+    scroll-padding-left:18px !important;
+    padding:0 48px 18px 0 !important;
+    margin-right:-18px !important;
+    position:relative !important;
+    scrollbar-width:none !important;
+  }
+
+  .research-architecture-cards-v60::-webkit-scrollbar,
+  .research-stack-v60::-webkit-scrollbar,
+  .home-grid::-webkit-scrollbar,
+  .quick-links-grid::-webkit-scrollbar,
+  .pub-theme-grid::-webkit-scrollbar,
+  .join-card-grid::-webkit-scrollbar,
+  .join-process::-webkit-scrollbar,
+  .contact-grid::-webkit-scrollbar,
+  .researcher-grid::-webkit-scrollbar,
+  .project-capability-grid::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  /* Cards inside swipe lanes */
+  .research-architecture-cards-v60 > *,
+  .research-stack-v60 > *,
+  .home-grid > *,
+  .quick-links-grid > *,
+  .pub-theme-grid > *,
+  .join-card-grid > *,
+  .join-process > *,
+  .contact-grid > *,
+  .researcher-grid > *,
+  .project-capability-grid > *{
+    flex:0 0 min(78vw, 330px) !important;
+    width:min(78vw, 330px) !important;
+    min-width:min(78vw, 330px) !important;
+    scroll-snap-align:start !important;
+  }
+
+  /* Research architecture and technical stack should feel like compact cards */
+  .research-architecture-cards-v60 > *,
+  .research-stack-v60 > *{
+    flex-basis:min(74vw, 310px) !important;
+    width:min(74vw, 310px) !important;
+    min-width:min(74vw, 310px) !important;
+  }
+
+  /* Premium right-side visual hint: fade + small arrow label */
+  .research-architecture-cards-v60::after,
+  .research-stack-v60::after,
+  .home-grid::after,
+  .quick-links-grid::after,
+  .pub-theme-grid::after,
+  .join-card-grid::after,
+  .join-process::after,
+  .contact-grid::after,
+  .researcher-grid::after,
+  .project-capability-grid::after{
+    content:"SWIPE →";
+    position:sticky !important;
+    right:0 !important;
+    top:0 !important;
+    align-self:stretch !important;
+    flex:0 0 70px !important;
+    min-width:70px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding-left:26px !important;
+    background:
+      linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.82) 42%, rgba(0,0,0,.96) 100%) !important;
+    color:rgba(102,215,255,.86) !important;
+    font-size:10px !important;
+    font-weight:900 !important;
+    letter-spacing:.14em !important;
+    writing-mode:vertical-rl !important;
+    text-orientation:mixed !important;
+    z-index:5 !important;
+    pointer-events:none !important;
+  }
+
+  /* Section-level mini cue above card lanes */
+  .research-architecture-cards-v60::before,
+  .research-stack-v60::before,
+  .pub-theme-grid::before,
+  .join-card-grid::before,
+  .contact-grid::before,
+  .researcher-grid::before,
+  .project-capability-grid::before{
+    content:"←  swipe cards  →";
+    position:absolute !important;
+    right:18px !important;
+    top:-24px !important;
+    color:rgba(255,255,255,.38) !important;
+    font-size:10px !important;
+    font-weight:800 !important;
+    letter-spacing:.10em !important;
+    text-transform:uppercase !important;
+    pointer-events:none !important;
+  }
+
+  /* Publication landmark cards: keep vertical list because titles are long */
+  .landmark-grid,
+  .publication-grid,
+  .pub-list{
+    display:block !important;
+    overflow:visible !important;
+  }
+
+  /* Large project archive lists: keep vertical, but compact spacing for reading */
+  .project-archive-list,
+  .archive-list,
+  .project-list{
+    display:block !important;
+    overflow:visible !important;
+  }
+
+  /* Featured project bands remain vertical because each card contains long Korean/English text */
+  .project-band{
+    width:100% !important;
+    min-width:0 !important;
+    scroll-snap-align:none !important;
+  }
+
+  /* Make the horizontal card text easier to scan on phones */
+  .research-architecture-cards-v60 h3,
+  .research-stack-v60 h3,
+  .home-grid h2,
+  .quick-links-grid h2,
+  .pub-theme-grid h3,
+  .join-card-grid h3,
+  .join-process h3,
+  .contact-grid h3,
+  .researcher-grid h3,
+  .project-capability-grid h3{
+    line-height:1.12 !important;
+  }
+
+  .research-architecture-cards-v60 p,
+  .research-stack-v60 p,
+  .home-grid p,
+  .quick-links-grid p,
+  .pub-theme-grid p,
+  .join-card-grid p,
+  .join-process p,
+  .contact-grid p,
+  .researcher-grid p,
+  .project-capability-grid p{
+    font-size:14.5px !important;
+    line-height:1.62 !important;
+  }
+}
+
+/* Slightly narrower phones */
+@media(max-width:420px){
+  .research-architecture-cards-v60 > *,
+  .research-stack-v60 > *,
+  .home-grid > *,
+  .quick-links-grid > *,
+  .pub-theme-grid > *,
+  .join-card-grid > *,
+  .join-process > *,
+  .contact-grid > *,
+  .researcher-grid > *,
+  .project-capability-grid > *{
+    flex-basis:min(82vw, 310px) !important;
+    width:min(82vw, 310px) !important;
+    min-width:min(82vw, 310px) !important;
+  }
+
+  .research-architecture-cards-v60::after,
+  .research-stack-v60::after,
+  .home-grid::after,
+  .quick-links-grid::after,
+  .pub-theme-grid::after,
+  .join-card-grid::after,
+  .join-process::after,
+  .contact-grid::after,
+  .researcher-grid::after,
+  .project-capability-grid::after{
+    flex-basis:58px !important;
+    min-width:58px !important;
+    font-size:9px !important;
+  }
+}
