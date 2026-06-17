@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | MUV Lab</title>
   <meta name="description" content="Research areas of MUV Lab" />
-  <link rel="stylesheet" href="style.css?v=54" />
+  <link rel="stylesheet" href="style.css?v=55" />
 </head>
 <body>
 
@@ -24,22 +24,184 @@
 
 
 <main>
-  <section class="page-hero" style="--bg:url('assets/research.png')">
+
+  <section class="page-hero research-hero" style="--bg:url('assets/research.png')">
     <div class="panel-overlay"></div>
     <div class="page-hero-content">
       <p class="eyebrow">Research</p>
       <h1>Guidance-and-control-centered marine autonomy.</h1>
-      <p>Guidance, control, simulation, and autonomy for unmanned underwater vehicles, unmanned surface vehicles, and defense-oriented marine systems.</p>
+      <p>MUV Lab develops guidance, control, simulation, and autonomy technologies for unmanned underwater and surface vehicles operating under uncertainty, constraints, and communication limitations.</p>
     </div>
   </section>
-  <section class="content-section">
+
+  <section class="content-section research-v55">
     <div class="section-inner">
-      <div class="card-grid four">
-        <article class="card"><span>01</span><h3>Nonlinear Control for Autonomy</h3><p>Lyapunov-based control, sliding-mode control, sampled-data control, input saturation, robustness, and stability analysis for autonomous unmanned systems.</p></article>
-        <article class="card"><span>02</span><h3>Guidance and Path Following</h3><p>Guidance laws, path-following control, trajectory tracking, waypoint missions, and 3D maneuvering for unmanned underwater and surface vehicles.</p></article>
-        <article class="card"><span>03</span><h3>Cooperative Marine Autonomy</h3><p>Formation control, cooperative path following, distributed coordination, and autonomous operation under delayed, intermittent, and low-rate underwater communication.</p></article>
-        <article class="card"><span>04</span><h3>Mission-Level Simulation</h3><p>6-DOF vehicle dynamics, digital twin simulation, mission scenario generation, performance evaluation, and verification of autonomy algorithms.</p></article>
-      </div>
+
+      <section class="research-intro-block">
+        <div>
+          <p class="eyebrow small">Research Architecture</p>
+          <h2>Mission-level autonomy grounded in control theory.</h2>
+        </div>
+        <p>MUV Lab studies the full technical pipeline from mission objectives and environmental information to guidance generation, nonlinear control, vehicle dynamics, cooperative operation, and simulation-based validation.</p>
+      </section>
+
+      <figure class="research-figure full-figure">
+        <img src="assets/research-architecture-v55.svg" alt="Marine autonomy research architecture showing mission, world model, guidance, control, vehicle dynamics, and validation." />
+      </figure>
+
+      <section class="architecture-text-grid">
+        <article>
+          <span>01</span>
+          <h3>Mission</h3>
+          <p>Mission regions, route constraints, vehicle tasks, and operational objectives.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>World Model</h3>
+          <p>Sensor fusion, bathymetric information, state estimation, and uncertainty representation.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Guidance</h3>
+          <p>Reference paths, waypoints, heading commands, formation references, and path-following objectives.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Control</h3>
+          <p>Nonlinear control, control allocation, actuator saturation handling, robustness, and disturbance rejection.</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h3>Vehicle Dynamics</h3>
+          <p>UUV/USV dynamics, 6-DOF modeling, actuator models, and environmental effects.</p>
+        </article>
+        <article>
+          <span>06</span>
+          <h3>Validation</h3>
+          <p>Mission-level simulation, performance evaluation, and deployment-oriented algorithm verification.</p>
+        </article>
+      </section>
+
+      <section class="research-section-head">
+        <p class="eyebrow small">Core Research Tracks</p>
+        <h2>Research areas connected as one autonomy system.</h2>
+      </section>
+
+      <section class="research-track feature-track">
+        <div class="track-copy">
+          <p class="eyebrow small">01 / Marine Autonomy</p>
+          <h3>Marine Autonomy and Mission Guidance</h3>
+          <p>MUV Lab studies mission-level autonomy for unmanned maritime systems, including path planning, path following, waypoint management, mission sequencing, and autonomous operation in underwater and surface environments.</p>
+          <div class="keyword-row">
+            <span>UUV / USV</span><span>Mission autonomy</span><span>Path planning</span><span>Mine-search concepts</span>
+          </div>
+        </div>
+        <div class="track-visual simple-mission-visual" aria-label="Mission guidance concept">
+          <div class="mission-zone">
+            <span class="wp wp1"></span><span class="wp wp2"></span><span class="wp wp3"></span><span class="wp wp4"></span>
+            <svg viewBox="0 0 520 300" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M70 230 C130 120, 230 210, 310 95 S430 110, 470 55" />
+              <path class="alt" d="M90 240 L165 145 L250 190 L360 88 L455 70" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="research-track">
+        <div class="track-copy">
+          <p class="eyebrow small">02 / Guidance and Control</p>
+          <h3>Nonlinear Guidance and Control</h3>
+          <p>We develop nonlinear guidance and control algorithms for marine vehicles with underactuated dynamics, actuator limits, model uncertainty, and environmental disturbances.</p>
+          <ul class="technical-list">
+            <li>Path-following guidance and cross-track error regulation</li>
+            <li>Heading command generation and vehicle-level control</li>
+            <li>Control allocation and input saturation handling</li>
+            <li>Robust nonlinear and Lyapunov-based controller design</li>
+          </ul>
+        </div>
+        <figure class="research-figure">
+          <img src="assets/guidance-control-concept-v55.svg" alt="UUV and USV guidance and control concept diagram." />
+        </figure>
+      </section>
+
+      <section class="research-track reverse">
+        <div class="track-copy">
+          <p class="eyebrow small">03 / Cooperative Operation</p>
+          <h3>Cooperative and Swarm Operation</h3>
+          <p>MUV Lab investigates cooperative operation of multiple unmanned maritime vehicles under realistic underwater communication constraints, including low-rate acoustic links, packet delay, packet dropout, and stale-packet rejection.</p>
+          <ul class="technical-list">
+            <li>Formation guidance and cooperative search geometry</li>
+            <li>Low-rate underwater communication and sample-and-hold exchange</li>
+            <li>Predictor-based coordination under delay and dropout</li>
+            <li>Mission-level operation of multiple UUVs</li>
+          </ul>
+        </div>
+        <figure class="research-figure">
+          <img src="assets/swarm-communication-concept-v55.svg" alt="Cooperative UUV swarm operation under communication constraints." />
+        </figure>
+      </section>
+
+      <section class="research-track">
+        <div class="track-copy">
+          <p class="eyebrow small">04 / Simulation and Validation</p>
+          <h3>Simulation, Digital Twin, and Validation</h3>
+          <p>Simulation and validation connect theory, software, and mission operation. We build simulation environments that combine 6-DOF vehicle dynamics, actuator models, sensor-fusion scenarios, ocean-current effects, communication constraints, and mission-level performance evaluation.</p>
+          <div class="keyword-row">
+            <span>6-DOF dynamics</span><span>Integrated simulator</span><span>Sensor fusion</span><span>Mission validation</span>
+          </div>
+        </div>
+        <figure class="research-figure">
+          <img src="assets/digital-twin-simulator-v55.svg" alt="Integrated simulator and digital twin diagram for marine autonomy." />
+        </figure>
+      </section>
+
+      <section class="research-track theory-track">
+        <div class="track-copy">
+          <p class="eyebrow small">05 / Control Theory</p>
+          <h3>Control Theory for Autonomous Systems</h3>
+          <p>The theoretical foundation of MUV Lab includes nonlinear control, sampled-data control, fuzzy/LPV/LMI systems, input saturation, residual compensation, Lyapunov methods, robust control, and data-driven control.</p>
+        </div>
+        <div class="theory-pipeline">
+          <div>Theory</div>
+          <span></span>
+          <div>Algorithm</div>
+          <span></span>
+          <div>Simulation</div>
+          <span></span>
+          <div>Mission Scenario</div>
+          <span></span>
+          <div>Validation</div>
+        </div>
+      </section>
+
+      <section class="research-section-head">
+        <p class="eyebrow small">Technical Stack</p>
+        <h2>Methods and implementation layers.</h2>
+      </section>
+
+      <section class="research-stack-grid">
+        <article>
+          <h3>Guidance</h3>
+          <p>Path following · waypoint guidance · formation reference generation · mission-oriented guidance</p>
+        </article>
+        <article>
+          <h3>Control</h3>
+          <p>Nonlinear control · robust control · sliding-mode control · saturation handling · control allocation</p>
+        </article>
+        <article>
+          <h3>Cooperation</h3>
+          <p>Formation control · low-rate communication · packet delay · packet dropout · distributed coordination</p>
+        </article>
+        <article>
+          <h3>Simulation</h3>
+          <p>6-DOF vehicle dynamics · hydrodynamic models · digital twin · mission-level validation</p>
+        </article>
+        <article>
+          <h3>Autonomy Software</h3>
+          <p>MATLAB / Simulink · Python · C/C++ · scenario simulation · algorithm implementation</p>
+        </article>
+      </section>
+
     </div>
   </section>
 </main>
