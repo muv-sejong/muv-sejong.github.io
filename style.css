@@ -6303,3 +6303,90 @@ h1, h2, h3, h4,
     min-width:860px !important;
   }
 }
+
+/* v74: final title capitalization policy
+   - Page hero titles and home section/card titles are uppercase.
+   - Long project titles and publication titles remain title case for readability.
+   - UI labels/buttons/badges remain uppercase.
+*/
+
+/* Page hero and home title blocks: uppercase display style */
+.hero-content h1,
+.page-hero-content h1,
+.home-grid h2,
+.home-card h2,
+.feature-card h2,
+.panel-card h2{
+  text-transform:uppercase !important;
+  letter-spacing:-.035em !important;
+}
+
+/* Internal section headings: readable Title Case, not forced all-caps */
+.research-lead-v60 h2,
+.research-section-title-v60 h2,
+.project-compact-head h2,
+.pub-lead h2,
+.join-intro h2,
+.contact-intro h2,
+.figure-copy-v60 h3,
+.track-copy-v60 h3,
+.contact-card h2{
+  text-transform:none !important;
+}
+
+/* Project and publication titles: never all caps */
+.project-band h3,
+.archive-item h3,
+.project-archive-list h3,
+.landmark-card h3,
+.publication-card h3,
+.pub-theme-card h3,
+.paper-title,
+.publication-title,
+.article-title{
+  text-transform:none !important;
+  letter-spacing:-.026em !important;
+  line-height:1.13 !important;
+}
+
+/* UI labels remain uppercase */
+.eyebrow,
+.eyebrow.small,
+.site-nav a,
+.button,
+.button.secondary,
+.member-role,
+.project-band-type,
+.project-band-index span,
+.project-meta-compact span,
+.pub-meta,
+.tags-v60 span,
+.member-keywords span,
+.status,
+.status-pill,
+.badge,
+.site-footer span,
+.brand{
+  text-transform:uppercase !important;
+}
+
+/* Keep homepage card uppercase readable rather than overly tight */
+.home-grid h2,
+.home-card h2,
+.feature-card h2,
+.panel-card h2{
+  line-height:1.02 !important;
+  letter-spacing:-.032em !important;
+}
+
+@media(max-width:760px){
+  .hero-content h1,
+  .page-hero-content h1,
+  .home-grid h2,
+  .home-card h2,
+  .feature-card h2,
+  .panel-card h2{
+    letter-spacing:-.030em !important;
+    line-height:1.04 !important;
+  }
+}
