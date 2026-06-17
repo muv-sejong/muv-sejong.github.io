@@ -4730,3 +4730,224 @@ body{
     white-space:normal !important;
   }
 }
+
+/* v63 refinements: richer mission/theory boards + ongoing badge fix */
+.mission-autonomy-board-v63,
+.theory-board-v63{
+  min-height:360px;
+  border:1px solid rgba(255,255,255,.13);
+  background:
+    linear-gradient(rgba(102,215,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(102,215,255,.045) 1px, transparent 1px),
+    radial-gradient(circle at 78% 18%, rgba(102,215,255,.12), transparent 22%),
+    radial-gradient(circle at 12% 82%, rgba(242,185,64,.05), transparent 20%),
+    #02070c;
+  background-size:28px 28px, 28px 28px, auto, auto, auto;
+  box-shadow:0 26px 80px rgba(0,0,0,.40);
+  padding:28px;
+}
+
+.board-scroll-v63{
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+
+.mission-autonomy-svg-v63,
+.theory-svg-v63{
+  width:100%;
+  display:block;
+}
+
+.mission-autonomy-svg-v63{
+  min-width:760px;
+}
+
+.mission-area-v63{
+  fill:rgba(102,215,255,.025);
+  stroke:rgba(102,215,255,.62);
+  stroke-width:1.8;
+}
+
+.mission-surface-v63{
+  stroke:rgba(255,255,255,.25);
+  stroke-width:1.2;
+}
+
+.usv-relay-v63 rect,
+.usv-relay-v63 polygon{
+  fill:rgba(245,245,245,.90);
+  stroke:rgba(255,255,255,.95);
+  stroke-width:1.2;
+}
+.usv-relay-v63 line{
+  stroke:#66d7ff;
+  stroke-width:1.4;
+  stroke-linecap:round;
+}
+
+.mission-ref-v63{
+  fill:none;
+  stroke:#66d7ff;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-dasharray:11 10;
+}
+
+.mission-plan-v63{
+  fill:none;
+  stroke:#f2b940;
+  stroke-width:2.2;
+  opacity:.86;
+}
+
+.mission-wp-v63{
+  fill:#071725;
+  stroke:#f2b940;
+  stroke-width:3;
+}
+
+.mission-keepout-v63{
+  fill:rgba(242,185,64,.06);
+  stroke:rgba(242,185,64,.62);
+  stroke-width:1.4;
+  stroke-dasharray:7 6;
+}
+
+.mission-uuv-v63 rect,
+.mission-uuv-v63 polygon{
+  fill:#d7ad38;
+  stroke:#ffd363;
+  stroke-width:1.3;
+}
+.mission-uuv-v63 line{
+  stroke:#ffe29a;
+  stroke-width:1.3;
+}
+
+.mission-comms-v63{
+  fill:none;
+  stroke:rgba(102,215,255,.75);
+  stroke-width:2.1;
+  stroke-dasharray:8 8;
+}
+
+.mission-task-v63{
+  fill:none;
+  stroke:rgba(242,185,64,.9);
+  stroke-width:2.1;
+  stroke-dasharray:6 7;
+}
+
+.mission-label-v63,
+.mission-keepout-label-v63,
+.mission-note-v63{
+  font-family:Inter,Arial,sans-serif;
+  font-size:14px;
+  font-weight:900;
+  fill:#fff;
+}
+
+.mission-keepout-label-v63{
+  fill:rgba(255,255,255,.78);
+}
+.mission-note-v63{
+  fill:rgba(255,255,255,.55);
+  font-size:12px;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+
+.theory-svg-v63{
+  min-width:820px;
+}
+
+.theory-col-v63{
+  fill:rgba(255,255,255,.02);
+  stroke:rgba(255,255,255,.12);
+  stroke-width:1.4;
+}
+
+.theory-col-title-v63{
+  font-family:Inter,Arial,sans-serif;
+  fill:#fff;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+
+.theory-chip-v63 rect{
+  fill:rgba(102,215,255,.055);
+  stroke:rgba(102,215,255,.38);
+  stroke-width:1.2;
+}
+.theory-chip-alt-v63 rect{
+  fill:rgba(242,185,64,.042);
+  stroke:rgba(242,185,64,.34);
+  stroke-width:1.2;
+}
+.theory-chip-v63 text,
+.theory-chip-alt-v63 text{
+  font-family:Inter,Arial,sans-serif;
+  fill:rgba(255,255,255,.86);
+  font-size:12.5px;
+  font-weight:800;
+}
+
+.theory-link-v63{
+  stroke:#66d7ff;
+  stroke-width:2.2;
+}
+
+.theory-process-line-v63{
+  stroke:rgba(255,255,255,.45);
+  stroke-width:1.4;
+}
+.theory-process-v63 text{
+  font-family:Inter,Arial,sans-serif;
+  fill:rgba(255,255,255,.65);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+
+/* Ongoing badge */
+.project-band{
+  grid-template-columns:84px minmax(0,1fr) minmax(330px,.58fr);
+}
+
+.project-band-index{
+  padding-right:12px;
+}
+
+.project-band-index span{
+  padding:5px 6px;
+  font-size:9px;
+  letter-spacing:.08em;
+  line-height:1;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+}
+
+@media(max-width:960px){
+  .project-band{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:760px){
+  .mission-autonomy-board-v63,
+  .theory-board-v63{
+    padding:22px;
+  }
+
+  .mission-autonomy-svg-v63{
+    min-width:720px;
+  }
+
+  .theory-svg-v63{
+    min-width:800px;
+  }
+}
