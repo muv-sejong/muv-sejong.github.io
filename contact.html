@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | MUV Lab</title>
   <meta name="description" content="Contact MUV Lab" />
-  <link rel="stylesheet" href="style.css?v=43" />
+  <link rel="stylesheet" href="style.css?v=45" />
 </head>
 <body>
 
@@ -25,149 +25,88 @@
 
 <main>
 
-  <section class="page-hero contact-hero" style="--bg:url('assets/contact.png')">
+  <section class="page-hero contact-hero minimal-contact-hero" style="--bg:url('assets/contact.png')">
     <div class="panel-overlay"></div>
     <div class="page-hero-content">
       <p class="eyebrow">Contact / Collaborate</p>
       <h1>Collaborate with MUV Lab.</h1>
       <p>
-        Graduate admission, sponsored research, and technical collaboration
-        in marine autonomy, guidance, control, and defense AI.
+        Marine autonomy, guidance, control, and defense AI.
       </p>
     </div>
   </section>
 
-  <section class="content-section contact-content">
+  <section class="content-section contact-content minimal-contact-content">
     <div class="section-inner">
 
-      <section class="contact-channel-grid">
-        <article>
-          <span>01</span>
-          <h2>Graduate Admission</h2>
-          <p>M.S. / Ph.D. / Integrated M.S.–Ph.D. / Research Intern</p>
-          <a href="mailto:dwk@sejong.ac.kr?subject=MUV%20Lab%20Graduate%20Admission%20Inquiry">dwk@sejong.ac.kr</a>
+      <section class="contact-core-layout">
+        <article class="contact-core-panel technical-panel">
+          <p class="eyebrow small">Technical Areas</p>
+          <h2>Capabilities for sponsored R&amp;D and technical collaboration.</h2>
+
+          <div class="technical-list">
+            <div>
+              <h3>Guidance &amp; Control</h3>
+              <p>UUV / USV path following · formation control · actuator saturation · robust nonlinear control</p>
+            </div>
+            <div>
+              <h3>Autonomy SW</h3>
+              <p>MATLAB / Simulink · Python · C / C++ · ROS2-oriented implementation · mission simulation</p>
+            </div>
+            <div>
+              <h3>Marine Simulation</h3>
+              <p>6-DOF dynamics · digital twin · scenario validation · HIL-ready architecture</p>
+            </div>
+            <div>
+              <h3>Defense AI</h3>
+              <p>Mission planning · world models · distributed autonomy · decision-support logic</p>
+            </div>
+          </div>
         </article>
 
-        <article>
-          <span>02</span>
-          <h2>Technical Collaboration</h2>
-          <p>Sponsored research, consulting, algorithm development, and autonomy software prototyping.</p>
-          <a href="mailto:dwk@sejong.ac.kr?subject=MUV%20Lab%20Technical%20Collaboration%20Inquiry">dwk@sejong.ac.kr</a>
-        </article>
+        <aside class="contact-core-panel inquiry-panel">
+          <p class="eyebrow small">Inquiries</p>
 
-        <article>
-          <span>03</span>
-          <h2>Location</h2>
-          <p>Room 1014C, Gwanggaeto Building<br />Sejong University, Seoul, Republic of Korea</p>
-          <a href="#location">View Map</a>
-        </article>
+          <div class="inquiry-block">
+            <h3>Graduate Admission</h3>
+            <p>M.S. · Ph.D. · Integrated M.S.–Ph.D. · Research Intern</p>
+          </div>
+
+          <div class="inquiry-block">
+            <h3>Sponsored R&amp;D / Technical Collaboration</h3>
+            <p>Algorithm development · simulation · consulting · autonomy software prototyping</p>
+          </div>
+
+          <div class="inquiry-email">
+            <span>Email</span>
+            <a href="mailto:dwk@sejong.ac.kr">dwk@sejong.ac.kr</a>
+          </div>
+
+          <div class="inquiry-address">
+            <span>Lab Address</span>
+            <p>
+              Room 1014C, Gwanggaeto Building<br />
+              Sejong University, Seoul, Republic of Korea
+            </p>
+          </div>
+        </aside>
       </section>
 
-      <section class="contact-section">
-        <div class="section-heading-row simple-heading">
-          <h2 class="block-title">Technical Collaboration Areas</h2>
-        </div>
-
-        <div class="collab-area-grid">
-          <article>
-            <span>01</span>
-            <h3>Guidance & Control</h3>
-            <ul>
-              <li>UUV / USV path following</li>
-              <li>Formation and cooperative control</li>
-              <li>Actuator saturation and robust control</li>
-              <li>Nonlinear marine vehicle control</li>
-            </ul>
-          </article>
-
-          <article>
-            <span>02</span>
-            <h3>Autonomy SW</h3>
-            <ul>
-              <li>MATLAB / Simulink</li>
-              <li>Python / C / C++</li>
-              <li>ROS2-oriented implementation</li>
-              <li>Mission simulation software</li>
-            </ul>
-          </article>
-
-          <article>
-            <span>03</span>
-            <h3>Marine System Simulation</h3>
-            <ul>
-              <li>6-DOF dynamics</li>
-              <li>Digital-twin simulation</li>
-              <li>Scenario-based validation</li>
-              <li>HIL-ready architecture</li>
-            </ul>
-          </article>
-
-          <article>
-            <span>04</span>
-            <h3>Defense AI & Mission Autonomy</h3>
-            <ul>
-              <li>Mission planning</li>
-              <li>World models</li>
-              <li>Distributed autonomy</li>
-              <li>Decision-support logic</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="defense-experience-block">
+      <section class="credibility-strip">
         <div>
-          <p class="eyebrow small">Defense-Sponsored R&D Experience</p>
-          <h2>Underwater vehicle guidance, control, and mission autonomy.</h2>
-          <p>
-            MUV Lab has extensive experience in defense-sponsored R&D, including
-            LIG Nex1-sponsored projects on UUV guidance and control, mine-detection
-            UUV swarm operation, and torpedo-related control technologies.
-          </p>
+          <p class="eyebrow small">Defense-Sponsored R&amp;D Experience</p>
+          <h2>LIG Nex1-sponsored UUV and torpedo-related R&amp;D experience.</h2>
         </div>
-
-        <div class="experience-keywords">
-          <span>Mine-detection UUV swarm operation</span>
-          <span>UUV guidance and path-following control</span>
-          <span>Light torpedo guidance/control research</span>
-          <span>Robust control for autonomous underwater vehicles</span>
+        <div class="credibility-tags">
+          <span>UUV Guidance</span>
+          <span>Mine-Detection UUV Swarm</span>
+          <span>Torpedo Control</span>
+          <span>Marine Autonomy Simulation</span>
         </div>
       </section>
 
-      <section class="contact-section">
-        <div class="section-heading-row simple-heading">
-          <h2 class="block-title">How to Start</h2>
-        </div>
-
-        <div class="start-process">
-          <article>
-            <span>01</span>
-            <h3>Define</h3>
-            <p>Vehicle, mission, constraints, environment, and required technical output.</p>
-          </article>
-
-          <article>
-            <span>02</span>
-            <h3>Discuss</h3>
-            <p>Guidance, control, autonomy, simulation, and software development scope.</p>
-          </article>
-
-          <article>
-            <span>03</span>
-            <h3>Prototype</h3>
-            <p>Algorithm design, simulation, and scenario-based verification.</p>
-          </article>
-
-          <article>
-            <span>04</span>
-            <h3>Collaborate</h3>
-            <p>Sponsored research, consulting, reporting, and technology transfer support.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="location" class="location-section">
-        <div class="location-info">
+      <section id="location" class="minimal-location-section">
+        <div class="location-summary">
           <p class="eyebrow small">Location</p>
           <h2>MUV Lab</h2>
           <p>
@@ -175,12 +114,10 @@
             Department of Defense and AI System Engineering<br />
             Sejong University, Seoul, Republic of Korea
           </p>
-          <div class="location-actions">
-            <a class="button" href="https://www.google.com/maps/search/?api=1&query=Sejong%20University%20Gwanggaeto%20Building%201014C" target="_blank" rel="noopener">Open in Google Maps</a>
-          </div>
+          <a class="button" href="https://www.google.com/maps/search/?api=1&query=Sejong%20University%20Gwanggaeto%20Building%201014C" target="_blank" rel="noopener">Open in Google Maps</a>
         </div>
 
-        <div class="map-panel">
+        <div class="minimal-map-panel">
           <iframe
             title="MUV Lab location map"
             loading="lazy"
