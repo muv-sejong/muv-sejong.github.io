@@ -3917,3 +3917,29 @@ body{
     padding:22px;
   }
 }
+
+/* v54: publications and join title refinement */
+.compact-theme-head{
+  margin-bottom:18px !important;
+}
+
+.compact-theme-head .eyebrow{
+  margin-bottom:0 !important;
+}
+
+.publications-v53 .theme-publication-grid{
+  margin-top:0 !important;
+}
+
+.join-final-cta h2{
+  max-width:none !important;
+  white-space:nowrap;
+  font-size:clamp(30px,4.2vw,58px) !important;
+}
+
+@media(max-width:760px){
+  .join-final-cta h2{
+    white-space:normal;
+    font-size:clamp(30px,8.2vw,42px) !important;
+  }
+}
