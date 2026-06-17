@@ -5977,3 +5977,329 @@ li{
     min-width:860px !important;
   }
 }
+
+/* v72: case consistency polish
+   Rule:
+   - Small labels, navigation, buttons, badges, and metadata remain uppercase.
+   - Main headings, card titles, project/publication/member titles use normal/title case.
+   - This removes the mixed all-caps vs title-case inconsistency across pages.
+*/
+
+/* Main display and section headings: no forced uppercase */
+.hero-content h1,
+.page-hero-content h1,
+.block-title,
+.section-title h2,
+.section-heading h2,
+.section-heading-row h2,
+.research-lead-v60 h2,
+.research-section-title-v60 h2,
+.figure-copy-v60 h3,
+.track-copy-v60 h3,
+.research-architecture-cards-v60 h3,
+.research-stack-v60 h3,
+.project-compact-head h2,
+.project-band h3,
+.archive-item h3,
+.project-archive-list h3,
+.pub-lead h2,
+.landmark-card h3,
+.publication-card h3,
+.pub-theme-card h3,
+.pub-record-panel h3,
+.member-profile h2,
+.pi-name,
+.researcher-card h3,
+.join-intro h2,
+.join-card h3,
+.join-process article h3,
+.join-final-cta h2,
+.contact-intro h2,
+.contact-card h2,
+.contact-card h3{
+  text-transform:none !important;
+}
+
+/* Preserve uppercase only where it functions as UI metadata */
+.eyebrow,
+.eyebrow.small,
+.site-nav a,
+.button,
+.button.secondary,
+.member-role,
+.project-band-type,
+.project-band-index span,
+.project-meta-compact span,
+.pub-meta,
+.service-tags span,
+.tags-v60 span,
+.member-keywords span,
+.project-band-side h4,
+.project-band-side li span,
+.archive-meta,
+.footer,
+.site-footer,
+.brand{
+  text-transform:uppercase !important;
+}
+
+/* Title-case heading rhythm */
+.hero-content h1,
+.page-hero-content h1{
+  letter-spacing:-.052em !important;
+}
+
+.research-lead-v60 h2,
+.research-section-title-v60 h2,
+.project-compact-head h2,
+.pub-lead h2,
+.join-intro h2,
+.contact-intro h2{
+  letter-spacing:-.042em !important;
+}
+
+.figure-copy-v60 h3,
+.track-copy-v60 h3,
+.project-band h3,
+.landmark-card h3,
+.publication-card h3,
+.researcher-card h3,
+.join-card h3,
+.contact-card h3{
+  letter-spacing:-.032em !important;
+}
+
+/* Keep short architecture-card titles compact but not shouted */
+.research-architecture-cards-v60 h3,
+.research-stack-v60 h3{
+  font-size:15.5px !important;
+  letter-spacing:.005em !important;
+  font-weight:900 !important;
+}
+
+/* Buttons remain consistent with nav */
+.button,
+.button.secondary{
+  letter-spacing:.09em !important;
+  font-weight:900 !important;
+}
+
+/* Mobile consistency */
+@media(max-width:760px){
+  .hero-content h1,
+  .page-hero-content h1{
+    letter-spacing:-.048em !important;
+  }
+
+  .research-lead-v60 h2,
+  .research-section-title-v60 h2,
+  .figure-copy-v60 h3,
+  .track-copy-v60 h3,
+  .project-band h3{
+    letter-spacing:-.034em !important;
+  }
+}
+
+/* v73: comprehensive case-policy cleanup
+   Final rule:
+   1. UI labels, navigation, buttons, badges, tags, metadata -> uppercase.
+   2. Long readable content: project titles, publication titles, research track titles,
+      member names, card titles, and major headings -> normal/title case.
+   This improves readability and removes mixed-case inconsistency.
+*/
+
+/* A. Never force uppercase on readable long titles/headings */
+h1, h2, h3, h4,
+.hero-content h1,
+.page-hero-content h1,
+.block-title,
+.section-title h2,
+.section-heading h2,
+.section-heading-row h2,
+.research-lead-v60 h2,
+.research-section-title-v60 h2,
+.figure-copy-v60 h3,
+.track-copy-v60 h3,
+.research-architecture-cards-v60 h3,
+.research-stack-v60 h3,
+.project-compact-head h2,
+.project-band h3,
+.project-title,
+.project-title-ko,
+.archive-item h3,
+.project-archive-list h3,
+.project-card h3,
+.pub-lead h2,
+.landmark-card h3,
+.landmark-card h4,
+.publication-card h3,
+.publication-card h4,
+.pub-theme-card h3,
+.pub-record-panel h3,
+.paper-title,
+.publication-title,
+.article-title,
+.member-profile h2,
+.pi-name,
+.researcher-card h3,
+.join-intro h2,
+.join-card h3,
+.join-process article h3,
+.join-final-cta h2,
+.contact-intro h2,
+.contact-card h2,
+.contact-card h3{
+  text-transform:none !important;
+}
+
+/* B. Uppercase only for UI labels and short metadata */
+.eyebrow,
+.eyebrow.small,
+.site-nav a,
+.button,
+.button.secondary,
+.brand,
+.member-role,
+.project-band-type,
+.project-band-index span,
+.project-meta-compact span,
+.project-band-side h4,
+.archive-meta,
+.pub-meta,
+.service-tags span,
+.tags-v60 span,
+.member-keywords span,
+.status,
+.status-pill,
+.badge,
+.metric-label,
+.site-footer,
+.site-footer span{
+  text-transform:uppercase !important;
+}
+
+/* C. Better title-case spacing. Uppercase needed tighter spacing; title case needs less. */
+.hero-content h1,
+.page-hero-content h1{
+  letter-spacing:-.050em !important;
+}
+
+.research-lead-v60 h2,
+.research-section-title-v60 h2,
+.project-compact-head h2,
+.pub-lead h2,
+.join-intro h2,
+.contact-intro h2{
+  letter-spacing:-.040em !important;
+}
+
+.figure-copy-v60 h3,
+.track-copy-v60 h3,
+.project-band h3,
+.landmark-card h3,
+.publication-card h3,
+.pub-theme-card h3,
+.researcher-card h3,
+.join-card h3,
+.contact-card h3{
+  letter-spacing:-.026em !important;
+}
+
+/* D. Project and publication titles are long: make them readable, not shouted */
+.project-band h3,
+.archive-item h3,
+.project-archive-list h3,
+.landmark-card h3,
+.publication-card h3{
+  line-height:1.13 !important;
+  color:rgba(255,255,255,.94) !important;
+}
+
+.project-band h3{
+  font-size:clamp(24px,1.82vw,32px) !important;
+}
+
+.landmark-card h3,
+.publication-card h3{
+  font-size:clamp(21px,1.5vw,28px) !important;
+}
+
+/* E. Short architecture cards can stay compact but not all-caps */
+.research-architecture-cards-v60 h3,
+.research-stack-v60 h3{
+  font-size:15.5px !important;
+  line-height:1.22 !important;
+  letter-spacing:.003em !important;
+}
+
+/* F. Body text contrast and rhythm */
+.project-title-ko,
+.project-band-main p,
+.project-band-side li,
+.archive-item p,
+.project-archive-list p,
+.landmark-card p,
+.publication-card p,
+.pub-theme-card p,
+.member-profile p,
+.researcher-card p,
+.join-card p,
+.contact-card p{
+  color:rgba(255,255,255,.76) !important;
+  line-height:1.68 !important;
+}
+
+/* G. Mobile case policy and swipe preservation */
+@media(max-width:760px){
+  .hero-content h1,
+  .page-hero-content h1{
+    letter-spacing:-.046em !important;
+  }
+
+  .research-lead-v60 h2,
+  .research-section-title-v60 h2,
+  .figure-copy-v60 h3,
+  .track-copy-v60 h3,
+  .project-band h3,
+  .landmark-card h3,
+  .publication-card h3{
+    letter-spacing:-.026em !important;
+    line-height:1.08 !important;
+  }
+
+  .project-band h3,
+  .landmark-card h3,
+  .publication-card h3{
+    font-size:clamp(22px,6.8vw,32px) !important;
+  }
+
+  .research-image-final-v64,
+  .research-image-v60,
+  .research-figure-board-v60 figure,
+  .hero-board-v60 figure{
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    touch-action:pan-x pan-y !important;
+  }
+
+  .research-image-final-v64 img,
+  .research-image-v60 img,
+  .research-figure-board-v60 figure img,
+  .hero-board-v60 figure img{
+    width:920px !important;
+    min-width:920px !important;
+    max-width:none !important;
+    height:auto !important;
+  }
+}
+
+@media(max-width:420px){
+  .research-image-final-v64 img,
+  .research-image-v60 img,
+  .research-figure-board-v60 figure img,
+  .hero-board-v60 figure img{
+    width:860px !important;
+    min-width:860px !important;
+  }
+}
