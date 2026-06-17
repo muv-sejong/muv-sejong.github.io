@@ -5381,3 +5381,275 @@ li{
     padding-bottom:54px !important;
   }
 }
+
+/* v69: unified site-wide readability + restored mobile figure swipe
+   Apply by replacing style.css. For cache busting, update HTML links to style.css?v=69.
+*/
+
+/* 1) Global typography balance: same rule across all pages */
+:root{
+  --muv-text-main: rgba(255,255,255,.92);
+  --muv-text-body: rgba(255,255,255,.76);
+  --muv-text-muted: rgba(255,255,255,.60);
+  --muv-heading-tracking: -.050em;
+}
+
+body{
+  color:var(--muv-text-main);
+}
+
+p,
+li{
+  color:var(--muv-text-body);
+}
+
+/* Big hero headings: keep SpaceX-like impact, but avoid excessive scale */
+.hero-content h1,
+.page-hero-content h1{
+  font-size:clamp(48px,5.75vw,96px) !important;
+  line-height:.97 !important;
+  letter-spacing:-.055em !important;
+}
+
+/* Main section titles across Research / Projects / Publications / Members / Join / Contact */
+.block-title,
+.section-title h2,
+.section-heading h2,
+.section-heading-row h2,
+.research-lead-v60 h2,
+.research-section-title-v60 h2,
+.pub-lead h2,
+.project-compact-head h2,
+.join-intro h2,
+.contact-intro h2{
+  font-size:clamp(40px,4.15vw,72px) !important;
+  line-height:1.00 !important;
+  letter-spacing:var(--muv-heading-tracking) !important;
+}
+
+/* Subsection/card titles */
+.figure-copy-v60 h3,
+.track-copy-v60 h3,
+.project-band h3,
+.landmark-card h3,
+.publication-card h3,
+.member-profile h2,
+.pi-name,
+.join-final-cta h2,
+.refined-join-cta h2,
+.contact-card h2{
+  letter-spacing:-.041em !important;
+}
+
+/* Body/readability consistently lifted */
+.research-lead-v60 p,
+.figure-copy-v60 p,
+.track-copy-v60 p,
+.research-list-v60 li,
+.project-title-ko,
+.project-band-main p,
+.project-band-side li,
+.archive-item p,
+.project-archive-list p,
+.landmark-card p,
+.publication-card p,
+.pub-theme-card p,
+.pub-record-panel p,
+.member-profile p,
+.researcher-card p,
+.join-card p,
+.join-process article p,
+.contact-card p{
+  font-size:15.5px !important;
+  line-height:1.72 !important;
+  color:var(--muv-text-body) !important;
+}
+
+/* Research first block: reduce title dominance and give the image/card room */
+.research-lead-v60 h2{
+  font-size:clamp(48px,4.95vw,84px) !important;
+  line-height:.99 !important;
+}
+
+.research-lead-v60 p{
+  max-width:1120px !important;
+  color:rgba(255,255,255,.78) !important;
+}
+
+.figure-copy-v60 h3{
+  font-size:clamp(32px,2.72vw,50px) !important;
+  line-height:1.03 !important;
+}
+
+.research-architecture-cards-v60 p,
+.research-stack-v60 p{
+  font-size:14.8px !important;
+  line-height:1.66 !important;
+  color:var(--muv-text-body) !important;
+}
+
+/* Keep small labels consistently blue and readable */
+.eyebrow,
+.eyebrow.small{
+  color:rgba(102,215,255,.78) !important;
+  letter-spacing:.14em !important;
+}
+
+/* 2) Restore and strengthen mobile horizontal swipe for technical figures */
+@media(max-width:760px){
+  html,
+  body{
+    overflow-x:hidden;
+  }
+
+  .content-section{
+    padding-top:54px !important;
+    padding-bottom:54px !important;
+  }
+
+  .page-hero-content,
+  .hero-content,
+  .section-inner{
+    width:min(100% - 36px, 1180px) !important;
+  }
+
+  .hero-content h1,
+  .page-hero-content h1{
+    font-size:clamp(36px,11.5vw,56px) !important;
+    line-height:.98 !important;
+  }
+
+  .block-title,
+  .section-title h2,
+  .section-heading h2,
+  .section-heading-row h2,
+  .research-lead-v60 h2,
+  .research-section-title-v60 h2,
+  .pub-lead h2,
+  .project-compact-head h2,
+  .join-intro h2,
+  .contact-intro h2{
+    font-size:clamp(29px,8.9vw,42px) !important;
+    line-height:1.04 !important;
+  }
+
+  .figure-copy-v60 h3,
+  .track-copy-v60 h3,
+  .project-band h3{
+    font-size:clamp(25px,7.9vw,37px) !important;
+    line-height:1.07 !important;
+  }
+
+  p,
+  li,
+  .research-lead-v60 p,
+  .track-copy-v60 p,
+  .project-title-ko,
+  .landmark-card p,
+  .publication-card p,
+  .join-card p,
+  .contact-card p{
+    font-size:15px !important;
+    line-height:1.74 !important;
+  }
+
+  .research-track-v60,
+  .research-track-v60.reverse,
+  .theory-track-v60{
+    grid-template-columns:1fr !important;
+    gap:22px !important;
+    padding:34px 0 !important;
+  }
+
+  .research-architecture-cards-v60,
+  .research-stack-v60{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+
+  /* Horizontal swipe containers */
+  .research-image-final-v64,
+  .research-image-v60,
+  .research-figure-board-v60 figure,
+  .hero-board-v60 figure{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    overscroll-behavior-x:contain !important;
+    touch-action:pan-x pan-y !important;
+    scrollbar-width:thin;
+    padding-bottom:8px !important;
+  }
+
+  /* The image itself must be wider than the viewport, otherwise swipe disappears */
+  .research-image-final-v64 img,
+  .research-image-v60 img,
+  .research-figure-board-v60 figure img,
+  .hero-board-v60 figure img{
+    display:block !important;
+    width:920px !important;
+    min-width:920px !important;
+    max-width:none !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    padding:10px !important;
+    box-sizing:border-box !important;
+    transform:none !important;
+  }
+
+  .hero-board-v60{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    padding:22px !important;
+  }
+
+  .project-band{
+    display:block !important;
+    padding:18px !important;
+  }
+
+  .project-band-index{
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    min-height:0 !important;
+    padding:0 0 14px !important;
+    margin-bottom:18px !important;
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+  }
+
+  .project-band-index span{
+    max-width:none !important;
+  }
+
+  .hero-actions-equal .button,
+  .hero-actions-equal .button.secondary,
+  .hero-actions .button,
+  .hero-actions .button.secondary{
+    width:100% !important;
+    min-width:0 !important;
+  }
+}
+
+@media(max-width:420px){
+  .page-hero-content,
+  .hero-content,
+  .section-inner{
+    width:min(100% - 28px, 1180px) !important;
+  }
+
+  .research-image-final-v64 img,
+  .research-image-v60 img,
+  .research-figure-board-v60 figure img,
+  .hero-board-v60 figure img{
+    width:860px !important;
+    min-width:860px !important;
+  }
+}
