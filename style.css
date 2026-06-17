@@ -4951,3 +4951,116 @@ body{
     min-width:800px;
   }
 }
+
+/* v64: replace selected research blocks with expert images, equal home buttons, image-copy deterrence */
+.hero-actions-equal{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.hero-actions-equal .button,
+.hero-actions-equal .button.secondary{
+  min-width:190px;
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-sizing:border-box;
+}
+
+.research-image-final-v64{
+  background:#02070c !important;
+}
+
+.research-image-final-v64 img{
+  object-fit:contain !important;
+  object-position:center center !important;
+  padding:18px !important;
+  box-sizing:border-box !important;
+  background:#02070c !important;
+  min-height:0 !important;
+  height:auto !important;
+  width:100% !important;
+  transform:none !important;
+}
+
+.theory-image-final-v64 img{
+  padding:22px !important;
+}
+
+.protected-image,
+.protected-image img,
+.research-image-v60,
+.research-image-v60 img,
+.research-figure-board-v60 img{
+  -webkit-user-drag:none;
+  user-drag:none;
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+}
+
+/* Give the Projects ongoing badge enough room and keep it away from the divider */
+.project-band{
+  grid-template-columns:108px minmax(0,1fr) minmax(330px,.58fr) !important;
+}
+
+.project-band-index{
+  padding-right:18px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+}
+
+.project-band-index span{
+  width:auto !important;
+  max-width:72px !important;
+  padding:5px 7px !important;
+  font-size:9px !important;
+  letter-spacing:.075em !important;
+  line-height:1.05 !important;
+  white-space:nowrap !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+}
+
+@media(max-width:960px){
+  .project-band{
+    grid-template-columns:1fr !important;
+  }
+
+  .project-band-index{
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+  }
+
+  .project-band-index span{
+    max-width:none !important;
+  }
+}
+
+@media(max-width:760px){
+  .hero-actions-equal{
+    width:100%;
+  }
+
+  .hero-actions-equal .button,
+  .hero-actions-equal .button.secondary{
+    flex:1 1 100%;
+    min-width:0;
+  }
+
+  .research-image-final-v64 img{
+    padding:10px !important;
+  }
+
+  .theory-image-final-v64 img{
+    padding:12px !important;
+  }
+}

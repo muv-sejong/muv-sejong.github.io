@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | MUV Lab</title>
   <meta name="description" content="Research areas of MUV Lab" />
-  <link rel="stylesheet" href="style.css?v=63" />
+  <link rel="stylesheet" href="style.css?v=64" />
 </head>
 <body>
 
@@ -56,8 +56,7 @@
           <p>Mission → World Model → Guidance → Control → Vehicle Dynamics → Validation</p>
         </div>
         <figure>
-          <a href="assets/research-architecture-final-v60.jpg" target="_blank" rel="noopener" aria-label="Open full research architecture figure">
-            <img src="assets/research-architecture-final-v60.jpg" alt="Marine autonomy research architecture concept diagram" />
+          <img src="assets/research-architecture-final-v60.jpg" alt="Marine autonomy research architecture concept diagram" draggable="false" loading="lazy" />
           </a>
         </figure>
       </section>
@@ -83,82 +82,11 @@
           <p>Mission-level autonomy for unmanned maritime systems, including path planning, path following, waypoint management, mission sequencing, and autonomous operation in underwater and surface environments.</p>
           <div class="tags-v60"><span>UUV / USV</span><span>Mission autonomy</span><span>Path planning</span><span>Waypoint guidance</span></div>
         </div>
-        
-        <div class="mission-autonomy-board-v63">
-          <div class="mini-head-v60">Mission Autonomy Schematic</div>
-          <div class="board-scroll-v63">
-            <svg class="mission-autonomy-svg-v63" viewBox="0 0 860 430" role="img" aria-label="Mission autonomy schematic">
-              <defs>
-                <marker id="routeArrowV63" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 Z" fill="#66d7ff"></path>
-                </marker>
-                <marker id="taskArrowV63" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 Z" fill="#f2b940"></path>
-                </marker>
-              </defs>
-
-              <rect x="88" y="74" width="614" height="248" rx="10" class="mission-area-v63"></rect>
-              <path d="M104 98 H686" class="mission-surface-v63"></path>
-
-              <g class="usv-relay-v63" transform="translate(378 70)">
-                <rect x="0" y="18" width="104" height="14" rx="2"></rect>
-                <polygon points="12,18 92,18 76,0 24,0"></polygon>
-                <rect x="42" y="-12" width="24" height="12" rx="2"></rect>
-                <line x1="54" y1="-12" x2="54" y2="-30"></line>
-                <line x1="54" y1="-26" x2="42" y2="-20"></line>
-                <line x1="54" y1="-26" x2="66" y2="-20"></line>
-              </g>
-
-              <path d="M142 282 C190 210, 246 166, 304 158 S420 188, 474 132 S576 102, 644 114" class="mission-ref-v63" marker-end="url(#routeArrowV63)"></path>
-              <path d="M144 274 L242 190 L336 218 L460 144 L560 116 L648 118" class="mission-plan-v63"></path>
-
-              <circle cx="144" cy="274" r="8" class="mission-wp-v63"></circle>
-              <circle cx="242" cy="190" r="8" class="mission-wp-v63"></circle>
-              <circle cx="336" cy="218" r="8" class="mission-wp-v63"></circle>
-              <circle cx="460" cy="144" r="8" class="mission-wp-v63"></circle>
-              <circle cx="560" cy="116" r="8" class="mission-wp-v63"></circle>
-              <circle cx="648" cy="118" r="8" class="mission-wp-v63"></circle>
-
-              <text x="132" y="302" class="mission-label-v63">Start</text>
-              <text x="226" y="176" class="mission-label-v63">WP1</text>
-              <text x="320" y="244" class="mission-label-v63">WP2</text>
-              <text x="544" y="102" class="mission-label-v63">WP3</text>
-              <text x="626" y="104" class="mission-label-v63">End</text>
-
-              <rect x="506" y="198" width="108" height="58" rx="5" class="mission-keepout-v63"></rect>
-              <text x="560" y="232" class="mission-keepout-label-v63" text-anchor="middle">Keep-out</text>
-
-              <g class="mission-uuv-v63" transform="translate(192 304) rotate(-8)">
-                <rect x="-56" y="-12" width="100" height="24" rx="12"></rect>
-                <polygon points="44,-12 72,0 44,12"></polygon>
-                <line x1="-16" y1="-12" x2="-16" y2="-20"></line>
-              </g>
-              <g class="mission-uuv-v63" transform="translate(358 326) rotate(3)">
-                <rect x="-56" y="-12" width="100" height="24" rx="12"></rect>
-                <polygon points="44,-12 72,0 44,12"></polygon>
-                <line x1="-16" y1="-12" x2="-16" y2="-20"></line>
-              </g>
-              <g class="mission-uuv-v63" transform="translate(570 296) rotate(-12)">
-                <rect x="-56" y="-12" width="100" height="24" rx="12"></rect>
-                <polygon points="44,-12 72,0 44,12"></polygon>
-                <line x1="-16" y1="-12" x2="-16" y2="-20"></line>
-              </g>
-
-              <path d="M430 86 L192 292" class="mission-comms-v63"></path>
-              <path d="M430 86 L358 314" class="mission-comms-v63"></path>
-              <path d="M430 86 L570 282" class="mission-comms-v63"></path>
-
-              <path d="M192 292 C218 280, 262 272, 300 290" class="mission-task-v63" marker-end="url(#taskArrowV63)"></path>
-              <path d="M358 314 C392 308, 422 296, 456 274" class="mission-task-v63" marker-end="url(#taskArrowV63)"></path>
-              <path d="M570 282 C604 278, 634 258, 654 234" class="mission-task-v63" marker-end="url(#taskArrowV63)"></path>
-
-              <text x="126" y="352" class="mission-note-v63">mission area</text>
-              <text x="350" y="352" class="mission-note-v63">relay links</text>
-              <text x="580" y="352" class="mission-note-v63">vehicle tasks</text>
-            </svg>
-          </div>
-        </div>
-</section>
+        <figure class="research-image-v60 research-image-final-v64 protected-image">
+          <img src="assets/mission-autonomy-final-v64.jpg" alt="Mission autonomy schematic showing mission area, planned route, reference route, relay link, keep-out area, and UUV tasks" draggable="false" loading="lazy" />
+          <figcaption>Mission area · planned/reference route · relay link · keep-out area · UUV task execution</figcaption>
+        </figure>
+      </section>
 
       <section class="research-track-v60 reverse">
         <div class="track-copy-v60">
@@ -173,9 +101,7 @@
           </ul>
         </div>
         <figure class="research-image-v60">
-          <a href="assets/guidance-3d-final-v60.jpg" target="_blank" rel="noopener" aria-label="Open full 3-D guidance and control figure">
-            <img src="assets/guidance-3d-final-v60.jpg" alt="Three-dimensional UUV and USV guidance and control concept" />
-          </a>
+          <img src="assets/guidance-3d-final-v60.jpg" alt="Three-dimensional UUV and USV guidance and control concept" draggable="false" loading="lazy" />
           <figcaption>3D reference path · vehicle state · cross-track error · heading/pitch commands · control input</figcaption>
         </figure>
       </section>
@@ -193,9 +119,7 @@
           </ul>
         </div>
         <figure class="research-image-v60">
-          <a href="assets/swarm-comm-final-v60.jpg" target="_blank" rel="noopener" aria-label="Open full cooperative operation figure">
-            <img src="assets/swarm-comm-final-v60.jpg" alt="Cooperative UUV swarm operation under communication constraints" />
-          </a>
+          <img src="assets/swarm-comm-final-v60.jpg" alt="Cooperative UUV swarm operation under communication constraints" draggable="false" loading="lazy" />
           <figcaption>Multiple UUVs · low-rate acoustic communication · delay/dropout · formation operation</figcaption>
         </figure>
       </section>
@@ -208,9 +132,7 @@
           <div class="tags-v60"><span>6-DOF dynamics</span><span>Integrated simulator</span><span>Sensor fusion</span><span>Mission validation</span></div>
         </div>
         <figure class="research-image-v60">
-          <a href="assets/digital-twin-final-v60.jpg" target="_blank" rel="noopener" aria-label="Open full digital twin figure">
-            <img src="assets/digital-twin-final-v60.jpg" alt="Integrated simulator and digital twin concept for marine autonomy" />
-          </a>
+          <img src="assets/digital-twin-final-v60.jpg" alt="Integrated simulator and digital twin concept for marine autonomy" draggable="false" loading="lazy" />
           <figcaption>6-DOF model · sensor fusion · mission scenario · autonomy algorithm · validation</figcaption>
         </figure>
       </section>
@@ -221,76 +143,10 @@
           <h3>Control Theory for Autonomous Systems</h3>
           <p>The theoretical foundation of MUV Lab includes nonlinear control, sampled-data control, fuzzy/LPV/LMI systems, input saturation, residual compensation, Lyapunov methods, robust control, and data-driven control.</p>
         </div>
-        
-        <div class="theory-board-v63">
-          <div class="mini-head-v60">Control-Theory System Map</div>
-          <div class="board-scroll-v63">
-            <svg class="theory-svg-v63" viewBox="0 0 880 410" role="img" aria-label="Control theory for autonomous systems diagram">
-              <defs>
-                <marker id="theoryArrowV63" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                  <path d="M0,0 L10,5 L0,10 Z" fill="#66d7ff"></path>
-                </marker>
-              </defs>
-
-              <g transform="translate(34 72)">
-                <rect x="0" y="0" width="182" height="248" rx="10" class="theory-col-v63"></rect>
-                <text x="20" y="28" class="theory-col-title-v63">Methods</text>
-                <g class="theory-chip-v63">
-                  <rect x="18" y="48" width="146" height="34" rx="7"></rect><text x="91" y="70" text-anchor="middle">Lyapunov Methods</text>
-                  <rect x="18" y="92" width="146" height="34" rx="7"></rect><text x="91" y="114" text-anchor="middle">Sampled-Data Control</text>
-                  <rect x="18" y="136" width="146" height="34" rx="7"></rect><text x="91" y="158" text-anchor="middle">Fuzzy / LPV / LMI</text>
-                  <rect x="18" y="180" width="146" height="34" rx="7"></rect><text x="91" y="202" text-anchor="middle">Data-Driven Control</text>
-                </g>
-              </g>
-
-              <g transform="translate(244 72)">
-                <rect x="0" y="0" width="182" height="248" rx="10" class="theory-col-v63"></rect>
-                <text x="20" y="28" class="theory-col-title-v63">Problem Setting</text>
-                <g class="theory-chip-alt-v63">
-                  <rect x="18" y="48" width="146" height="34" rx="7"></rect><text x="91" y="70" text-anchor="middle">Nonlinear Dynamics</text>
-                  <rect x="18" y="92" width="146" height="34" rx="7"></rect><text x="91" y="114" text-anchor="middle">Uncertainty / Disturbance</text>
-                  <rect x="18" y="136" width="146" height="34" rx="7"></rect><text x="91" y="158" text-anchor="middle">Input Saturation</text>
-                  <rect x="18" y="180" width="146" height="34" rx="7"></rect><text x="91" y="202" text-anchor="middle">Communication Constraints</text>
-                </g>
-              </g>
-
-              <g transform="translate(454 72)">
-                <rect x="0" y="0" width="182" height="248" rx="10" class="theory-col-v63"></rect>
-                <text x="20" y="28" class="theory-col-title-v63">Design Layer</text>
-                <g class="theory-chip-v63">
-                  <rect x="18" y="48" width="146" height="34" rx="7"></rect><text x="91" y="70" text-anchor="middle">Guidance Law</text>
-                  <rect x="18" y="92" width="146" height="34" rx="7"></rect><text x="91" y="114" text-anchor="middle">Feedback Controller</text>
-                  <rect x="18" y="136" width="146" height="34" rx="7"></rect><text x="91" y="158" text-anchor="middle">Allocation / Compensation</text>
-                  <rect x="18" y="180" width="146" height="34" rx="7"></rect><text x="91" y="202" text-anchor="middle">Stability Analysis</text>
-                </g>
-              </g>
-
-              <g transform="translate(664 72)">
-                <rect x="0" y="0" width="182" height="248" rx="10" class="theory-col-v63"></rect>
-                <text x="20" y="28" class="theory-col-title-v63">Verification</text>
-                <g class="theory-chip-alt-v63">
-                  <rect x="18" y="48" width="146" height="34" rx="7"></rect><text x="91" y="70" text-anchor="middle">Trajectory Simulation</text>
-                  <rect x="18" y="92" width="146" height="34" rx="7"></rect><text x="91" y="114" text-anchor="middle">Scenario Validation</text>
-                  <rect x="18" y="136" width="146" height="34" rx="7"></rect><text x="91" y="158" text-anchor="middle">Marine Vehicle Tests</text>
-                  <rect x="18" y="180" width="146" height="34" rx="7"></rect><text x="91" y="202" text-anchor="middle">Deployable Algorithms</text>
-                </g>
-              </g>
-
-              <path d="M216 196 H244" class="theory-link-v63" marker-end="url(#theoryArrowV63)"></path>
-              <path d="M426 196 H454" class="theory-link-v63" marker-end="url(#theoryArrowV63)"></path>
-              <path d="M636 196 H664" class="theory-link-v63" marker-end="url(#theoryArrowV63)"></path>
-
-              <path d="M124 340 H756" class="theory-process-line-v63" marker-end="url(#theoryArrowV63)"></path>
-              <g class="theory-process-v63">
-                <text x="146" y="364">Theory</text>
-                <text x="300" y="364">Modeling</text>
-                <text x="452" y="364">Synthesis</text>
-                <text x="610" y="364">Validation</text>
-                <text x="742" y="364">Deployment</text>
-              </g>
-            </svg>
-          </div>
-        </div>
+        <figure class="research-image-v60 research-image-final-v64 protected-image theory-image-final-v64">
+          <img src="assets/control-theory-final-v64.jpg" alt="Control theory system map connecting methods, system modeling, design, and validation" draggable="false" loading="lazy" />
+          <figcaption>Methods · system modeling · guidance/control design · simulation/scenario/experiment validation</figcaption>
+        </figure>
       </section>
 
 
