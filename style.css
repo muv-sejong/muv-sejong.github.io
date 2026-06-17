@@ -5064,3 +5064,117 @@ body{
     padding:12px !important;
   }
 }
+
+/* v65: research image lightbox, watermark overlay, caption removal, member photo swap */
+.research-image-v60 figcaption,
+.research-figure-board-v60 figcaption{
+  display:none !important;
+}
+
+.research-image-v60 img,
+.research-figure-board-v60 img,
+.protected-image img{
+  cursor:zoom-in;
+}
+
+.is-lightbox-target{
+  cursor:zoom-in !important;
+}
+
+body.lightbox-open{
+  overflow:hidden;
+}
+
+.muv-image-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(10px);
+}
+
+.muv-image-lightbox.is-open{
+  display:flex;
+}
+
+.muv-lightbox-frame{
+  position:relative;
+  max-width:min(94vw,1500px);
+  max-height:88vh;
+  border:1px solid rgba(255,255,255,.22);
+  background:#02070c;
+  box-shadow:0 40px 140px rgba(0,0,0,.72);
+  overflow:hidden;
+}
+
+.muv-lightbox-frame img{
+  display:block;
+  max-width:100%;
+  max-height:88vh;
+  object-fit:contain;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
+}
+
+.muv-lightbox-watermark{
+  position:absolute;
+  inset:0;
+  display:grid;
+  grid-template-rows:repeat(3,1fr);
+  align-items:center;
+  justify-items:center;
+  pointer-events:none;
+  opacity:.16;
+  transform:rotate(-18deg) scale(1.15);
+  mix-blend-mode:screen;
+}
+
+.muv-lightbox-watermark span{
+  color:rgba(255,255,255,.82);
+  font-size:clamp(18px,3.4vw,54px);
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  text-shadow:0 0 20px rgba(102,215,255,.20);
+}
+
+.muv-lightbox-close{
+  position:fixed;
+  top:22px;
+  right:26px;
+  z-index:10000;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  font-size:32px;
+  line-height:38px;
+  cursor:pointer;
+}
+
+.muv-lightbox-close:hover{
+  border-color:rgba(102,215,255,.7);
+  color:#66d7ff;
+}
+
+@media(max-width:760px){
+  .muv-image-lightbox{
+    padding:12px;
+  }
+
+  .muv-lightbox-close{
+    top:12px;
+    right:12px;
+  }
+
+  .muv-lightbox-watermark{
+    opacity:.18;
+  }
+}
