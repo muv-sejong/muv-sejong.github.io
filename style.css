@@ -6600,88 +6600,146 @@ h1, h2, h3, h4,
   }
 }
 
-/* v76: mobile System-Level View width alignment
-   The System-Level View copy/image board was visually narrower than other mobile sections.
-   This makes the board use the same full mobile content width, while keeping the image swipe.
+/* v77: SEO visibility + corrected mobile System-Level width
+   Base is v75, not the incorrect v76 image-height patch.
+   - Adds readable SEO support lines for Dowan Kim.
+   - Makes System-Level View card and image card match the mobile card width below.
+   - Prevents the system image from becoming unnecessarily tall.
 */
+.hero-seo-line,
+.pi-seo-line,
+.contact-seo-line{
+  margin-top:12px !important;
+  max-width:760px !important;
+  color:rgba(255,255,255,.64) !important;
+  font-size:13.5px !important;
+  line-height:1.55 !important;
+  letter-spacing:.01em !important;
+}
+
+.pi-seo-line,
+.contact-seo-line{
+  margin-top:14px !important;
+  color:rgba(255,255,255,.68) !important;
+}
+
 @media(max-width:760px){
+  .hero-seo-line{
+    font-size:13px !important;
+    line-height:1.48 !important;
+    margin-top:10px !important;
+  }
+
+  /* System-Level View becomes the same mobile card lane width as Mission/World Model/etc. */
   .research-figure-board-v60.hero-board-v60,
   .research-figure-board-v60{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:14px !important;
     width:100% !important;
     max-width:100% !important;
-    margin-left:0 !important;
-    margin-right:0 !important;
-    padding:22px !important;
-    box-sizing:border-box !important;
-    border-radius:24px !important;
-  }
-
-  .research-figure-board-v60 .figure-copy-v60{
-    width:100% !important;
-    max-width:100% !important;
-    min-width:0 !important;
-  }
-
-  .research-figure-board-v60 figure{
-    width:100% !important;
-    max-width:100% !important;
-    min-width:0 !important;
-    margin:0 !important;
-    padding-bottom:10px !important;
-    box-sizing:border-box !important;
     overflow-x:auto !important;
     overflow-y:hidden !important;
     -webkit-overflow-scrolling:touch !important;
-    touch-action:pan-x pan-y !important;
+    overscroll-behavior-x:contain !important;
+    scroll-snap-type:x mandatory !important;
+    padding:0 48px 18px 0 !important;
+    margin:0 -18px 34px 0 !important;
+    scrollbar-width:none !important;
+    box-sizing:border-box !important;
+  }
+
+  .research-figure-board-v60.hero-board-v60::-webkit-scrollbar,
+  .research-figure-board-v60::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .research-figure-board-v60 .figure-copy-v60,
+  .research-figure-board-v60 figure{
+    flex:0 0 min(74vw, 310px) !important;
+    width:min(74vw, 310px) !important;
+    min-width:min(74vw, 310px) !important;
+    max-width:min(74vw, 310px) !important;
+    scroll-snap-align:start !important;
+    box-sizing:border-box !important;
+    margin:0 !important;
+    border-radius:0 !important;
+  }
+
+  .research-figure-board-v60 .figure-copy-v60{
+    min-height:178px !important;
+    padding:20px !important;
+  }
+
+  .research-figure-board-v60 figure{
+    height:178px !important;
+    min-height:178px !important;
+    max-height:178px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+    background:#02070c !important;
   }
 
   .research-figure-board-v60 figure img{
-    width:920px !important;
-    min-width:920px !important;
-    max-width:none !important;
-    height:auto !important;
-    display:block !important;
-    object-fit:contain !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    max-height:178px !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
   }
 
-  .research-lead-v60 + .research-figure-board-v60{
-    margin-top:26px !important;
-    margin-bottom:36px !important;
-  }
-
-  .research-figure-board-v60 figure::after{
+  /* Outer lane cue only; no nested image-height cue */
+  .research-figure-board-v60::after{
     content:"SWIPE →";
     position:sticky !important;
     right:0 !important;
     top:0 !important;
-    float:right !important;
-    width:58px !important;
-    height:100% !important;
-    min-height:44px !important;
+    align-self:stretch !important;
+    flex:0 0 70px !important;
+    min-width:70px !important;
     display:flex !important;
     align-items:center !important;
     justify-content:center !important;
-    margin-left:-58px !important;
-    background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.78) 45%, rgba(0,0,0,.95) 100%) !important;
+    padding-left:26px !important;
+    background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.82) 42%, rgba(0,0,0,.96) 100%) !important;
     color:rgba(102,215,255,.86) !important;
-    font-size:9px !important;
+    font-size:10px !important;
     font-weight:900 !important;
-    letter-spacing:.13em !important;
+    letter-spacing:.14em !important;
     writing-mode:vertical-rl !important;
     pointer-events:none !important;
-    z-index:4 !important;
+    z-index:5 !important;
+  }
+
+  .research-figure-board-v60 figure::after{
+    display:none !important;
+    content:none !important;
   }
 }
 
 @media(max-width:420px){
-  .research-figure-board-v60.hero-board-v60,
-  .research-figure-board-v60{
-    padding:18px !important;
-    border-radius:22px !important;
+  .research-figure-board-v60 .figure-copy-v60,
+  .research-figure-board-v60 figure{
+    flex-basis:min(82vw, 310px) !important;
+    width:min(82vw, 310px) !important;
+    min-width:min(82vw, 310px) !important;
+    max-width:min(82vw, 310px) !important;
+  }
+
+  .research-figure-board-v60 figure{
+    height:170px !important;
+    min-height:170px !important;
+    max-height:170px !important;
   }
 
   .research-figure-board-v60 figure img{
-    width:860px !important;
-    min-width:860px !important;
+    max-height:170px !important;
   }
 }
