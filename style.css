@@ -6967,3 +6967,164 @@ h1, h2, h3, h4,
     padding:10px !important;
   }
 }
+
+/* v80: Research mobile image-window equalization
+   Final correction for Research mobile:
+   - System-Level View text remains above the image.
+   - System-Level View text card and image window are rectangular, not rounded.
+   - System image window uses the exact same visible mobile window size rule as other Research image windows.
+   - Only the inner image is horizontally scrollable.
+*/
+@media(max-width:760px){
+
+  /* 1) Overall system block: vertical structure only */
+  .research-figure-board-v60,
+  .research-figure-board-v60.hero-board-v60{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:26px 0 38px 0 !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+  }
+
+  /* 2) System-Level View text card:
+        same rectangular language as other Research text cards */
+  .research-figure-board-v60 .figure-copy-v60{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:0 0 16px 0 !important;
+    padding:24px !important;
+    box-sizing:border-box !important;
+    border:1px solid rgba(255,255,255,.12) !important;
+    border-radius:0 !important;
+    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012)) !important;
+    box-shadow:none !important;
+  }
+
+  /* 3) Equal visible image-window size across the Research section.
+        This applies the same viewport size to:
+        - system architecture figure
+        - research track images
+        - final replacement images */
+  .research-figure-board-v60 figure,
+  .research-image-v60,
+  .research-image-final-v64{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    height:clamp(280px, 62vw, 360px) !important;
+    min-height:clamp(280px, 62vw, 360px) !important;
+    max-height:clamp(280px, 62vw, 360px) !important;
+    margin:0 !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+    border:1px solid rgba(255,255,255,.13) !important;
+    border-radius:0 !important;
+    background:
+      linear-gradient(rgba(102,215,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg,rgba(102,215,255,.035) 1px, transparent 1px),
+      #02070c !important;
+    background-size:28px 28px,28px 28px,auto !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    overscroll-behavior-x:contain !important;
+    touch-action:pan-x pan-y !important;
+    scrollbar-width:none !important;
+    box-shadow:0 22px 66px rgba(0,0,0,.40) !important;
+  }
+
+  .research-figure-board-v60 figure::-webkit-scrollbar,
+  .research-image-v60::-webkit-scrollbar,
+  .research-image-final-v64::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  /* 4) Inner image: horizontally scrollable, but contained in the identical rectangular window */
+  .research-figure-board-v60 figure img,
+  .research-image-v60 img,
+  .research-image-final-v64 img{
+    display:block !important;
+    width:980px !important;
+    min-width:980px !important;
+    max-width:none !important;
+    height:100% !important;
+    min-height:100% !important;
+    max-height:100% !important;
+    object-fit:contain !important;
+    object-position:left center !important;
+    padding:12px !important;
+    box-sizing:border-box !important;
+    background:transparent !important;
+    transform:none !important;
+    border-radius:0 !important;
+  }
+
+  /* 5) Keep system image below text and before the Mission cards */
+  .research-figure-board-v60 figure{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  .research-architecture-cards-v60{
+    margin-top:0 !important;
+  }
+
+  /* 6) Swipe cue: same rectangular image window, subtle right-side cue */
+  .research-figure-board-v60 figure::after{
+    content:"SWIPE →";
+    position:sticky !important;
+    right:0 !important;
+    top:0 !important;
+    float:right !important;
+    width:58px !important;
+    height:100% !important;
+    min-height:100% !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    margin-left:-58px !important;
+    background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.72) 44%, rgba(0,0,0,.94) 100%) !important;
+    color:rgba(102,215,255,.86) !important;
+    font-size:9px !important;
+    font-weight:900 !important;
+    letter-spacing:.13em !important;
+    writing-mode:vertical-rl !important;
+    pointer-events:none !important;
+    z-index:4 !important;
+  }
+}
+
+@media(max-width:420px){
+  .research-figure-board-v60 .figure-copy-v60{
+    padding:22px !important;
+    border-radius:0 !important;
+  }
+
+  .research-figure-board-v60 figure,
+  .research-image-v60,
+  .research-image-final-v64{
+    height:300px !important;
+    min-height:300px !important;
+    max-height:300px !important;
+    border-radius:0 !important;
+  }
+
+  .research-figure-board-v60 figure img,
+  .research-image-v60 img,
+  .research-image-final-v64 img{
+    width:920px !important;
+    min-width:920px !important;
+    padding:10px !important;
+    border-radius:0 !important;
+  }
+}
