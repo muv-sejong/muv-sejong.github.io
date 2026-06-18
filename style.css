@@ -6839,3 +6839,131 @@ h1, h2, h3, h4,
     max-height:330px !important;
   }
 }
+
+/* v79: Research mobile system-layout correction
+   Structure on mobile:
+   1) Research lead
+   2) System-Level View text block
+   3) System architecture image block, full mobile content width
+   4) Mission / World Model / Guidance / Control / Dynamics / Validation horizontal card lane
+   This restores the original large image viewport while keeping the text above the image.
+*/
+@media(max-width:760px){
+
+  /* The System-Level View block is NOT a horizontal-card lane.
+     It is a vertical system block before the mission cards. */
+  .research-figure-board-v60,
+  .research-figure-board-v60.hero-board-v60{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:26px 0 38px 0 !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+    background:transparent !important;
+    border:0 !important;
+    overflow:visible !important;
+  }
+
+  /* Text block: full width, same visual rhythm as other premium cards */
+  .research-figure-board-v60 .figure-copy-v60{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:0 0 16px 0 !important;
+    padding:22px !important;
+    box-sizing:border-box !important;
+    border:1px solid rgba(255,255,255,.105) !important;
+    border-radius:24px !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.050), rgba(255,255,255,.015)) !important;
+  }
+
+  /* Image block: below the text and full content width.
+     This fixes the too-small image window from v78. */
+  .research-figure-board-v60 figure{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+    border:1px solid rgba(255,255,255,.105) !important;
+    border-radius:24px !important;
+    background:rgba(255,255,255,.025) !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    overscroll-behavior-x:contain !important;
+    touch-action:pan-x pan-y !important;
+    scrollbar-width:none !important;
+  }
+
+  .research-figure-board-v60 figure::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  /* Keep the diagram large and readable by horizontal swipe.
+     Do not clamp height; let the image keep its natural aspect ratio. */
+  .research-figure-board-v60 figure img{
+    display:block !important;
+    width:1080px !important;
+    min-width:1080px !important;
+    max-width:none !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:left center !important;
+    padding:12px !important;
+    box-sizing:border-box !important;
+    transform:none !important;
+  }
+
+  /* The following mission cards remain the separate horizontal lane. */
+  .research-architecture-cards-v60{
+    margin-top:0 !important;
+  }
+
+  /* Swipe cue on the image block only */
+  .research-figure-board-v60 figure::after{
+    content:"SWIPE →";
+    position:sticky !important;
+    right:0 !important;
+    top:0 !important;
+    float:right !important;
+    width:58px !important;
+    min-height:54px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    margin-left:-58px !important;
+    background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.72) 44%, rgba(0,0,0,.94) 100%) !important;
+    color:rgba(102,215,255,.86) !important;
+    font-size:9px !important;
+    font-weight:900 !important;
+    letter-spacing:.13em !important;
+    writing-mode:vertical-rl !important;
+    pointer-events:none !important;
+    z-index:4 !important;
+  }
+}
+
+@media(max-width:420px){
+  .research-figure-board-v60 .figure-copy-v60{
+    padding:20px !important;
+    border-radius:22px !important;
+  }
+
+  .research-figure-board-v60 figure{
+    border-radius:22px !important;
+  }
+
+  .research-figure-board-v60 figure img{
+    width:980px !important;
+    min-width:980px !important;
+    padding:10px !important;
+  }
+}
