@@ -7122,3 +7122,29 @@ h1, h2, h3, h4,
     pointer-events:none !important;
   }
 }
+
+/* v84: remove ONLY the first Research system-image SWIPE cue
+   Scope is intentionally limited to the first System-Level View image block.
+   Other mobile card-lane SWIPE indicators are left unchanged.
+*/
+@media(max-width:760px){
+  section.research-figure-board-v60.hero-board-v60::before,
+  section.research-figure-board-v60.hero-board-v60::after,
+  section.research-figure-board-v60.hero-board-v60 figure::before,
+  section.research-figure-board-v60.hero-board-v60 figure::after{
+    content:none !important;
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+    width:0 !important;
+    height:0 !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:none !important;
+    border:0 !important;
+    box-shadow:none !important;
+    pointer-events:none !important;
+  }
+}
