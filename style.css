@@ -7101,3 +7101,24 @@ h1, h2, h3, h4,
     border-radius:0 !important;
   }
 }
+
+/* v82: remove swipe label from first System-Level image only
+   Keeps horizontal scrolling itself. Removes the visible SWIPE text/overlay
+   from the first Research system-level image window.
+*/
+@media(max-width:760px){
+  .research-figure-board-v60 figure::before,
+  .research-figure-board-v60 figure::after{
+    content:none !important;
+    display:none !important;
+    visibility:hidden !important;
+    background:none !important;
+    width:0 !important;
+    height:0 !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    pointer-events:none !important;
+  }
+}
