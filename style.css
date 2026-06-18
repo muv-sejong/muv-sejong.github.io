@@ -6599,3 +6599,89 @@ h1, h2, h3, h4,
     font-size:9px !important;
   }
 }
+
+/* v76: mobile System-Level View width alignment
+   The System-Level View copy/image board was visually narrower than other mobile sections.
+   This makes the board use the same full mobile content width, while keeping the image swipe.
+*/
+@media(max-width:760px){
+  .research-figure-board-v60.hero-board-v60,
+  .research-figure-board-v60{
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding:22px !important;
+    box-sizing:border-box !important;
+    border-radius:24px !important;
+  }
+
+  .research-figure-board-v60 .figure-copy-v60{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+
+  .research-figure-board-v60 figure{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding-bottom:10px !important;
+    box-sizing:border-box !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    touch-action:pan-x pan-y !important;
+  }
+
+  .research-figure-board-v60 figure img{
+    width:920px !important;
+    min-width:920px !important;
+    max-width:none !important;
+    height:auto !important;
+    display:block !important;
+    object-fit:contain !important;
+  }
+
+  .research-lead-v60 + .research-figure-board-v60{
+    margin-top:26px !important;
+    margin-bottom:36px !important;
+  }
+
+  .research-figure-board-v60 figure::after{
+    content:"SWIPE →";
+    position:sticky !important;
+    right:0 !important;
+    top:0 !important;
+    float:right !important;
+    width:58px !important;
+    height:100% !important;
+    min-height:44px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    margin-left:-58px !important;
+    background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.78) 45%, rgba(0,0,0,.95) 100%) !important;
+    color:rgba(102,215,255,.86) !important;
+    font-size:9px !important;
+    font-weight:900 !important;
+    letter-spacing:.13em !important;
+    writing-mode:vertical-rl !important;
+    pointer-events:none !important;
+    z-index:4 !important;
+  }
+}
+
+@media(max-width:420px){
+  .research-figure-board-v60.hero-board-v60,
+  .research-figure-board-v60{
+    padding:18px !important;
+    border-radius:22px !important;
+  }
+
+  .research-figure-board-v60 figure img{
+    width:860px !important;
+    min-width:860px !important;
+  }
+}
