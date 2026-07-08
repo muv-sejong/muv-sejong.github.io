@@ -7150,3 +7150,190 @@ h1, h2, h3, h4,
 }
 
 /* v86: fix Woo Young Kang photo placement and publication metrics */
+
+/* v87: desktop page-hero responsive viewport correction
+   Fixes Research / Projects / Publications hero behavior on desktop and wide monitors:
+   - prevents large titles from being clipped at the top
+   - lets the background fill the first viewport when the browser is narrow/half-width
+   - adjusts background position by page and aspect ratio
+   - does not change Members / Join / Contact, which were already stable
+*/
+@media (min-width:761px){
+  .research-hero,
+  .projects-hero,
+  .publications-hero{
+    height:auto !important;
+    min-height:clamp(760px, 92svh, 960px) !important;
+    display:flex !important;
+    align-items:center !important;
+    overflow:hidden !important;
+    background-size:cover !important;
+    background-repeat:no-repeat !important;
+  }
+
+  .research-hero .page-hero-content,
+  .projects-hero .page-hero-content,
+  .publications-hero .page-hero-content{
+    width:min(100% - 16vw, 1180px) !important;
+    max-width:1180px !important;
+    padding:clamp(115px, 12svh, 150px) 8vw clamp(76px, 8svh, 112px) !important;
+    box-sizing:border-box !important;
+  }
+
+  .research-hero .page-hero-content h1,
+  .projects-hero .page-hero-content h1,
+  .publications-hero .page-hero-content h1{
+    max-width:min(930px, 64vw) !important;
+    font-size:clamp(60px, 5.05vw, 92px) !important;
+    line-height:.98 !important;
+    letter-spacing:-.038em !important;
+    margin:0 !important;
+  }
+
+  .research-hero .page-hero-content > p:not(.eyebrow),
+  .projects-hero .page-hero-content > p:not(.eyebrow),
+  .publications-hero .page-hero-content > p:not(.eyebrow){
+    max-width:720px !important;
+    margin-top:22px !important;
+  }
+
+  .projects-hero .page-metrics,
+  .publications-hero .page-metrics{
+    max-width:640px !important;
+  }
+
+  .projects-hero{
+    background-position:center 48% !important;
+  }
+
+  .research-hero{
+    background-position:center 52% !important;
+  }
+
+  .publications-hero{
+    background-position:center 50% !important;
+  }
+}
+
+/* Narrow desktop / half-screen browser:
+   use a full first viewport so the background does not end too early
+   and reduce the title slightly so it never climbs above the viewport. */
+@media (min-width:761px) and (max-width:1180px){
+  .research-hero,
+  .projects-hero,
+  .publications-hero{
+    min-height:100svh !important;
+  }
+
+  .research-hero .page-hero-content,
+  .projects-hero .page-hero-content,
+  .publications-hero .page-hero-content{
+    width:min(100% - 14vw, 900px) !important;
+    padding:clamp(118px, 14svh, 150px) 7vw clamp(66px, 8svh, 100px) !important;
+  }
+
+  .research-hero .page-hero-content h1,
+  .projects-hero .page-hero-content h1,
+  .publications-hero .page-hero-content h1{
+    max-width:720px !important;
+    font-size:clamp(54px, 7.0vw, 78px) !important;
+    line-height:1.0 !important;
+  }
+
+  .projects-hero .metric-grid.compact,
+  .publications-hero .metric-grid.compact{
+    grid-template-columns:repeat(3, minmax(108px, 1fr)) !important;
+    max-width:560px !important;
+  }
+
+  .projects-hero{
+    background-position:58% center !important;
+  }
+
+  .research-hero{
+    background-position:center center !important;
+  }
+
+  .publications-hero{
+    background-position:center center !important;
+  }
+}
+
+/* Very wide monitor:
+   keep the hero within the visible first screen and avoid upper-title clipping.
+   Background crop is moved slightly downward/centered instead of feeling too high. */
+@media (min-width:1400px) and (min-aspect-ratio:16/9){
+  .research-hero,
+  .projects-hero,
+  .publications-hero{
+    min-height:clamp(780px, 88svh, 920px) !important;
+  }
+
+  .research-hero .page-hero-content,
+  .projects-hero .page-hero-content,
+  .publications-hero .page-hero-content{
+    padding-top:clamp(120px, 11svh, 150px) !important;
+    padding-bottom:clamp(78px, 7svh, 105px) !important;
+  }
+
+  .research-hero .page-hero-content h1,
+  .projects-hero .page-hero-content h1,
+  .publications-hero .page-hero-content h1{
+    font-size:clamp(68px, 4.75vw, 94px) !important;
+  }
+
+  .projects-hero{
+    background-position:center 54% !important;
+  }
+
+  .research-hero{
+    background-position:center 54% !important;
+  }
+
+  .publications-hero{
+    background-position:center 54% !important;
+  }
+}
+
+/* Ultra-wide screens:
+   make the image crop less aggressive vertically while keeping full bleed.
+*/
+@media (min-width:1700px) and (min-aspect-ratio:19/9){
+  .research-hero,
+  .projects-hero,
+  .publications-hero{
+    min-height:clamp(800px, 86svh, 900px) !important;
+    background-size:cover !important;
+  }
+
+  .projects-hero{
+    background-position:center 56% !important;
+  }
+
+  .research-hero{
+    background-position:center 55% !important;
+  }
+
+  .publications-hero{
+    background-position:center 55% !important;
+  }
+}
+
+/* Fallback for browsers without svh support */
+@supports not (height:100svh){
+  @media (min-width:761px){
+    .research-hero,
+    .projects-hero,
+    .publications-hero{
+      min-height:clamp(760px, 92vh, 960px) !important;
+    }
+  }
+
+  @media (min-width:761px) and (max-width:1180px){
+    .research-hero,
+    .projects-hero,
+    .publications-hero{
+      min-height:100vh !important;
+    }
+  }
+}
