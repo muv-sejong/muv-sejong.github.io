@@ -7369,3 +7369,37 @@ h1, h2, h3, h4,
 /* v91: activity service update */
 
 /* v92: activity board-member title update */
+
+/* v93: homepage members metrics update */
+
+/* v94: balance PI detail panels with Selected Awards height */
+@media(min-width:901px){
+  .pi-info-layout{
+    align-items:stretch !important;
+  }
+
+  .pi-info-left{
+    height:100% !important;
+    display:grid !important;
+    grid-template-rows:minmax(0, .92fr) minmax(0, 1.08fr) !important;
+    gap:24px !important;
+  }
+
+  .pi-info-left .refined-panel,
+  .awards-panel{
+    height:100% !important;
+    box-sizing:border-box !important;
+  }
+
+  .pi-info-left .refined-panel{
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  .pi-info-left .clean-list{
+    flex:1 1 auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:space-between !important;
+  }
+}
