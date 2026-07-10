@@ -7337,3 +7337,35 @@ h1, h2, h3, h4,
     }
   }
 }
+
+/* v88: members role and metric update */
+.members-metrics{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  max-width:760px !important;
+}
+
+@media(max-width:760px){
+  .members-metrics{
+    grid-template-columns:1fr !important;
+    max-width:none !important;
+  }
+}
+
+/* v89: members postdoctoral researcher metric */
+.members-hero .page-metrics.four-metrics{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  max-width:760px !important;
+}
+
+@media(max-width:760px){
+  .members-hero .page-metrics.four-metrics{
+    grid-template-columns:1fr !important;
+    max-width:none !important;
+  }
+}
+
+/* v90: awards list update */
+
+/* v91: activity service update */
+
+/* v92: activity board-member title update */
